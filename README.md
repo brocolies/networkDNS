@@ -2,6 +2,8 @@
 
 CDN 기반 OTT 스트리밍 시뮬레이터. 6개 노드가 localhost UDP로 통신하며, DNS 보안 공격/방어 모듈을 포함한다.
 
+각 항목은 한 번의 커밋 단위로 설계됐다. 끝낸 항목은 `[ ]`를 `[x]`로 바꾸고 그 줄 끝에 커밋 해시를 적어 작업 흐름을 기록한다.
+
 ---
 
 ## 폴더 구조
@@ -24,65 +26,102 @@ network/
 
 ### Part 1. 공통 기반
 
-코드를 짜기 전에 모든 노드가 공유할 토대를 먼저 깐다.
+**목표**: 모든 노드가 공유할 메시지 포맷·시간 표기·로거를 먼저 정의한다. 코드 한 줄 짜기 전에 "두 노드가 무엇을 주고받을지"부터 합의해야 송신·수신 양쪽을 짤 수 있다.
 
-- `common/protocol.py` — 메시지 종류 정의 (dns_query/response, metadata_request/response, chunk_request/response)
-- `common/time_utils.py` — `HH:MM:SS:ms` 포맷
-- `common/logger.py` — 노드별 통합 로깅
-- 라운드트립 직렬화 검증
+**핵심 감각**: UDP는 패킷 단위라서 한 패킷 = 한 메시지로 설계해야 한다. 메시지는 `dict → JSON 문자열 → UTF-8 바이트`로 직렬화한다.
+
+- [ ] `common/protocol.py` — `dns_query` / `dns_response` 정의 + `pack` / `unpack` 헬퍼
+- [ ] `common/protocol.py` — `metadata_request` / `metadata_response` 추가
+- [ ] `common/protocol.py` — `chunk_request` / `chunk_response` 추가
+- [ ] `common/time_utils.py` — `HH:MM:SS:ms` 포맷터, `elapsed_ms`, `parse_time`
+- [ ] `common/logger.py` — `get_logger(node_name)` — 콘솔 + `logs/{node}.log` 동시 기록
+- [ ] **검증**: 6종 메시지 라운드트립(`unpack(pack(msg)) == msg`) + 시간 포맷 샘플 출력
+
+---
 
 ### Part 2. DNS 계층
 
-명세 2.2, 2.5, 2.8 ~ 2.11. iterative resolution이 핵심.
+**목표**: 클라이언트가 도메인 이름으로 컨텐츠 서버 IP를 받아내는 전 과정 구현. 명세 2.2, 2.5, 2.8 ~ 2.11.
 
-- `dns/local_dns.py` — 클라이언트 진입점, 상위 DNS에 반복 질의
-- `dns/net_plus_dns.py` — Net+ Web Server IP 응답
-- `dns/abcdn_dns.py` — 부하·가중치 기반 스트리밍 서버 선택
-- DNS 응답 캐시 + TTL 만료
-- 체인 통과 end-to-end 검증
+**핵심 감각**: Local DNS는 클라이언트에 대해서는 재귀(recursive), 상위 DNS에 대해서는 반복(iterative) 질의를 수행한다. abCDN DNS는 같은 컨텐츠라도 부하·가중치 기반으로 매번 다른 스트리밍 서버 IP를 반환할 수 있다.
+
+- [ ] `dns/local_dns.py` — UDP 서버 골격, 클라이언트 질의 수신 → 상위 DNS 반복 질의 → 응답 전달
+- [ ] `dns/net_plus_dns.py` — 컨텐츠명 → Net+ Web Server IP 응답
+- [ ] `dns/abcdn_dns.py` — 가중치 기반 스트리밍 서버 IP 선택 (`random.choices`)
+- [ ] DNS 캐시 — `dict`로 `(name, ip, expire_at)` 저장, TTL = 60s 만료 처리
+- [ ] **검증**: 클라이언트가 한 번도 만난 적 없는 도메인을 질의했을 때 3종 DNS 체인을 거쳐 IP가 돌아오는지, 두 번째 질의는 캐시에서 즉시 응답하는지 로그로 확인
+
+---
 
 ### Part 3. 서버 계층
 
-명세 2.3 ~ 2.4, 2.6, 2.12 ~ 2.13. 컨텐츠 메타데이터와 청크가 실제로 흐르게 한다.
+**목표**: 컨텐츠 메타데이터와 청크가 실제로 흘러나오게 한다. 명세 2.3 ~ 2.4, 2.6, 2.12 ~ 2.13.
 
-- `server/net_plus_web.py` — 컨텐츠 정보 응답
-- `server/abcdn_stream.py` — 청크 단위 전송
-- `data/content_metadata.json` — 컨텐츠 카탈로그
-- 단일 클라이언트 메타 → 청크 흐름 검증
+**핵심 감각**: 서버는 무한 루프로 `recvfrom`을 돌면서 들어온 요청을 분기 처리한다. 청크는 임의 바이트 페이로드(예: `b"\x00" * 1024`)로 시뮬레이션해도 충분하다 — 명세에 실제 영상 데이터는 요구되지 않음.
+
+- [ ] `data/content_metadata.json` — 컨텐츠 2~3개, 각각 인코딩 레벨별 청크 리스트와 청크 크기 명시
+- [ ] `server/net_plus_web.py` — `metadata_request` 수신 → JSON에서 해당 컨텐츠 메타데이터 응답
+- [ ] `server/abcdn_stream.py` — `chunk_request` 수신 → 지정 크기 청크 전송, 약간의 지연(`random.uniform`) 시뮬레이션
+- [ ] **검증**: 임시 클라이언트 스크립트로 메타데이터 조회 → 청크 1개 받기까지 한 사이클 성공, 로그에 송수신 시각 기록
+
+---
 
 ### Part 4. 클라이언트 핵심 로직
 
-명세 2.1, 2.7, 2.16 ~ 2.18. 이 프로젝트의 알고리즘적 본질이 여기 있다.
+**목표**: 이 프로젝트의 알고리즘적 본질. 명세 2.1, 2.7, 2.16 ~ 2.18.
 
-- `client/client.py` — 메인 루프 (DNS 질의 → 메타 → 청크 요청)
-- `client/buffer.py` — R_buffer 가중이동평균 (α = 0.5)
-- `client/encoding_switch.py` — case (i)/(ii) + t_S* 매칭
-- 한 컨텐츠 끝까지 스트리밍, 인코딩 전환 시연 가능
+**핵심 감각**: R_buffer는 측정값(`R_chunk`)과 누적값을 α로 가중평균한 값이다. 인코딩 전환은 `R_buffer / R_current` 비율이 β 이상이면 상승, γ 이하면 하강 — hysteresis로 진동을 막는다. case (i)/(ii)는 다음 청크가 목표 시각 t_S* 안에 도착 가능한지에 따라 분기한다.
+
+- [ ] `client/client.py` — 사용자 입력(컨텐츠명, 시작 시각) 수신
+- [ ] `client/client.py` — DNS 질의 → 메타데이터 요청 → 청크 요청 메인 루프
+- [ ] `client/buffer.py` — `BufferEstimator` 클래스, `R_buffer = α·R_chunk + (1-α)·R_buffer_prev`
+- [ ] `client/encoding_switch.py` — case (i)/(ii) 판정 + t_S* 매칭
+- [ ] `client/encoding_switch.py` — β/γ 임계 기반 인코딩 레벨 결정
+- [ ] 버퍼 모니터링·종료 처리 (명세 2.7)
+- [ ] **검증**: 한 컨텐츠를 끝까지 받아내면서 R_buffer 값이 로그에 찍히고, 네트워크 지연을 강제로 늘렸을 때 인코딩이 한 단계 내려가는 게 관찰됨
+
+---
 
 ### Part 5. 통합과 운영
 
-명세 2.14 ~ 2.15. 단일 노드 동작에서 시스템으로.
+**목표**: 단일 노드 시연에서 시스템 시연으로. 명세 2.14 ~ 2.15.
 
-- threading 적용, 다중 클라이언트 처리
-- 노드별 로그 통합 포맷
-- `run.sh` — 6개 노드 일괄 실행
-- 명세 2.1 ~ 2.18 전수 점검
+**핵심 감각**: 각 노드는 독립 프로세스로 띄운다. 노드 내에서 다중 요청 처리는 `threading.Thread(daemon=True)`로 분산. 로그 포맷이 노드별로 다르면 디버깅이 지옥이 되므로 통일한다.
+
+- [ ] 서버 측 threading — 동시에 여러 클라이언트 요청 처리
+- [ ] `run.sh` — 6개 노드를 백그라운드로 띄우고 `trap`으로 일괄 종료
+- [ ] 로그 포맷 통일: `[HH:MM:SS:ms] [node_name] [event_type] details`
+- [ ] **검증**: 명세 2.1 ~ 2.18 모든 항목 수동 점검, 동시 클라이언트 2개로 충돌 없는지 확인
+
+---
 
 ### Part 6. 보안 모듈
 
-자기소개서·계획서에서 약속한 부분. 면접의 핵심 어필 포인트.
+**목표**: 자기소개서·계획서에서 약속한 부분. 면접의 핵심 어필 포인트.
 
-- `security/attacker.py` — Kaminsky 류 cache poisoning 재현
-- `security/txid_defense.py` — transaction ID 검증 방어
-- 공격 성공률 before / after 측정
-- DNSSEC가 해결하려는 본질(서명 기반 인증의 필연성)을 코드 수준에서 실증
+**핵심 감각**: Kaminsky 공격의 본질은 "UDP는 무연결 + DNS txid가 16-bit밖에 안 되니까 위조 응답을 합법 응답보다 먼저 도착시키면 캐시 오염 가능"이다. txid 검증은 합리적인 첫 방어선이지만, 충분히 빠른 위조 시도 앞에서는 뚫린다 — 그래서 DNSSEC가 서명 기반 인증으로 본질적 해결을 시도한다.
+
+- [ ] `security/attacker.py` — Local DNS 응답 포트로 위조 `dns_response` 송신 (합법 응답보다 먼저 도착시키기)
+- [ ] 공격 시연: 클라이언트가 악성 IP로 유도되는 시나리오 로그 캡처
+- [ ] `security/txid_defense.py` — Local DNS에 txid 매칭 검증 추가, 불일치 응답 drop
+- [ ] 방어 시연: 동일 공격이 차단되는 시나리오 로그 캡처
+- [ ] 공격 성공률 측정 — 방어 전/후 N회 시행, 비율 기록
+- [ ] DNSSEC 본질 정리 — `security/README.md`에 "왜 txid만으로 부족하고 서명이 필요한가" 정리
+- [ ] **검증**: 공격/방어 두 시나리오가 같은 `run.sh`에서 토글로 실행 가능, 로그에 결과가 명확히 드러남
+
+---
 
 ### Part 7. 마감
 
-- README 최종 정리, 코드 주석 정돈
-- 10분 데모 시나리오 리허설
-- 시연 영상 녹화 (면접 대비)
-- 명세 체크리스트 전수 검증
+**목표**: 5/24 개인 데드라인 → 6/01 학교 제출 → 6/02 면접 시연까지의 최종 정돈.
+
+- [ ] README 최종 정리 (구현 결정·trade-off 추가 기록)
+- [ ] 코드 주석 정돈, 죽은 코드 제거
+- [ ] 10분 데모 시나리오 스크립트 작성
+- [ ] 데모 리허설 1회
+- [ ] 시연 영상 녹화 (면접 백업용)
+- [ ] 명세 2.1 ~ 2.18 체크리스트 최종 전수 확인
+- [ ] `git tag v1.0-final`
 
 ---
 
@@ -121,4 +160,25 @@ network/
 
 ```bash
 ./run.sh
+```
+
+---
+
+## 커밋 컨벤션
+
+작업 단위가 작아 매일 여러 커밋이 가능하다. 메시지는 짧고 동사로 시작.
+
+```
+feat(common): define dns_query/response messages
+feat(dns): local_dns iterative resolution
+feat(client): R_buffer weighted moving average
+feat(security): kaminsky-style cache poisoning attacker
+fix(dns): cache TTL expiry off-by-one
+docs: update README part 4 completion
+```
+
+각 체크박스 항목 하나가 대략 한 커밋에 대응. 끝낸 줄은 `[x]` + 커밋 해시 7자리 추가:
+
+```
+- [x] `common/protocol.py` — dns_query/response 정의 (a1b2c3d)
 ```
