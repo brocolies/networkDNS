@@ -10,15 +10,68 @@ CDN 기반 OTT 스트리밍 시뮬레이터. 6개 노드가 localhost UDP로 통
 
 ```
 network/
-├── client/      클라이언트 — 스트리밍 수신·인코딩 전환
-├── dns/         3종 DNS 서버 — Local, Net+, abCDN
-├── server/      Net+ Web Server, abCDN Streaming Server
-├── security/    DNS 공격·방어 모듈
-├── common/      프로토콜, 시간, 로거 공통 모듈
-├── data/        컨텐츠 메타데이터
-├── logs/        실행 로그
-└── run.sh       전체 노드 일괄 실행
+├── common/                          ← 가장 먼저 짤 라이브러리 (8개 노드의 공통 언어)
+│   ├── protocol.py                  메시지 6종 dict + pack/unpack
+│   ├── time_utils.py                HH:MM:SS:ms 포맷
+│   └── logger.py                    노드별 로거
+│
+├── dns/                             Phase 2
+│   ├── net_plus_dns.py    :50003    단순 lookup (leaf)
+│   ├── abcdn_dns.py       :50004    가중치 선택 (leaf)
+│   └── local_dns.py       :50002    orchestrator (재귀↔반복)
+│
+├── server/                          Phase 3
+│   ├── net_plus_web.py    :50001    영상번호 → 인덱스 URL
+│   └── abcdn_streaming.py :50005    청크 전송 + 인공 지연
+│
+├── client/                          Phase 4 — 가장 복잡
+│   ├── client.py          :50000    메인 + 3 스레드 (수신·재생·probe)
+│   ├── buffer.py                    BufferEstimator (R_buffer)
+│   └── encoding_switch.py           case (i)/(ii) + β/γ 결정
+│
+├── security/                        Phase 6 (보너스 — 자소서·기술서 약속)
+│   ├── attacker.py        :50099    위조 응답 송신
+│   ├── fake_streaming.py  :50098    가짜 CDN
+│   └── txid_defense.py              local_dns 패치
+│
+├── data/
+│   ├── content_metadata.json        9 영상 × 3 인코딩 × 청크
+│   └── gen_chunks.py                생성 스크립트
+│
+├── config.txt                       포트 정의 (위 포트는 예시)
+├── run.sh                           6개 노드 일괄 실행
+├── logs/                            노드별 로그
+└── README.md
 ```
+
+**노드 = 같은 컴퓨터의 별개 Python 프로세스**. `127.0.0.1`의 서로 다른 포트로 UDP datagram을 던져 통신. 포트 번호만 `config.txt`에서 합의되면 6대 노트북에 흩뿌려도 동일 코드로 작동.
+
+---
+
+## 통신 흐름
+
+한 사이클 = 10단계 메시지 교환.
+
+```
+① 클라이언트  → Net+ Web        영상 N 요청
+② Net+ Web    → 클라이언트      인덱스 URL
+③ 클라이언트  → Local DNS       DNS query (인덱스 도메인)
+④ Local DNS   → Net+ DNS        query
+⑤ Net+ DNS    → Local DNS       abCDN 주소
+⑥ Local DNS   → abCDN DNS       query                   ← 공격자 침투 지점
+⑦ abCDN DNS   → Local DNS       manifest
+⑧ Local DNS   → 클라이언트      manifest
+⑨ 클라이언트  → abCDN Stream    chunk 요청
+⑩ abCDN Stream → 클라이언트     chunk 응답              ← 반복 + 적응형 등급 전환
+```
+
+**①~②**: 영상 인덱스 URL 발급 — Net+ Web 단순 응답.
+**③~⑧**: DNS 체인 — 인덱스 도메인을 manifest까지 풀어내는 과정. Local DNS는 클라이언트에 대해선 재귀(recursive), 상위 DNS에 대해선 반복(iterative) 질의.
+**⑨~⑩**: 청크 스트리밍 — 반복하면서 클라이언트가 R_buffer 측정 + 인코딩 동적 전환.
+
+### 보안 모듈 침투 지점
+
+⑥과 ⑦ 사이. 공격자가 위조 `manifest` 응답을 ⑦보다 빠르게 Local DNS에 도착시키면 캐시 오염 → 클라이언트가 가짜 스트리밍 서버로 유도 (Kaminsky 류 cache poisoning). 방어는 random 16-bit txid 매칭으로 위조 응답 drop. **txid는 식별, DNSSEC는 인증** — 같은 16-bit인데 본질이 다른 이유가 면접 어필 포인트.
 
 ---
 
