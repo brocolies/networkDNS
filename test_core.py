@@ -1,11 +1,11 @@
 """
-protocol, time_utils, logger 테스트
+protocol, time_utils, log_utils 테스트
 
 """
 
-from common.protocol import pack, unpack
-from common.time_utils import now_time, time_to_ms, elapsed_time
-from common.logger import get_logger
+from core.protocol import pack, unpack
+from core.time_utils import now_time, time_to_ms, elapsed_time
+from core.log_utils import get_logger
 
 def test_protocol():
     test_msg = [

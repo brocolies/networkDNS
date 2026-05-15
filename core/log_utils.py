@@ -1,12 +1,12 @@
 """
-logger.py: 로그 찍는 용도
+log_utils.py: 로그 찍는 용도
 time_utils에서 now_time 반환값 사용
-인코딩 변경시 출력할 내용 명세 확인 
+인코딩 변경시 출력할 내용 명세 확인
 """
 
 import os
 import logging
-from common.time_utils import now_time
+from core.time_utils import now_time
 
 class MyFormatter(logging.Formatter):
     def formatTime(self, record, datefmt=None):
@@ -37,4 +37,4 @@ def get_logger(name):
     file_handler.setFormatter(formatter)
     log.addHandler(file_handler)
 
-    return log
+    return log 
