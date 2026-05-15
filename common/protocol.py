@@ -25,15 +25,15 @@ info_rsp = {
 
 dns_rqst = {
     "type": "dns_rqst",
-    "name": str,
+    "url_name": str,
     "txid": int, # 보안 모듈에서 사용하기 위해 미리 추가
 }
 
 dns_rsp = {
     "type": "dns_rsp",
-    "name": str,
+    "url_name_ehco": str, # 질의 echo(식별 위해 클라이언트 질의 그대로 돌려줌)
     "txid": int,
-    "answer": str | dict,
+    "url_answer": str | dict,
 }
 
 chunk_rqst = {
