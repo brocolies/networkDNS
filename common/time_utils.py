@@ -7,7 +7,7 @@ xx:yy:zz:abc 형태로 출력
 """
 from datetime import datetime
 
-def now_time() -> str:
+def now_time() -> str: # log 찍는 용도
     now = datetime.now()
     formatted_time = now.strftime("%H:%M:%S:%f")[:-3]
     return formatted_time

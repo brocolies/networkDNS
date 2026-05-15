@@ -27,7 +27,8 @@ network/
 ├── client/                          Phase 4 — 가장 복잡
 │   ├── client.py          :50000    메인 + 3 스레드 (수신·재생·probe)
 │   ├── buffer.py                    BufferEstimator (R_buffer)
-│   └── encoding_switch.py           case (i)/(ii) + β/γ 결정
+│   ├── encoding_switch.py           case (i)/(ii) + β/γ 결정
+│   └── gui.py                       (Phase 5) tkinter 최소 시각화 — 명세 "가능하면" 선택
 │
 ├── security/                        Phase 6 (보너스 — 자소서·기술서 약속)
 │   ├── attacker.py        :50099    위조 응답 송신
