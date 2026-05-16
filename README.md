@@ -40,6 +40,11 @@ network/
 │   ├── content_metadata.json        9 영상 × 3 인코딩 × 청크
 │   └── gen_chunks.py                생성 스크립트
 │
+├── tests/                           단위·통합 검증 스크립트
+│   ├── test_core.py                 Phase 1 공통 모듈 라운드트립
+│   ├── test_netplus_dns.py          Net+ DNS 단독 검증
+│   └── test_*.py                    노드별 추가
+│
 ├── config.txt                       포트 정의 (위 포트는 예시)
 ├── run.sh                           6개 노드 일괄 실행
 ├── logs/                            노드별 로그

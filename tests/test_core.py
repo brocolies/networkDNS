@@ -4,8 +4,6 @@ protocol, time_utils, log_utils 테스트
 """
 
 from core.protocol import pack, unpack
-from core.time_utils import now_time, time_to_ms, elapsed_time
-from core.log_utils import get_logger
 
 def test_protocol():
     test_msg = [
