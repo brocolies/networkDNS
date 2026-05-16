@@ -10,16 +10,20 @@ Local DNS가 처음으로 쿼리를 보내는 곳
 import socket
 from core.protocol import pack, unpack
 from core.log_utils import get_logger
+from core.config_utils import parse_config
 
-# config.txt parsing
-def parse_config(path="config.txt"):
-    with open(path) as file:
-        for addresses in file:
-            if addresses.startswith("netplus_dns_server"):
-                addresses = addresses.strip()
-                key, val = addresses.split("=", 1)
-                val = val.strip()
-                ip, port = val.split(":", 1)
-    return ip, port
+abCDN_URL = {
+    f"index.netplus.com/movie{i}": f"abCDN.net/cdn{i}"
+    for i in range(1,10)
+}
 
-parse_config()
+def main():
+    parsed_config = parse_config()
+    DNS_addr = parsed_config["netplus_dns_server"]
+    dns_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    dns_socket.bind(DNS_addr)
+    
+    log = get_logger("netplus_dns")
+    log.info(f"")
+
+    
