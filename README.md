@@ -13,7 +13,8 @@ network/
 ├── core/                            ← 가장 먼저 짤 라이브러리 (8개 노드의 공통 언어)
 │   ├── protocol.py                  메시지 6종 dict + pack/unpack
 │   ├── time_utils.py                HH:MM:SS:ms 포맷
-│   └── log_utils.py                 노드별 로거
+│   ├── log_utils.py                 노드별 로거
+│   └── config_utils.py              config.txt 파싱
 │
 ├── dns/                             Phase 2
 │   ├── net_plus_dns.py    :50003    단순 lookup (leaf)
