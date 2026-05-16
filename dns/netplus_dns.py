@@ -12,18 +12,42 @@ from core.protocol import pack, unpack
 from core.log_utils import get_logger
 from core.config_utils import parse_config
 
-abCDN_URL = {
+ABCDN_URL = {
     f"index.netplus.com/movie{i}": f"abCDN.net/cdn{i}"
     for i in range(1,10)
 }
 
 def main():
     parsed_config = parse_config()
-    DNS_addr = parsed_config["netplus_dns_server"]
+    node_name = "netplus_dns_server"
+    dns_addr = parsed_config[node_name]
     dns_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    dns_socket.bind(DNS_addr)
+    dns_socket.bind(dns_addr)
     
     log = get_logger("netplus_dns")
-    log.info(f"")
+    log.info(f"{node_name}: {dns_addr} ON")
 
-    
+    while True:
+        payload, client_addr = dns_socket.recvfrom(4096)
+        ip, port = client_addr
+        msg = unpack(payload)
+        log.info(f"received from {ip}:{port}: {msg}")
+
+        if msg.get("type") != "dns_rqst":
+            log.warning(f"Not expected type: {msg}")
+            continue
+        
+        url = msg["url"]
+        answer = ABCDN_URL.get(url, "")
+
+        response = {
+            "type": "dns_rsp",
+            "url_echo": url,
+            "txid": msg["txid"], 
+            "answer": answer,
+        }
+
+        dns_socket.sendto(pack(response), client_addr)
+        log.info(f"sent to {dns_addr}: {response}")
+        
+    main()
