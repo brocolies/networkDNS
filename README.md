@@ -98,17 +98,17 @@ network/
 
 ---
 
-### Part 2. DNS 계층  🟡 진행 중
+### Part 2. DNS 계층  🟡 진행 중 (1/3)
 
 **목표**: 클라이언트가 URL로 manifest를 받아내는 전 과정 구현. 명세 3.2, 3.3.2, 3.3.3.
 
 **핵심 감각**: Local DNS는 클라이언트에 대해서는 재귀(recursive), 상위 DNS에 대해서는 반복(iterative) 질의를 수행한다. leaf 두 개(Net+/abCDN DNS)는 단순 lookup, Local DNS만 orchestrator.
 
-- [🟡] `dns/netplus_dns.py` — 인덱스 URL → abCDN URL 응답 (작업 중)
+- [x] `dns/netplus_dns.py` — 인덱스 URL → abCDN URL 응답 + `tests/test_netplus_dns.py` 통과
 - [ ] `dns/abcdn_dns.py` — abCDN URL → manifest dict (HQ/MQ/LQ 서버 IP) 응답
 - [ ] `dns/local_dns.py` — 클라 query 받아 Net+/abCDN DNS 순차 forward 후 manifest 클라에 응답
 - [ ] (선택) DNS 캐시 — TTL 60s. Phase 2엔 스킵, 시간 남으면 추가
-- [ ] **검증**: `tests/test_netplus_dns.py`, `test_abcdn_dns.py`, `test_local_dns.py` 각 단독 + 통합 시 클라 → manifest 한 사이클 성공
+- [ ] **검증**: 통합 — 클라 query 한 번 → manifest 받기까지 한 사이클 통과 (`tests/test_dns_chain.py`)
 
 ---
 
