@@ -48,6 +48,6 @@ def main():
         }
 
         dns_socket.sendto(pack(response), client_addr)
-        log.info(f"sent to {dns_addr}: {response}")
+        log.info(f"sent to {client_addr}: {response}")
         
-    main()
+main()

@@ -17,9 +17,9 @@ network/
 │   └── config_utils.py              config.txt 파싱
 │
 ├── dns/                             Phase 2
-│   ├── net_plus_dns.py    :50003    단순 lookup (leaf)
-│   ├── abcdn_dns.py       :50004    가중치 선택 (leaf)
-│   └── local_dns.py       :50002    orchestrator (재귀↔반복)
+│   ├── netplus_dns.py     :50002    URL → abCDN URL lookup (leaf)
+│   ├── abcdn_dns.py       :50003    URL → manifest dict lookup (leaf)
+│   └── local_dns.py       :50000    orchestrator (재귀↔반복)
 │
 ├── server/                          Phase 3
 │   ├── net_plus_web.py    :50001    영상번호 → 인덱스 URL
@@ -84,32 +84,31 @@ network/
 
 ## 진행 흐름
 
-### Part 1. 공통 기반
+### Part 1. 공통 기반  ✅ 완료
 
 **목표**: 모든 노드가 공유할 메시지 포맷·시간 표기·로거를 먼저 정의한다. 코드 한 줄 짜기 전에 "두 노드가 무엇을 주고받을지"부터 합의해야 송신·수신 양쪽을 짤 수 있다.
 
 **핵심 감각**: UDP는 패킷 단위라서 한 패킷 = 한 메시지로 설계해야 한다. 메시지는 `dict → JSON 문자열 → UTF-8 바이트`로 직렬화한다.
 
-- [ ] `common/protocol.py` — `dns_query` / `dns_response` 정의 + `pack` / `unpack` 헬퍼
-- [ ] `common/protocol.py` — `metadata_request` / `metadata_response` 추가
-- [ ] `common/protocol.py` — `chunk_request` / `chunk_response` 추가
-- [ ] `common/time_utils.py` — `HH:MM:SS:ms` 포맷터, `elapsed_ms`, `parse_time`
-- [ ] `common/logger.py` — `get_logger(node_name)` — 콘솔 + `logs/{node}.log` 동시 기록
-- [ ] **검증**: 6종 메시지 라운드트립(`unpack(pack(msg)) == msg`) + 시간 포맷 샘플 출력
+- [x] `core/protocol.py` — 메시지 6종 (`info_rqst`/`rsp`, `dns_rqst`/`rsp`, `chunk_rqst`/`rsp`) + `pack`/`unpack` + `HQ`/`MQ`/`LQ` 상수
+- [x] `core/time_utils.py` — `now_time()`, `time_to_ms()`, `elapsed_time()`
+- [x] `core/log_utils.py` — `get_logger(node_name)` — 콘솔 + `logs/{node}.log` 동시 기록
+- [x] `core/config_utils.py` — `parse_config()` config.txt → `{key: (ip, port)}` dict
+- [x] **검증**: `tests/test_core.py` — 6종 메시지 라운드트립 통과
 
 ---
 
-### Part 2. DNS 계층
+### Part 2. DNS 계층  🟡 진행 중
 
-**목표**: 클라이언트가 도메인 이름으로 컨텐츠 서버 IP를 받아내는 전 과정 구현. 명세 2.2, 2.5, 2.8 ~ 2.11.
+**목표**: 클라이언트가 URL로 manifest를 받아내는 전 과정 구현. 명세 3.2, 3.3.2, 3.3.3.
 
-**핵심 감각**: Local DNS는 클라이언트에 대해서는 재귀(recursive), 상위 DNS에 대해서는 반복(iterative) 질의를 수행한다. abCDN DNS는 같은 컨텐츠라도 부하·가중치 기반으로 매번 다른 스트리밍 서버 IP를 반환할 수 있다.
+**핵심 감각**: Local DNS는 클라이언트에 대해서는 재귀(recursive), 상위 DNS에 대해서는 반복(iterative) 질의를 수행한다. leaf 두 개(Net+/abCDN DNS)는 단순 lookup, Local DNS만 orchestrator.
 
-- [ ] `dns/local_dns.py` — UDP 서버 골격, 클라이언트 질의 수신 → 상위 DNS 반복 질의 → 응답 전달
-- [ ] `dns/net_plus_dns.py` — 컨텐츠명 → Net+ Web Server IP 응답
-- [ ] `dns/abcdn_dns.py` — 가중치 기반 스트리밍 서버 IP 선택 (`random.choices`)
-- [ ] DNS 캐시 — `dict`로 `(name, ip, expire_at)` 저장, TTL = 60s 만료 처리
-- [ ] **검증**: 클라이언트가 한 번도 만난 적 없는 도메인을 질의했을 때 3종 DNS 체인을 거쳐 IP가 돌아오는지, 두 번째 질의는 캐시에서 즉시 응답하는지 로그로 확인
+- [🟡] `dns/netplus_dns.py` — 인덱스 URL → abCDN URL 응답 (작업 중)
+- [ ] `dns/abcdn_dns.py` — abCDN URL → manifest dict (HQ/MQ/LQ 서버 IP) 응답
+- [ ] `dns/local_dns.py` — 클라 query 받아 Net+/abCDN DNS 순차 forward 후 manifest 클라에 응답
+- [ ] (선택) DNS 캐시 — TTL 60s. Phase 2엔 스킵, 시간 남으면 추가
+- [ ] **검증**: `tests/test_netplus_dns.py`, `test_abcdn_dns.py`, `test_local_dns.py` 각 단독 + 통합 시 클라 → manifest 한 사이클 성공
 
 ---
 
@@ -210,9 +209,14 @@ network/
 
 | 구분 | 일자 |
 |---|---|
-| 개인 데드라인 | 5/24 (일) |
+| Phase 1 (공통 기반) | ✅ 5/14 완료 |
+| Phase 2 (DNS 체인) | 🟡 5/15~17 진행 중 |
+| 화이트햇 필기시험 | 5/23 (토) |
+| 개인 데드라인 (본 시스템 완성) | 5/24 (일) |
+| 보안 모듈 완성 | 5/27 (수) |
+| 화이트햇 면접 | 5/30 (토) |
 | 학교 공식 제출 | 6/01 (월) 13:00 |
-| 면접 | 6/02 (화) |
+| 학교 면접 | 6/02 (화) |
 
 ---
 
