@@ -19,7 +19,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.sendto(pack(query), abcdn_dns_addr)
 print(f"sent: {query}")
 
-payload, client_addr = sock.recvfrom(4096) 
+payload, _ = sock.recvfrom(4096) 
 response = unpack(payload)
 
 assert response["txid"] == query["txid"]

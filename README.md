@@ -76,9 +76,18 @@ network/
 **③~⑧**: DNS 체인 — 인덱스 도메인을 manifest까지 풀어내는 과정. Local DNS는 클라이언트에 대해선 재귀(recursive), 상위 DNS에 대해선 반복(iterative) 질의.
 **⑨~⑩**: 청크 스트리밍 — 반복하면서 클라이언트가 R_buffer 측정 + 인코딩 동적 전환.
 
-### 보안 모듈 침투 지점
+### 보안 모듈 — 다층 방어 thesis
 
-⑥과 ⑦ 사이. 공격자가 위조 `manifest` 응답을 ⑦보다 빠르게 Local DNS에 도착시키면 캐시 오염 → 클라이언트가 가짜 스트리밍 서버로 유도 (Kaminsky 류 cache poisoning). 방어는 random 16-bit txid 매칭으로 위조 응답 drop. **txid는 식별, DNSSEC는 인증** — 같은 16-bit인데 본질이 다른 이유가 면접 어필 포인트.
+**자소서 thesis**: DNS는 구조적으로 인증 부재인데 우리가 안전한 이유는 **여러 방어층이 서로 약점을 메우는 구조**. 이를 코드로 입증.
+
+⑥과 ⑦ 사이가 침투 지점. 공격자가 위조 `manifest` 응답을 ⑦보다 빠르게 Local DNS에 도착시키면 캐시 오염 → 클라이언트가 가짜 스트리밍 서버로 유도 (Kaminsky 류 cache poisoning).
+
+**다층 방어 계획**:
+- Layer 1 — txid 매칭 (entropy 16-bit). 단일 매칭의 한계 측정.
+- Layer 2 — SPR (Source Port Randomization, entropy ~32-bit). 사후 보강의 대표 사례.
+- Layer 3 (시간 됐으면) — Toy DNSSEC stub (서명 인증). 본질적 해결.
+
+각 층 추가 시 공격 성공률 정량 측정. **"다층 방어는 잘 작동하지만 본질 해결책(DNSSEC) 보급 지연의 사후약방문"** 까지 분석. txid는 식별, DNSSEC는 인증 — 본질 차이.
 
 ---
 
@@ -154,19 +163,21 @@ network/
 
 ---
 
-### Part 6. 보안 모듈
+### Part 6. 보안 모듈 — 다층 방어 입증
 
-**목표**: 자기소개서·계획서에서 약속한 부분. 면접의 핵심 어필 포인트.
+**목표**: 자소서 thesis "여러 방어층이 서로 약점을 메우는 구조"를 코드로 입증. 면접 핵심 어필.
 
-**핵심 감각**: Kaminsky 공격의 본질은 "UDP는 무연결 + DNS txid가 16-bit밖에 안 되니까 위조 응답을 합법 응답보다 먼저 도착시키면 캐시 오염 가능"이다. txid 검증은 합리적인 첫 방어선이지만, 충분히 빠른 위조 시도 앞에서는 뚫린다 — 그래서 DNSSEC가 서명 기반 인증으로 본질적 해결을 시도한다.
+**핵심 감각**: Kaminsky 공격은 "UDP 무연결 + 16-bit txid + race condition"의 합. 단일 방어로 못 막음. 실제 인터넷도 txid + SPR 이중 + DNSSEC 부분 보급으로 다층 운영. **다층은 본질 해결(DNSSEC) 지연의 사후약방문**이라는 분석까지 가야 깊이 있는 답.
 
-- [ ] `security/attacker.py` — Local DNS 응답 포트로 위조 `dns_response` 송신 (합법 응답보다 먼저 도착시키기)
+- [ ] `security/attacker.py` — Local DNS 응답 포트로 위조 `dns_response` 송신 (합법보다 먼저 도착)
 - [ ] 공격 시연: 클라이언트가 악성 IP로 유도되는 시나리오 로그 캡처
-- [ ] `security/txid_defense.py` — Local DNS에 txid 매칭 검증 추가, 불일치 응답 drop
-- [ ] 방어 시연: 동일 공격이 차단되는 시나리오 로그 캡처
-- [ ] 공격 성공률 측정 — 방어 전/후 N회 시행, 비율 기록
-- [ ] DNSSEC 본질 정리 — `security/README.md`에 "왜 txid만으로 부족하고 서명이 필요한가" 정리
-- [ ] **검증**: 공격/방어 두 시나리오가 같은 `run.sh`에서 토글로 실행 가능, 로그에 결과가 명확히 드러남
+- [ ] **Layer 1** — `security/txid_defense.py`: txid 매칭 검증
+- [ ] Layer 1 측정: 공격 성공률 N회 시행 (방어 전/후 비교)
+- [ ] **Layer 2** — SPR (Source Port Randomization) 추가: Local DNS의 upstream forward를 임시 소켓·무작위 포트로
+- [ ] Layer 2 측정: 추가 entropy 효과 정량 측정
+- [ ] (선택) **Layer 3** — `security/dnssec_stub.py`: RSA 키쌍 + 응답 서명 + 검증. `cryptography` 라이브러리
+- [ ] DNSSEC 분석 — `security/README.md`에 "1997년부터 존재했지만 보급 지연 → Kaminsky 2008 → SPR 긴급 도입 → 현재도 본질 해결 미흡" 흐름 정리
+- [ ] **검증**: 공격/방어 토글로 실행 가능, 각 층 성공률 표로 정리
 
 ---
 

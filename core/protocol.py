@@ -9,6 +9,7 @@ protocol.py: 1과 2를 정의하는 파일
     3. 클라이언트 <-> abCDN: chunk_rqst/rsp
 """
 import json
+import random
 
 HQ, MQ, LQ = "HQ", "MQ", "LQ" # chunk에서 사용할 상수 강제
 
@@ -59,3 +60,6 @@ def pack(msg: dict) -> bytes:
 
 def unpack(data: bytes) -> dict:
     return json.loads(data.decode("utf-8"))
+
+def create_txid() -> int:
+    return random.randint(0, 0xFFFF)

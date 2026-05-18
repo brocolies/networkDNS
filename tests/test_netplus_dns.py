@@ -7,7 +7,7 @@ from core.protocol import pack, unpack
 from core.config_utils import parse_config
 
 config = parse_config()
-netplus_dns_addr = config["netplus_dns_server"]
+netplus_addr = config["netplus_dns_server"]
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
@@ -21,13 +21,13 @@ query = {
     }
 
 # 4단계 · pack(dict→bytes) 후 Net+ DNS에 송신
-sock.sendto(pack(query), netplus_dns_addr)
+sock.sendto(pack(query), netplus_addr)
 print(f"sent: {query}")
 
 # 5단계 · 응답 대기 (recvfrom은 블로킹)
 # data = 응답 bytes
 # _ = 보낸 사람 주소 (이미 알고 있는 Net+ DNS라 안 씀)
-payload, client_addr = sock.recvfrom(4096)
+payload, _ = sock.recvfrom(4096)
 response = unpack(payload)
 
 # 6단계 · 응답 검증 (assert — 실패 시 즉시 AssertionError)
