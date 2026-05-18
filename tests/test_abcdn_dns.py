@@ -11,5 +11,21 @@ abcdn_dns_addr = config["abCDN_dns_server"]
 
 query = {
     "type": "dns_rqst",
-    "url": index.
+    "url": "abCDN.net/cdn3",
+    "txid": 42,
 }
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.sendto(pack(query), abcdn_dns_addr)
+print(f"sent: {query}")
+
+payload, client_addr = sock.recvfrom(4096) 
+response = unpack(payload)
+
+assert response["txid"] == query["txid"]
+assert response["url_echo"] == query["url"]
+assert response["answer"]["HQ"] == "127.0.0.1:50010"
+assert response["answer"]["MQ"] == "127.0.0.1:50011"
+assert response["answer"]["LQ"] == "127.0.0.1:50012"
+
+print(f"recv: {response}")

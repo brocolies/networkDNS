@@ -27,8 +27,8 @@ print(f"sent: {query}")
 # 5단계 · 응답 대기 (recvfrom은 블로킹)
 # data = 응답 bytes
 # _ = 보낸 사람 주소 (이미 알고 있는 Net+ DNS라 안 씀)
-data, _ = sock.recvfrom(4096)
-response = unpack(data)
+payload, client_addr = sock.recvfrom(4096)
+response = unpack(payload)
 
 # 6단계 · 응답 검증 (assert — 실패 시 즉시 AssertionError)
 assert response["txid"] == query["txid"]                 # txid echo 확인

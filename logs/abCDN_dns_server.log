@@ -1,0 +1,3 @@
+[14:27:30:739] [abCDN_dns_server] abCDN_dns_server: ('127.0.0.1', 50003) ON
+[14:28:11:589] [abCDN_dns_server] received from ('127.0.0.1', 58698): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn3', 'txid': 42}
+[14:28:11:590] [abCDN_dns_server] send to ('127.0.0.1', 58698): {'type': 'dns_rsp', 'url_echo': 'abCDN.net/cdn3', 'txid': 42, 'answer': {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}}
