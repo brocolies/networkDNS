@@ -21,23 +21,27 @@ def main():
     parsed_config = parse_config()
     node_name = "netplus_dns_server"
     dns_addr = parsed_config[node_name]
-    dns_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    dns_socket.bind(dns_addr)
-    
-    log = get_logger("netplus_dns")
+
+    # UDP 소켓 생성
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    # 포트 OS에 등록 -> 이 포트로 오는 패킷 수신
+    sock.bind(dns_addr)
+    # 명세 내용, 로거 생성
+    log = get_logger(node_name)
     log.info(f"{node_name}: {dns_addr} ON")
 
     while True:
-        payload, client_addr = dns_socket.recvfrom(4096)
-        ip, port = client_addr
+        # recvfrom(): (payload, sender addr) 튜플 반환
+        payload, client_addr = sock.recvfrom(4096)
         msg = unpack(payload)
-        log.info(f"received from {ip}:{port}: {msg}")
+        log.info(f"received from {client_addr}: {msg}")
 
         if msg.get("type") != "dns_rqst":
-            log.warning(f"Not expected type: {msg}")
+            log.warning(f"not expected type: {msg}")
             continue
         
         url = msg["url"]
+        # dict.get(key, default=None), key가 없을 떄 반환할 내용
         answer = ABCDN_URL.get(url, "")
 
         response = {
@@ -47,7 +51,8 @@ def main():
             "answer": answer,
         }
 
-        dns_socket.sendto(pack(response), client_addr)
+        sock.sendto(pack(response), client_addr)
         log.info(f"sent to {client_addr}: {response}")
         
-main()
+if __name__ == "__main__":
+    main()
