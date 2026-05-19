@@ -9,7 +9,7 @@ from core.config_utils import parse_config
 config = parse_config()
 abcdn_dns_addr = config["abCDN_dns_server"]
 
-query = {
+test_query = {
     "type": "dns_rqst",
     "url": "abCDN.net/cdn3",
     "txid": 42,

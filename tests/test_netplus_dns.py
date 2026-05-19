@@ -11,20 +11,17 @@ netplus_addr = config["netplus_dns_server"]
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-# 3단계 · 테스트용 dns_rqst 메시지 만들기
-# url: 임의 영상 인덱스 (movie3 — INDEX_TO_ABCDN에 등록된 키)
-# txid: 임의값 42. 응답에 echo돼서 돌아오는지 검증용
-query = {
+# test용 query
+test_query = {
     "type": "dns_rqst", 
     "url": "index.netplus.com/movie3", 
     "txid": 42
     }
 
-# 4단계 · pack(dict→bytes) 후 Net+ DNS에 송신
+# sendto: 보낼 bytes/주소
 sock.sendto(pack(query), netplus_addr)
 print(f"sent: {query}")
 
-# 5단계 · 응답 대기 (recvfrom은 블로킹)
 # data = 응답 bytes
 # _ = 보낸 사람 주소 (이미 알고 있는 Net+ DNS라 안 씀)
 payload, _ = sock.recvfrom(4096)
