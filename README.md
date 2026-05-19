@@ -37,8 +37,8 @@ network/
 │   └── txid_defense.py              local_dns 패치
 │
 ├── data/
-│   ├── content_metadata.json        9 영상 × 3 인코딩 × 청크
-│   └── gen_chunks.py                생성 스크립트
+│   ├── chunks.json                  9 영상 × 3 인코딩 × 청크 메타데이터
+│   └── (gen_chunks.py for one-shot generation)
 │
 ├── tests/                           단위·통합 검증 스크립트
 │   ├── test_core.py                 Phase 1 공통 모듈 라운드트립
@@ -107,17 +107,18 @@ network/
 
 ---
 
-### Part 2. DNS 계층  🟡 진행 중 (1/3)
+### Part 2. DNS 계층  ✅ 완료
 
 **목표**: 클라이언트가 URL로 manifest를 받아내는 전 과정 구현. 명세 3.2, 3.3.2, 3.3.3.
 
 **핵심 감각**: Local DNS는 클라이언트에 대해서는 재귀(recursive), 상위 DNS에 대해서는 반복(iterative) 질의를 수행한다. leaf 두 개(Net+/abCDN DNS)는 단순 lookup, Local DNS만 orchestrator.
 
-- [x] `dns/netplus_dns.py` — 인덱스 URL → abCDN URL 응답 + `tests/test_netplus_dns.py` 통과
-- [ ] `dns/abcdn_dns.py` — abCDN URL → manifest dict (HQ/MQ/LQ 서버 IP) 응답
-- [ ] `dns/local_dns.py` — 클라 query 받아 Net+/abCDN DNS 순차 forward 후 manifest 클라에 응답
+- [x] `dns/netplus_dns.py` — 인덱스 URL → abCDN URL 응답 + 단위 테스트 통과
+- [x] `dns/abcdn_dns.py` — abCDN URL → manifest dict (HQ/MQ/LQ 서버 IP) 응답 + 단위 테스트 통과
+- [x] `dns/local_dns.py` — 클라 query 받아 Net+/abCDN DNS 순차 forward 후 manifest 클라에 응답
+- [x] `core/protocol.py`에 `create_txid()` 추가 — 16-bit 무작위 ID 생성 공용
 - [ ] (선택) DNS 캐시 — TTL 60s. Phase 2엔 스킵, 시간 남으면 추가
-- [ ] **검증**: 통합 — 클라 query 한 번 → manifest 받기까지 한 사이클 통과 (`tests/test_dns_chain.py`)
+- [x] **통합 검증** — `tests/test_local_dns.py`: 클라 query 한 번 → 3 hop 거쳐 manifest 받기까지 한 사이클 통과 ⭐
 
 ---
 
@@ -221,7 +222,7 @@ network/
 | 구분 | 일자 |
 |---|---|
 | Phase 1 (공통 기반) | ✅ 5/14 완료 |
-| Phase 2 (DNS 체인) | 🟡 5/15~17 진행 중 |
+| Phase 2 (DNS 체인) | ✅ 5/15~17 완료 (DNS 체인 마일스톤 ⭐) |
 | 화이트햇 필기시험 | 5/23 (토) |
 | 개인 데드라인 (본 시스템 완성) | 5/24 (일) |
 | 보안 모듈 완성 | 5/27 (수) |

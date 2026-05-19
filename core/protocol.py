@@ -9,7 +9,7 @@ protocol.py: 1과 2를 정의하는 파일
     3. 클라이언트 <-> abCDN: chunk_rqst/rsp
 """
 import json
-import random
+import secrets
 
 HQ, MQ, LQ = "HQ", "MQ", "LQ" # chunk에서 사용할 상수 강제
 
@@ -32,9 +32,9 @@ dns_rqst = {
 
 dns_rsp = {
     "type": "dns_rsp",
-    "url_ehco": str, # 질의 echo(식별 위해 클라이언트 질의 그대로 돌려줌)
+    "url_echo": str, # 질의 echo(식별 위해 클라이언트 질의 그대로 돌려줌)
     "txid": int,
-    "url_answer": str | dict,
+    "answer": str | dict, # str(abCDN URL) 또는 dict(manifest)
 }
 
 chunk_rqst = {
@@ -52,7 +52,6 @@ chunk_rsp = {
     "chunk_index": int,
     "start_time": str,
     "end_time": str,
-    "payload_size": int,
 }
 
 def pack(msg: dict) -> bytes:
@@ -62,4 +61,4 @@ def unpack(data: bytes) -> dict:
     return json.loads(data.decode("utf-8"))
 
 def create_txid() -> int:
-    return random.randint(0, 0xFFFF)
+    return secrets.randbits(16)

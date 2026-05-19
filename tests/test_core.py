@@ -19,7 +19,7 @@ def test_protocol():
         {"type": "chunk_rqst", "movie_id": 1, "encoding_type": "HQ", "chunk_index": 0,
          "last_watched_time": "00:00:00:000"},
         {"type": "chunk_rsp", "movie_id": 1, "encoding_type": "HQ", "chunk_index": 0,
-         "start_time": "00:00:00:000", "end_time": "00:00:04:000", "payload_size": 1024},
+         "start_time": "00:00:00:000", "end_time": "00:00:04:000"},
     ]
 
     for i in test_msg:

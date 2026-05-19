@@ -19,7 +19,7 @@ MANIFEST_URL = {
 }
 
 def main(): 
-    node_name = "abCDN_dns_server"
+    node_name = "abcdn_dns_server"
     parsed_config = parse_config()
     abcdn_addr = parsed_config[node_name]
 

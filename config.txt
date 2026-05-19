@@ -1,4 +1,4 @@
 local_dns_server = 127.0.0.1:50000
 netplus_web_server = 127.0.0.1:50001
 netplus_dns_server = 127.0.0.1:50002
-abCDN_dns_server = 127.0.0.1:50003
+abcdn_dns_server = 127.0.0.1:50003

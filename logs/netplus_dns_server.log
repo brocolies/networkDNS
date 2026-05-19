@@ -1,3 +1,11 @@
 [15:26:33:683] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
 [15:26:59:323] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie3', 'txid': 42440}
 [15:26:59:323] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie3', 'txid': 42440, 'answer': 'abCDN.net/cdn3'}
+[17:12:02:039] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie3', 'txid': 18902}
+[17:12:02:039] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie3', 'txid': 18902, 'answer': 'abCDN.net/cdn3'}
+[17:47:39:125] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie3', 'txid': 40777}
+[17:47:39:125] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie3', 'txid': 40777, 'answer': 'abCDN.net/cdn3'}
+[17:47:42:322] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie3', 'txid': 15969}
+[17:47:42:322] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie3', 'txid': 15969, 'answer': 'abCDN.net/cdn3'}
+[17:47:43:640] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie3', 'txid': 15956}
+[17:47:43:640] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie3', 'txid': 15956, 'answer': 'abCDN.net/cdn3'}

@@ -22,7 +22,7 @@ def main():
     config = parse_config()
     local_addr = config["local_dns_server"]
     netplus_addr = config["netplus_dns_server"]
-    abcdn_addr = config["abCDN_dns_server"]
+    abcdn_addr = config["abcdn_dns_server"]
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind(local_addr)
