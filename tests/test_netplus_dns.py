@@ -19,8 +19,8 @@ test_query = {
     }
 
 # sendto: 보낼 bytes/주소
-sock.sendto(pack(query), netplus_addr)
-print(f"sent: {query}")
+sock.sendto(pack(test_query), netplus_addr)
+print(f"sent: {test_query}")
 
 # data = 응답 bytes
 # _ = 보낸 사람 주소 (이미 알고 있는 Net+ DNS라 안 씀)
@@ -28,8 +28,8 @@ payload, _ = sock.recvfrom(4096)
 response = unpack(payload)
 
 # 6단계 · 응답 검증 (assert — 실패 시 즉시 AssertionError)
-assert response["txid"] == query["txid"]                 # txid echo 확인
-assert response["url_echo"] == query["url"]              # url echo 확인
+assert response["txid"] == test_query["txid"]                 # txid echo 확인
+assert response["url_echo"] == test_query["url"]              # url echo 확인
 assert response["answer"] == "abCDN.net/cdn3"            # 매핑 lookup 결과 확인
 
 print(f"recv: {response}")
