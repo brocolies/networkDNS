@@ -12,15 +12,15 @@ from core.protocol import pack, unpack
 from core.log_utils import get_logger
 from core.config_utils import parse_config
 
-ABCDN_URL = {
-    f"index.netplus.com/movie{i}": f"abCDN.net/cdn{i}"
-    for i in range(1,10)
-}
-
 def main():
-    parsed_config = parse_config()
+    config = parse_config()
     node_name = "netplus_dns_server"
-    dns_addr = parsed_config[node_name]
+    dns_addr = config[node_name]
+
+    abcdn_url = {
+        f"index.netplus.com/movie{i}": f"abCDN.net/cdn{i}"
+        for i in range(1,10)
+    }
 
     # UDP 소켓 생성
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -42,7 +42,7 @@ def main():
         
         url = msg["url"]
         # dict.get(key, default=None), key가 없을 떄 반환할 내용
-        answer = ABCDN_URL.get(url, "")
+        answer = abcdn_url.get(url, "")
 
         response = {
             "type": "dns_rsp",

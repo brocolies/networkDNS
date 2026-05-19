@@ -23,7 +23,7 @@ network/
 │
 ├── server/                          Phase 3
 │   ├── net_plus_web.py    :50001    영상번호 → 인덱스 URL
-│   └── abcdn_streaming.py :50005    청크 전송 + 인공 지연
+│   └── streaming.py       :50010-2  청크 전송 + 인공 지연 (HQ/MQ/LQ 3 인스턴스)
 │
 ├── client/                          Phase 4 — 가장 복잡
 │   ├── client.py          :50000    메인 + 3 스레드 (수신·재생·probe)

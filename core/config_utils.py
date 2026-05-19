@@ -1,5 +1,5 @@
 """
-config.txt parsing 용도 
+config.txt parsing 용도
 
 """
 
