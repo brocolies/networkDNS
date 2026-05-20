@@ -39,7 +39,7 @@ def main():
         wanted_index_url = movie_url.get(movie_id, "")
         response = {
             "type": "info_rsp",
-            "movie_id": movie_id,
+            "movie_id_echo": movie_id,
             "index_url": wanted_index_url,
         }
 

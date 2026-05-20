@@ -20,7 +20,7 @@ info_rqst = {
 
 info_rsp = {
     "type": "info_rsp",
-    "movie_id": int, # 1 ~ 9 중 항상 선택
+    "movie_id_echo": int, 
     "index_url": str,
 }
 

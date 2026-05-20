@@ -12,3 +12,4 @@
 [17:47:42:323] [abCDN_dns_server] send to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'abCDN.net/cdn3', 'txid': 51261, 'answer': {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}}
 [17:47:43:640] [abCDN_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn3', 'txid': 45159}
 [17:47:43:640] [abCDN_dns_server] send to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'abCDN.net/cdn3', 'txid': 45159, 'answer': {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}}
+[16:12:05:116] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
