@@ -1,0 +1,2 @@
+[13:34:53:485] [streaming HQ] HQ ON: 50010
+[13:35:16:112] [streaming HQ] received from ('127.0.0.1', 54552): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:00:00:000'}
