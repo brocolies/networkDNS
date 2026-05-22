@@ -48,7 +48,7 @@ def main():
         }
 
         sock.sendto(pack(response), client_addr)
-        log.info(f"send to {client_addr}: {response}")
+        log.info(f"sent to {client_addr}: {response}")
 
 if __name__ == "__main__":
     main()

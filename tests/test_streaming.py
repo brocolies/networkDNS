@@ -1,5 +1,5 @@
 """
-
+HQ 서버로 테스트 
 """
 
 import socket
