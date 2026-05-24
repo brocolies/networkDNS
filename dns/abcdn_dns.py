@@ -46,9 +46,7 @@ def main():
             "txid": msg["txid"],
             "answer": answer,
         }
-
         sock.sendto(pack(response), client_addr)
-        log.info(f"sent to {client_addr}: {response}")
 
 if __name__ == "__main__":
     main()
