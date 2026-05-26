@@ -36,6 +36,9 @@ movie_id = None
 node_name = "client"
 log = get_logger(node_name)
 
+def main():
+    initial_setup()
+
 # movie_id 선택 -> index 수령 -> local에 질의 -> manifest local에게 수령 -> CDN에 chunk 첫 요청
 def initial_setup():
     global manifest, movie_id
@@ -83,15 +86,14 @@ def initial_setup():
     }
     sock.sendto(pack(chunk_req), initial_chunk_addr)
 
-# CDN 서버에서 청크 수령 / 버퍼에 저장 / 수신 로그
-buffer = queue.Queue()
-current_encoding = "HQ"
-
-while True:
-    payload, _ = sock.recvfrom(4096)
-    chunk = unpack(payload)
-    log.info(f"received from {hq_chunk_addr}: {chunk}")
-    buffer.append(chunk)
+def receive_chunks():
+    # CDN 서버에서 청크 수령 / 버퍼에 저장 / 수신 로그
+    while True:
+        payload, cdn_addr = sock.recvfrom(4096)
+        chunk = unpack(payload)
+        log.info(f"received from {cdn_addr}: {chunk}")
+        if chunk["encoding_type"] == selected_encoding:
+            buffer.put(chunk)
 
 if __name__ == "__main__":
     main()
