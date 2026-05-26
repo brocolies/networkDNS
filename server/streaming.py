@@ -19,6 +19,7 @@ chunk_rsp = {
 < 구현 필요 기능 > 
 - 
 
++ 시나리오 결정 ->
 
 """
 
@@ -62,6 +63,10 @@ def main():
 
     log = get_logger("streaming " + encoding_type)
     log.info(f"{encoding_type} ON: {port}")
+    
+    # congestion delay 시간 임의 설정 00:15 ~ 01:20까지 
+    congestion_delay_start_ms = 15 * 1000 
+    congestion_delay_end_ms = 80 * 1000
 
     while True:
         payload, client_addr = sock.recvfrom(4096)
@@ -74,7 +79,14 @@ def main():
         start_index = cal_start_index(rqst_movie_chunks, msg["last_watched_time"])
 
         for i in range(start_index, len(rqst_movie_chunks)): 
-            server_to_client_delay = random.uniform(0.1, 0.4)
+            # server delay 구현 -> 일정 구간에서는 증가해야 함
+            # 적절한 혼잡 발생 영상범위1 설정 필요
+            # congestion delay 시간 임의 설정 00:15 ~ 01:20까지 
+
+            if 15 * 1000 <= chunk_start_ms < 80 * 1000:
+                server_to_client_delay = random.uniform(5.0, 7.0)
+            else:
+                server_to_client_delay = random.uniform(0.1, 0.4)
             time.sleep(server_to_client_delay)
 
             response = {

@@ -11,24 +11,33 @@ R = aR + (1-a)fullness -> fullness의 누적 추이 표현
 1. 영화 골라서 Net+ Web에 요청 -> 인덱스 URL 받기 / initial_setup()
 2. 그 URL로 local DNS에 질의 -> manifest 받기 / initial_setup()
 3. manifest에서 HQ 서버 주소 꺼내서 첫 청크 요청 보내기 / initial_setup()
-4. 받기 스레드 만들기 -> push로 오는 청크 계속 받아서 버퍼에 쌓기 (receiver)
-5. 버퍼 어느 정도 차면 재생 시작 (player)
-6. 재생 스레드 만들기 -> 버퍼에서 청크 꺼내서 sleep으로 재생 (player)
+4. 받기 스레드 만들기 -> push로 오는 청크 계속 받아서 버퍼에 쌓기 / receive_chunks()
+5. 버퍼 어느 정도 차면 재생 시작 / play_chunks()
+6. 재생 스레드 만들기 -> 버퍼에서 청크 꺼내서 sleep으로 재생 / play_chunks()
 7. 재생하면서 버퍼 얼마나 찼나 재고(probe) R 계산하기 (probe_and_update)
 8. R 보고 화질 올릴지 내릴지 정하기 (decide)
 9. 화질 바뀌면 새 서버에 다시 요청 + 전환 로그 찍기 (decide)
 
+< 명세 주의사항 > 
+1. 영화의 적절한 범위에서 네트워크 딜레이 결정 -> streaming.py 파일 수정
+    - 적절한 delay 값 선택 필요 random.uniform(x, y) 
+2. 첫 k번 probe 전까지는 R 무의미하다는 것 반영 -> 
+3. 적절한 alpha 값 선정 필요 0.8은 너무 이전 애들이 반영 많이 돼서 변화가 더딤
+    - 적정값 테스트해서 찾기
+
 """
 
-import socket 
+import socket
 import queue
+import time
 from core.protocol import pack, unpack, create_txid
 from core.config_utils import parse_config
 from core.log_utils import get_logger
 
 buffer = queue.Queue()
 selected_encoding = "HQ"
-R = 0.0
+R_buffer = 0.0
+n = 10 # 버퍼 크기
 alpha = 0.8
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 manifest = None 
@@ -94,6 +103,17 @@ def receive_chunks():
         log.info(f"received from {cdn_addr}: {chunk}")
         if chunk["encoding_type"] == selected_encoding:
             buffer.put(chunk)
+
+def play_chunks():
+    # 버퍼에 저장된 청크 가져와서 재생 -> 초기값 정해야함(얼마나 저장하고 시작할지)
+    # sleep으로 영상 재생 구현
+    initial_size = int(n * 0.3)
+    while buffer.qsize < initial_size:
+            time.sleep(0.1) # initial_size보다 커질 때까지 대기
+    
+
+
+
 
 if __name__ == "__main__":
     main()
