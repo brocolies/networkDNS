@@ -7,14 +7,16 @@ R = aR + (1-a)fullness -> fullness의 누적 추이 표현
 0 < r < b < 1일 때 -> 각 부등호마다 화질 하향/유지/상향
 결정해야 할 것: 처음에 얼마나 버퍼를 채울 것인가? -> 0.3? 이후 필요하다면 튜닝
 
-< 구현해야 할 내용 >
-1. 영화 선택
-2. 인덱스 수령
-3. local DNS에 인덱스 질의
-4. manifest 수령
-5. CDN 서버에 요청 전송
-6. 버퍼 생성해서 cdn server에게 들어오는 청크 저장(일정량 저장 이후 재생)
-7. sleep 사용해서 영상 재생
+< 구현해야 할 내용 > / 함수
+1. 영화 골라서 Net+ Web에 요청 -> 인덱스 URL 받기 / initial_setup()
+2. 그 URL로 local DNS에 질의 -> manifest 받기 / initial_setup()
+3. manifest에서 HQ 서버 주소 꺼내서 첫 청크 요청 보내기 / initial_setup()
+4. 받기 스레드 만들기 -> push로 오는 청크 계속 받아서 버퍼에 쌓기 (receiver)
+5. 버퍼 어느 정도 차면 재생 시작 (player)
+6. 재생 스레드 만들기 -> 버퍼에서 청크 꺼내서 sleep으로 재생 (player)
+7. 재생하면서 버퍼 얼마나 찼나 재고(probe) R 계산하기 (probe_and_update)
+8. R 보고 화질 올릴지 내릴지 정하기 (decide)
+9. 화질 바뀌면 새 서버에 다시 요청 + 전환 로그 찍기 (decide)
 
 """
 
@@ -24,16 +26,24 @@ from core.protocol import pack, unpack, create_txid
 from core.config_utils import parse_config
 from core.log_utils import get_logger
 
-def main():
-    node_name = "client"
-    log = get_logger(node_name)
+buffer = queue.Queue()
+selected_encoding = "HQ"
+R = 0.0
+alpha = 0.8
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+manifest = None 
+movie_id = None 
+node_name = "client"
+log = get_logger(node_name)
+
+# movie_id 선택 -> index 수령 -> local에 질의 -> manifest local에게 수령 -> CDN에 chunk 첫 요청
+def initial_setup():
+    global manifest, movie_id
     config = parse_config()
     netplus_web_addr = config["netplus_web_server"]
     local_dns_addr = config["local_dns_server"]
 
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
-    # 보고싶은 영화 클릭 -> web server에 request 전송
+    # 1. 보고싶은 영화 클릭 -> web server에 request 전송
     movie_id = 9
     info_req = {
         "type": "info_rqst", 
@@ -41,12 +51,12 @@ def main():
     }
     sock.sendto(pack(info_req), netplus_web_addr)
 
-    # rsp에서 index 수령 / 수신 로그
+    # 2. rsp에서 index 수령 / 수신 로그
     payload, _ = sock.recvfrom(4096)
     movie_index_url = unpack(payload)["index_url"]
     log.info(f"received from {netplus_web_addr}: {movie_index_url}")
 
-    # local DNS에 인덱스 질의 
+    # 3. local DNS에 인덱스 질의 
     dns_req = {
         "type": "dns_rqst",
         "url": movie_index_url,
@@ -54,34 +64,34 @@ def main():
     }
     sock.sendto(pack(dns_req), local_dns_addr)
 
-    # mainfest 수령 / 수신 로그 
+    # 4. mainfest 수령 / 수신 로그 
     payload, _ = sock.recvfrom(4096)
     manifest = unpack(payload)["answer"]
     log.info(f"received from {local_dns_addr}: {manifest}")
 
-    # CDN 서버에 청크 요청
-    ip, port = manifest["HQ"].split(":")
+    # 5. CDN 서버에 첫 청크 요청
+    ip, port = manifest[selected_encoding].split(":")
     port = int(port)
-    hq_chunk_addr = (ip, port)
+    initial_chunk_addr = (ip, port)
 
     chunk_req = {
         "type": "chunk_rqst",
         "movie_id": movie_id,
-        "encoding_type": "HQ",
+        "encoding_type": selected_encoding,
         "chunk_index": 0,
         "last_watched_time": "00:00:00:000",
     }
-    sock.sendto(pack(chunk_req), hq_chunk_addr)
+    sock.sendto(pack(chunk_req), initial_chunk_addr)
 
-    # CDN 서버에서 청크 수령 / 버퍼에 저장 / 수신 로그
-    buffer = queue.Queue()
-    initial_encoding = "HQ"
-    
-    while True:
-        payload, _ = sock.recvfrom(4096)
-        chunk = unpack(payload)
-        log.info(f"received from {hq_chunk_addr}: {chunk}")
-        buffer.append(chunk)
+# CDN 서버에서 청크 수령 / 버퍼에 저장 / 수신 로그
+buffer = queue.Queue()
+current_encoding = "HQ"
+
+while True:
+    payload, _ = sock.recvfrom(4096)
+    chunk = unpack(payload)
+    log.info(f"received from {hq_chunk_addr}: {chunk}")
+    buffer.append(chunk)
 
 if __name__ == "__main__":
     main()
