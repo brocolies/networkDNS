@@ -30,7 +30,9 @@ R = aR + (1-a)fullness -> fullness의 누적 추이 표현
 import socket
 import queue
 import time
+import threading
 from core.protocol import pack, unpack, create_txid
+from core.time_utils import time_to_ms
 from core.config_utils import parse_config
 from core.log_utils import get_logger
 
@@ -108,12 +110,15 @@ def play_chunks():
     # 버퍼에 저장된 청크 가져와서 재생 -> 초기값 정해야함(얼마나 저장하고 시작할지)
     # sleep으로 영상 재생 구현
     initial_size = int(n * 0.3)
-    while buffer.qsize < initial_size:
+    while buffer.qsize() < initial_size:
             time.sleep(0.1) # initial_size보다 커질 때까지 대기
     
-
-
-
+    while True:
+        chunk = buffer.get()
+        calculate_length_to_s = (time_to_ms(chunk["end_time"]) - time_to_ms(chunk["start_time"])) / 1000
+        time.sleep(calculate_length_to_s)
+        if chunk["end_time"] == "00:01:59:000":
+            break
 
 if __name__ == "__main__":
     main()

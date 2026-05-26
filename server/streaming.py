@@ -28,6 +28,7 @@ import json
 import socket
 import random
 import time
+import select
 from core.protocol import pack, unpack
 from core.log_utils import get_logger
 from core.time_utils import time_to_ms
@@ -35,13 +36,12 @@ from core.time_utils import time_to_ms
 # 몇 번째 청크부터 보낼지 
 # 
 def cal_start_index(chunks, last_watched_time):
-    index = 0
     ms_last_watched_time = time_to_ms(last_watched_time)
 
     for i in range(len(chunks)):
-        if time_to_ms(chunks[i]["start_time"]) <= ms_last_watched_time:
-            index = i
-    return index
+        if time_to_ms(chunks[i]["start_time"]) >= ms_last_watched_time:
+            return i
+    return len(chunks) - 1
 
 
 
@@ -79,11 +79,13 @@ def main():
         start_index = cal_start_index(rqst_movie_chunks, msg["last_watched_time"])
 
         for i in range(start_index, len(rqst_movie_chunks)): 
+            if find_new_request(sock):
+                break
             # server delay 구현 -> 일정 구간에서는 증가해야 함
             # 적절한 혼잡 발생 영상범위1 설정 필요
             # congestion delay 시간 임의 설정 00:15 ~ 01:20까지 
-
-            if 15 * 1000 <= chunk_start_ms < 80 * 1000:
+            chunk_start_ms = time_to_ms(rqst_movie_chunks[i]["start_time"])
+            if congestion_delay_start_ms <= chunk_start_ms < congestion_delay_end_ms:
                 server_to_client_delay = random.uniform(5.0, 7.0)
             else:
                 server_to_client_delay = random.uniform(0.1, 0.4)
@@ -99,9 +101,9 @@ def main():
             }
             sock.sendto(pack(response), client_addr)
 
+def find_new_request(sock):
+    new_req, _, _ = select.select([sock], [], [], 0)
+    return bool(new_req)
+
 if __name__ == "__main__":
     main()
-
-        
-
-        
