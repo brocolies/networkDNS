@@ -1,0 +1,28 @@
+[14:59:19:369] [streaming MQ] MQ ON: 50011
+[15:00:27:872] [streaming MQ] received from ('127.0.0.1', 60341): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:15:996'}
+[15:04:39:903] [streaming MQ] received from ('127.0.0.1', 63927): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:15:996'}
+[15:13:01:806] [streaming MQ] received from ('127.0.0.1', 52145): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:15:996'}
+[15:13:59:186] [streaming MQ] received from ('127.0.0.1', 51505): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:15:996'}
+[15:17:07:291] [streaming MQ] received from ('127.0.0.1', 51485): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:15:996'}
+[15:24:06:611] [streaming MQ] received from ('127.0.0.1', 55981): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:15:996'}
+[15:24:55:753] [streaming MQ] received from ('127.0.0.1', 60994): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:15:996'}
+[15:33:20:703] [streaming MQ] received from ('127.0.0.1', 52219): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:15:996'}
+[15:36:23:638] [streaming MQ] received from ('127.0.0.1', 57721): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
+[15:37:20:722] [streaming MQ] received from ('127.0.0.1', 57721): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:01:20:000'}
+[15:41:33:633] [streaming MQ] received from ('127.0.0.1', 57780): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
+[15:42:26:060] [streaming MQ] received from ('127.0.0.1', 57780): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:01:20:000'}
+[15:52:10:551] [streaming MQ] received from ('127.0.0.1', 53813): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
+[15:53:07:667] [streaming MQ] received from ('127.0.0.1', 53813): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:01:20:000'}
+[15:53:27:871] [streaming MQ] received from ('127.0.0.1', 53813): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:01:11:982'}
+[16:06:16:496] [streaming MQ] received from ('127.0.0.1', 52134): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:18:662'}
+[16:07:17:305] [streaming MQ] received from ('127.0.0.1', 52134): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:01:20:000'}
+[16:08:43:040] [streaming MQ] received from ('127.0.0.1', 62540): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
+[16:13:36:283] [streaming MQ] received from ('127.0.0.1', 53831): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
+[16:14:32:377] [streaming MQ] received from ('127.0.0.1', 53831): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:01:20:000'}
+[16:18:45:105] [streaming MQ] MQ ON: 50011
+[16:19:45:666] [streaming MQ] MQ ON: 50011
+[16:20:07:526] [streaming MQ] received from ('127.0.0.1', 57535): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
+[16:20:40:767] [streaming MQ] received from ('127.0.0.1', 57535): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:56:000'}
+[17:26:46:045] [streaming MQ] MQ ON: 50011
+[17:27:08:620] [streaming MQ] received from ('127.0.0.1', 50008): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
+[17:27:40:779] [streaming MQ] received from ('127.0.0.1', 50008): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:56:000'}

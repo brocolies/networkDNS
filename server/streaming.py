@@ -66,7 +66,7 @@ def main():
     
     # congestion delay 시간 임의 설정 00:15 ~ 01:20까지 
     congestion_delay_start_ms = 15 * 1000 
-    congestion_delay_end_ms = 80 * 1000
+    congestion_delay_end_ms = 60 * 1000
 
     while True:
         payload, client_addr = sock.recvfrom(4096)
@@ -86,7 +86,7 @@ def main():
             # congestion delay 시간 임의 설정 00:15 ~ 01:20까지 
             chunk_start_ms = time_to_ms(rqst_movie_chunks[i]["start_time"])
             if congestion_delay_start_ms <= chunk_start_ms < congestion_delay_end_ms:
-                server_to_client_delay = random.uniform(5.0, 7.0)
+                server_to_client_delay = random.uniform(5.0, 6.0)
             else:
                 server_to_client_delay = random.uniform(0.1, 0.4)
             time.sleep(server_to_client_delay)

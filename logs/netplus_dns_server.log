@@ -10,3 +10,42 @@
 [17:47:43:640] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie3', 'txid': 15956}
 [17:47:43:640] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie3', 'txid': 15956, 'answer': 'abCDN.net/cdn3'}
 [16:12:03:650] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
+[14:59:01:626] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
+[14:59:29:228] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 55708}
+[14:59:29:229] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 55708, 'answer': 'abCDN.net/cdn9'}
+[15:00:11:303] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 32575}
+[15:00:11:303] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 32575, 'answer': 'abCDN.net/cdn9'}
+[15:04:25:925] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 57471}
+[15:04:25:925] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 57471, 'answer': 'abCDN.net/cdn9'}
+[15:12:47:624] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 27786}
+[15:12:47:625] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 27786, 'answer': 'abCDN.net/cdn9'}
+[15:13:26:947] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 27211}
+[15:13:26:947] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 27211, 'answer': 'abCDN.net/cdn9'}
+[15:13:38:873] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 59173}
+[15:13:38:874] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 59173, 'answer': 'abCDN.net/cdn9'}
+[15:16:52:993] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 16932}
+[15:16:52:993] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 16932, 'answer': 'abCDN.net/cdn9'}
+[15:23:52:524] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 26482}
+[15:23:52:524] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 26482, 'answer': 'abCDN.net/cdn9'}
+[15:24:36:645] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 11583}
+[15:24:36:645] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 11583, 'answer': 'abCDN.net/cdn9'}
+[15:33:06:720] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 47829}
+[15:33:06:720] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 47829, 'answer': 'abCDN.net/cdn9'}
+[15:36:03:902] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 63926}
+[15:36:03:902] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 63926, 'answer': 'abCDN.net/cdn9'}
+[15:41:14:101] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 19353}
+[15:41:14:101] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 19353, 'answer': 'abCDN.net/cdn9'}
+[15:51:51:233] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 7421}
+[15:51:51:234] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 7421, 'answer': 'abCDN.net/cdn9'}
+[16:05:59:531] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 59831}
+[16:05:59:531] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 59831, 'answer': 'abCDN.net/cdn9'}
+[16:08:23:515] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 6601}
+[16:08:23:515] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 6601, 'answer': 'abCDN.net/cdn9'}
+[16:13:16:855] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 23338}
+[16:13:16:855] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 23338, 'answer': 'abCDN.net/cdn9'}
+[16:18:48:116] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 30384}
+[16:18:48:116] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 30384, 'answer': 'abCDN.net/cdn9'}
+[16:19:48:322] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 5890}
+[16:19:48:322] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 5890, 'answer': 'abCDN.net/cdn9'}
+[17:26:49:095] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 24254}
+[17:26:49:096] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 24254, 'answer': 'abCDN.net/cdn9'}

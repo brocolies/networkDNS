@@ -1,0 +1,1824 @@
+[14:59:29:227] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[14:59:29:230] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:00:11:301] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:00:11:304] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:00:14:085] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'start_time': '00:00:00:000', 'end_time': '00:00:02:666'}
+[15:00:14:349] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 1, 'start_time': '00:00:02:666', 'end_time': '00:00:05:332'}
+[15:00:14:505] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 2, 'start_time': '00:00:05:332', 'end_time': '00:00:07:998'}
+[15:00:14:651] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 3, 'start_time': '00:00:07:998', 'end_time': '00:00:10:664'}
+[15:00:14:876] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 4, 'start_time': '00:00:10:664', 'end_time': '00:00:13:330'}
+[15:00:15:143] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 5, 'start_time': '00:00:13:330', 'end_time': '00:00:15:996'}
+[15:00:21:357] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 6, 'start_time': '00:00:15:996', 'end_time': '00:00:18:662'}
+[15:00:27:208] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 7, 'start_time': '00:00:18:662', 'end_time': '00:00:21:328'}
+[15:00:27:869] [client] encoding switched: HQ to MQ
+R_buffer: 0.221875
+alpha: 0.5
+beta: 0.8
+gamma: 0.4
+[15:00:30:541] [client] encoding switched: MQ to LQ
+R_buffer: 0.1609375
+alpha: 0.5
+beta: 0.8
+gamma: 0.4
+[15:00:33:591] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 4, 'start_time': '00:00:16:000', 'end_time': '00:00:20:000'}
+[15:00:34:002] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 8, 'start_time': '00:00:21:328', 'end_time': '00:00:23:994'}
+[15:00:35:573] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 3, 'start_time': '00:00:24:000', 'end_time': '00:00:32:000'}
+[15:00:39:088] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 5, 'start_time': '00:00:20:000', 'end_time': '00:00:24:000'}
+[15:00:40:167] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 9, 'start_time': '00:00:23:994', 'end_time': '00:00:26:660'}
+[15:00:42:323] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 4, 'start_time': '00:00:32:000', 'end_time': '00:00:40:000'}
+[15:00:45:281] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 6, 'start_time': '00:00:24:000', 'end_time': '00:00:28:000'}
+[15:00:46:998] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 10, 'start_time': '00:00:26:660', 'end_time': '00:00:29:326'}
+[15:00:48:681] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 5, 'start_time': '00:00:40:000', 'end_time': '00:00:48:000'}
+[15:00:50:752] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 7, 'start_time': '00:00:28:000', 'end_time': '00:00:32:000'}
+[15:00:52:894] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 11, 'start_time': '00:00:29:326', 'end_time': '00:00:31:992'}
+[15:00:53:932] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 6, 'start_time': '00:00:48:000', 'end_time': '00:00:56:000'}
+[15:00:57:192] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 8, 'start_time': '00:00:32:000', 'end_time': '00:00:36:000'}
+[15:00:59:397] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 7, 'start_time': '00:00:56:000', 'end_time': '00:01:04:000'}
+[15:00:59:627] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 12, 'start_time': '00:00:31:992', 'end_time': '00:00:34:658'}
+[15:01:03:535] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 9, 'start_time': '00:00:36:000', 'end_time': '00:00:40:000'}
+[15:01:04:608] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 8, 'start_time': '00:01:04:000', 'end_time': '00:01:12:000'}
+[15:01:06:136] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 13, 'start_time': '00:00:34:658', 'end_time': '00:00:37:324'}
+[15:01:09:638] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 10, 'start_time': '00:00:40:000', 'end_time': '00:00:44:000'}
+[15:01:10:285] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 9, 'start_time': '00:01:12:000', 'end_time': '00:01:20:000'}
+[15:01:10:597] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 10, 'start_time': '00:01:20:000', 'end_time': '00:01:28:000'}
+[15:01:10:719] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 11, 'start_time': '00:01:28:000', 'end_time': '00:01:36:000'}
+[15:01:10:952] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 12, 'start_time': '00:01:36:000', 'end_time': '00:01:44:000'}
+[15:01:11:144] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 13, 'start_time': '00:01:44:000', 'end_time': '00:01:52:000'}
+[15:01:11:269] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 14, 'start_time': '00:00:37:324', 'end_time': '00:00:39:990'}
+[15:01:11:315] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 14, 'start_time': '00:01:52:000', 'end_time': '00:02:00:000'}
+[15:01:16:145] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 11, 'start_time': '00:00:44:000', 'end_time': '00:00:48:000'}
+[15:01:18:018] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 15, 'start_time': '00:00:39:990', 'end_time': '00:00:42:656'}
+[15:01:22:098] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 12, 'start_time': '00:00:48:000', 'end_time': '00:00:52:000'}
+[15:01:23:231] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 16, 'start_time': '00:00:42:656', 'end_time': '00:00:45:322'}
+[15:01:28:314] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 13, 'start_time': '00:00:52:000', 'end_time': '00:00:56:000'}
+[15:01:28:998] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 17, 'start_time': '00:00:45:322', 'end_time': '00:00:47:988'}
+[15:01:34:312] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 18, 'start_time': '00:00:47:988', 'end_time': '00:00:50:654'}
+[15:01:34:551] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 14, 'start_time': '00:00:56:000', 'end_time': '00:01:00:000'}
+[15:01:39:657] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 19, 'start_time': '00:00:50:654', 'end_time': '00:00:53:320'}
+[15:01:40:623] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 15, 'start_time': '00:01:00:000', 'end_time': '00:01:04:000'}
+[15:01:45:998] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 16, 'start_time': '00:01:04:000', 'end_time': '00:01:08:000'}
+[15:01:46:309] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 20, 'start_time': '00:00:53:320', 'end_time': '00:00:55:986'}
+[15:01:51:852] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 17, 'start_time': '00:01:08:000', 'end_time': '00:01:12:000'}
+[15:01:52:033] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 21, 'start_time': '00:00:55:986', 'end_time': '00:00:58:652'}
+[15:01:58:091] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 18, 'start_time': '00:01:12:000', 'end_time': '00:01:16:000'}
+[15:01:58:628] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 22, 'start_time': '00:00:58:652', 'end_time': '00:01:01:318'}
+[15:02:04:552] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 19, 'start_time': '00:01:16:000', 'end_time': '00:01:20:000'}
+[15:02:04:704] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 20, 'start_time': '00:01:20:000', 'end_time': '00:01:24:000'}
+[15:02:05:054] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 21, 'start_time': '00:01:24:000', 'end_time': '00:01:28:000'}
+[15:02:05:214] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 22, 'start_time': '00:01:28:000', 'end_time': '00:01:32:000'}
+[15:02:05:248] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 23, 'start_time': '00:01:01:318', 'end_time': '00:01:03:984'}
+[15:02:05:548] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 23, 'start_time': '00:01:32:000', 'end_time': '00:01:36:000'}
+[15:02:05:681] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 24, 'start_time': '00:01:36:000', 'end_time': '00:01:40:000'}
+[15:02:05:888] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 25, 'start_time': '00:01:40:000', 'end_time': '00:01:44:000'}
+[15:02:06:007] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 26, 'start_time': '00:01:44:000', 'end_time': '00:01:48:000'}
+[15:02:06:130] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 27, 'start_time': '00:01:48:000', 'end_time': '00:01:52:000'}
+[15:02:06:445] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 28, 'start_time': '00:01:52:000', 'end_time': '00:01:56:000'}
+[15:02:06:591] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 29, 'start_time': '00:01:56:000', 'end_time': '00:02:00:000'}
+[15:02:11:054] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 24, 'start_time': '00:01:03:984', 'end_time': '00:01:06:650'}
+[15:04:25:924] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:04:25:926] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:04:26:101] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'start_time': '00:00:00:000', 'end_time': '00:00:02:666'}
+[15:04:26:326] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 1, 'start_time': '00:00:02:666', 'end_time': '00:00:05:332'}
+[15:04:26:547] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 2, 'start_time': '00:00:05:332', 'end_time': '00:00:07:998'}
+[15:04:26:924] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 3, 'start_time': '00:00:07:998', 'end_time': '00:00:10:664'}
+[15:04:27:318] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 4, 'start_time': '00:00:10:664', 'end_time': '00:00:13:330'}
+[15:04:27:566] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 5, 'start_time': '00:00:13:330', 'end_time': '00:00:15:996'}
+[15:04:33:860] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 6, 'start_time': '00:00:15:996', 'end_time': '00:00:18:662'}
+[15:04:38:966] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 7, 'start_time': '00:00:18:662', 'end_time': '00:00:21:328'}
+[15:04:39:902] [client] encoding switched: HQ to MQ
+R_buffer: 0.221875
+alpha: 0.5
+beta: 0.8
+gamma: 0.4
+[15:04:42:570] [client] encoding switched: MQ to LQ
+R_buffer: 0.1609375
+alpha: 0.5
+beta: 0.8
+gamma: 0.4
+[15:04:43:978] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 8, 'start_time': '00:00:21:328', 'end_time': '00:00:23:994'}
+[15:04:46:798] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 4, 'start_time': '00:00:16:000', 'end_time': '00:00:20:000'}
+[15:04:47:857] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 3, 'start_time': '00:00:24:000', 'end_time': '00:00:32:000'}
+[15:04:49:111] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 9, 'start_time': '00:00:23:994', 'end_time': '00:00:26:660'}
+[15:04:52:994] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 5, 'start_time': '00:00:20:000', 'end_time': '00:00:24:000'}
+[15:04:54:805] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 4, 'start_time': '00:00:32:000', 'end_time': '00:00:40:000'}
+[15:04:54:997] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 10, 'start_time': '00:00:26:660', 'end_time': '00:00:29:326'}
+[15:04:59:354] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 6, 'start_time': '00:00:24:000', 'end_time': '00:00:28:000'}
+[15:05:00:236] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 11, 'start_time': '00:00:29:326', 'end_time': '00:00:31:992'}
+[15:05:00:617] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 5, 'start_time': '00:00:40:000', 'end_time': '00:00:48:000'}
+[15:05:05:528] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 7, 'start_time': '00:00:28:000', 'end_time': '00:00:32:000'}
+[15:05:05:530] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 12, 'start_time': '00:00:31:992', 'end_time': '00:00:34:658'}
+[15:05:07:018] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 6, 'start_time': '00:00:48:000', 'end_time': '00:00:56:000'}
+[15:05:11:973] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 8, 'start_time': '00:00:32:000', 'end_time': '00:00:36:000'}
+[15:05:12:106] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 13, 'start_time': '00:00:34:658', 'end_time': '00:00:37:324'}
+[15:05:12:249] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 7, 'start_time': '00:00:56:000', 'end_time': '00:01:04:000'}
+[15:05:17:559] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 9, 'start_time': '00:00:36:000', 'end_time': '00:00:40:000'}
+[15:05:17:724] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 8, 'start_time': '00:01:04:000', 'end_time': '00:01:12:000'}
+[15:05:18:710] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 14, 'start_time': '00:00:37:324', 'end_time': '00:00:39:990'}
+[15:05:23:165] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 10, 'start_time': '00:00:40:000', 'end_time': '00:00:44:000'}
+[15:05:23:890] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 9, 'start_time': '00:01:12:000', 'end_time': '00:01:20:000'}
+[15:05:24:081] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 10, 'start_time': '00:01:20:000', 'end_time': '00:01:28:000'}
+[15:05:24:340] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 11, 'start_time': '00:01:28:000', 'end_time': '00:01:36:000'}
+[15:05:24:498] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 12, 'start_time': '00:01:36:000', 'end_time': '00:01:44:000'}
+[15:05:24:678] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 13, 'start_time': '00:01:44:000', 'end_time': '00:01:52:000'}
+[15:05:24:738] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 15, 'start_time': '00:00:39:990', 'end_time': '00:00:42:656'}
+[15:05:25:040] [client] received from ('127.0.0.1', 50012): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 14, 'start_time': '00:01:52:000', 'end_time': '00:02:00:000'}
+[15:05:28:228] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 11, 'start_time': '00:00:44:000', 'end_time': '00:00:48:000'}
+[15:05:30:329] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 16, 'start_time': '00:00:42:656', 'end_time': '00:00:45:322'}
+[15:05:34:553] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 12, 'start_time': '00:00:48:000', 'end_time': '00:00:52:000'}
+[15:05:36:404] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 17, 'start_time': '00:00:45:322', 'end_time': '00:00:47:988'}
+[15:05:40:277] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 13, 'start_time': '00:00:52:000', 'end_time': '00:00:56:000'}
+[15:05:42:094] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 18, 'start_time': '00:00:47:988', 'end_time': '00:00:50:654'}
+[15:05:46:603] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 14, 'start_time': '00:00:56:000', 'end_time': '00:01:00:000'}
+[15:05:48:959] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 19, 'start_time': '00:00:50:654', 'end_time': '00:00:53:320'}
+[15:05:53:312] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 15, 'start_time': '00:01:00:000', 'end_time': '00:01:04:000'}
+[15:05:54:794] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 20, 'start_time': '00:00:53:320', 'end_time': '00:00:55:986'}
+[15:05:59:680] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 16, 'start_time': '00:01:04:000', 'end_time': '00:01:08:000'}
+[15:06:01:274] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 21, 'start_time': '00:00:55:986', 'end_time': '00:00:58:652'}
+[15:06:05:907] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 17, 'start_time': '00:01:08:000', 'end_time': '00:01:12:000'}
+[15:06:08:169] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 22, 'start_time': '00:00:58:652', 'end_time': '00:01:01:318'}
+[15:06:11:811] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 18, 'start_time': '00:01:12:000', 'end_time': '00:01:16:000'}
+[15:06:14:954] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 23, 'start_time': '00:01:01:318', 'end_time': '00:01:03:984'}
+[15:06:18:169] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 19, 'start_time': '00:01:16:000', 'end_time': '00:01:20:000'}
+[15:06:18:328] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 20, 'start_time': '00:01:20:000', 'end_time': '00:01:24:000'}
+[15:06:18:469] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 21, 'start_time': '00:01:24:000', 'end_time': '00:01:28:000'}
+[15:06:18:808] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 22, 'start_time': '00:01:28:000', 'end_time': '00:01:32:000'}
+[15:06:19:161] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 23, 'start_time': '00:01:32:000', 'end_time': '00:01:36:000'}
+[15:06:19:514] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 24, 'start_time': '00:01:36:000', 'end_time': '00:01:40:000'}
+[15:06:19:858] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 25, 'start_time': '00:01:40:000', 'end_time': '00:01:44:000'}
+[15:06:20:236] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 26, 'start_time': '00:01:44:000', 'end_time': '00:01:48:000'}
+[15:06:20:490] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 27, 'start_time': '00:01:48:000', 'end_time': '00:01:52:000'}
+[15:06:20:702] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 28, 'start_time': '00:01:52:000', 'end_time': '00:01:56:000'}
+[15:06:21:053] [client] received from ('127.0.0.1', 50011): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 29, 'start_time': '00:01:56:000', 'end_time': '00:02:00:000'}
+[15:06:21:347] [client] received from ('127.0.0.1', 50010): {'type': 'chunk_rsp', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 24, 'start_time': '00:01:03:984', 'end_time': '00:01:06:650'}
+[15:12:47:622] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:12:47:626] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:12:47:774] [client] [encoding_type] 00:00:00:000 ~ 00:00:02:666
+[15:12:48:145] [client] [encoding_type] 00:00:02:666 ~ 00:00:05:332
+[15:12:48:355] [client] [encoding_type] 00:00:05:332 ~ 00:00:07:998
+[15:12:48:507] [client] [encoding_type] 00:00:07:998 ~ 00:00:10:664
+[15:12:48:774] [client] [encoding_type] 00:00:10:664 ~ 00:00:13:330
+[15:12:48:979] [client] [encoding_type] 00:00:13:330 ~ 00:00:15:996
+[15:12:51:127] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:12:53:796] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:12:55:453] [client] [encoding_type] 00:00:15:996 ~ 00:00:18:662
+[15:12:56:465] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:12:59:136] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:13:01:353] [client] [encoding_type] 00:00:18:662 ~ 00:00:21:328
+[15:13:01:803] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:13:01:804] [client] encoding switched: HQ to MQ
+R_buffer: 0.221875
+alpha: 0.5
+beta: 0.8
+gamma: 0.4
+[15:13:04:475] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:13:04:475] [client] encoding switched: MQ to LQ
+R_buffer: 0.1609375
+alpha: 0.5
+beta: 0.8
+gamma: 0.4
+[15:13:07:146] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:13:07:779] [client] [encoding_type] 00:00:21:328 ~ 00:00:23:994
+[15:13:08:278] [client] [encoding_type] 00:00:16:000 ~ 00:00:20:000
+[15:13:09:550] [client] [encoding_type] 00:00:24:000 ~ 00:00:32:000
+[15:13:09:815] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:13:14:303] [client] [encoding_type] 00:00:20:000 ~ 00:00:24:000
+[15:13:14:320] [client] [encoding_type] 00:00:23:994 ~ 00:00:26:660
+[15:13:16:403] [client] [encoding_type] 00:00:32:000 ~ 00:00:40:000
+[15:13:17:820] [client] PLAY: [LQ] 00:00:24:000 ~ 00:00:32:000
+[15:13:19:528] [client] [encoding_type] 00:00:26:660 ~ 00:00:29:326
+[15:13:20:701] [client] [encoding_type] 00:00:24:000 ~ 00:00:28:000
+[15:13:22:179] [client] [encoding_type] 00:00:40:000 ~ 00:00:48:000
+[15:13:25:757] [client] [encoding_type] 00:00:29:326 ~ 00:00:31:992
+[15:13:25:821] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:13:26:946] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:13:26:947] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:13:31:982] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:13:32:368] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:13:32:679] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:13:33:009] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:13:33:171] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:13:33:317] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:13:38:873] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:13:38:874] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:13:39:910] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:13:40:286] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:13:40:462] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:13:40:817] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:13:40:970] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:13:41:321] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:13:43:207] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:13:45:877] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:13:47:490] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:13:48:545] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:13:51:215] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:13:53:721] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:13:53:886] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:13:53:887] [client] encoding switched: HQ to MQ
+R_buffer: 0.221875
+alpha: 0.5
+beta: 0.8
+gamma: 0.4
+[15:13:56:558] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:13:56:559] [client] encoding switched: MQ to LQ
+R_buffer: 0.1609375
+alpha: 0.5
+beta: 0.8
+gamma: 0.4
+[15:13:59:229] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:13:59:695] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[15:14:01:684] [client] [LQ] 00:00:24:000 ~ 00:00:32:000
+[15:14:01:900] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:14:04:639] [client] [MQ] 00:00:16:000 ~ 00:00:20:000
+[15:14:05:616] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[15:14:08:344] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:14:09:905] [client] PLAY: [LQ] 00:00:24:000 ~ 00:00:32:000
+[15:14:11:007] [client] [MQ] 00:00:20:000 ~ 00:00:24:000
+[15:14:11:123] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[15:14:15:017] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:14:17:115] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[15:14:17:304] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[15:14:17:906] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:14:21:678] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:14:23:678] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[15:14:24:153] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[15:14:25:911] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:14:26:849] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[15:14:28:999] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[15:14:30:450] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[15:14:32:328] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[15:14:33:915] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:14:34:295] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[15:14:35:861] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[15:14:38:373] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[15:14:38:615] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:14:38:756] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:14:38:862] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:14:39:123] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:14:39:337] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:14:40:845] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[15:14:41:316] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[15:14:41:919] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+[15:14:46:753] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[15:14:46:891] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[15:14:49:921] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+[15:14:52:775] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[15:14:53:132] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[15:14:57:924] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+[15:14:58:774] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[15:14:59:500] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[15:15:04:729] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[15:15:05:928] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:15:05:964] [client] [HQ] 00:00:50:654 ~ 00:00:53:320
+[15:15:11:087] [client] [HQ] 00:00:53:320 ~ 00:00:55:986
+[15:15:11:370] [client] [MQ] 00:01:00:000 ~ 00:01:04:000
+[15:15:13:932] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:15:16:728] [client] [HQ] 00:00:55:986 ~ 00:00:58:652
+[15:15:18:161] [client] [MQ] 00:01:04:000 ~ 00:01:08:000
+[15:15:21:936] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:15:23:178] [client] [HQ] 00:00:58:652 ~ 00:01:01:318
+[15:15:24:066] [client] [MQ] 00:01:08:000 ~ 00:01:12:000
+[15:15:28:913] [client] [HQ] 00:01:01:318 ~ 00:01:03:984
+[15:15:29:942] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:15:29:998] [client] [MQ] 00:01:12:000 ~ 00:01:16:000
+[15:15:34:299] [client] [HQ] 00:01:03:984 ~ 00:01:06:650
+[15:15:36:552] [client] [MQ] 00:01:16:000 ~ 00:01:20:000
+[15:15:36:805] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[15:15:37:034] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[15:15:37:203] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[15:15:37:365] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[15:15:37:645] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[15:15:37:903] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[15:15:37:945] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:16:52:991] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:16:52:994] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:16:53:213] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:16:53:582] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:16:53:916] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:16:54:253] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:16:54:532] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:16:54:773] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:16:56:606] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:16:59:274] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:17:00:200] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:17:01:946] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:17:04:616] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:17:07:122] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:17:07:288] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:17:07:289] [client] encoding switched: HQ to MQ
+R_buffer: 0.20917819999999998
+alpha: 0.3
+beta: 0.8
+gamma: 0.4
+[15:17:09:957] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:17:09:958] [client] encoding switched: MQ to LQ
+R_buffer: 0.13275346
+alpha: 0.3
+beta: 0.8
+gamma: 0.4
+[15:17:12:203] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[15:17:12:627] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:17:13:892] [client] [MQ] 00:00:16:000 ~ 00:00:20:000
+[15:17:15:298] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:17:15:415] [client] [LQ] 00:00:24:000 ~ 00:00:32:000
+[15:17:18:345] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[15:17:20:629] [client] [MQ] 00:00:20:000 ~ 00:00:24:000
+[15:17:20:937] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:17:23:420] [client] PLAY: [LQ] 00:00:24:000 ~ 00:00:32:000
+[15:17:24:872] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[15:17:26:954] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:17:27:143] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[15:17:30:245] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[15:17:31:425] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:17:32:078] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:17:32:787] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[15:17:36:887] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[15:17:38:350] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[15:17:39:370] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[15:17:39:428] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:17:42:445] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[15:17:44:984] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[15:17:45:465] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[15:17:47:433] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:17:47:850] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[15:17:50:301] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[15:17:50:558] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:17:50:916] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:17:51:308] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:17:51:365] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[15:17:51:627] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:17:51:849] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:17:54:721] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[15:17:55:438] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+[15:17:57:420] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[15:18:00:616] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[15:18:03:010] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[15:18:03:444] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+[15:18:06:967] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[15:18:09:877] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[15:18:11:449] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+[15:18:13:424] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[15:18:16:507] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[15:18:19:451] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:18:20:153] [client] [HQ] 00:00:50:654 ~ 00:00:53:320
+[15:18:23:174] [client] [MQ] 00:01:00:000 ~ 00:01:04:000
+[15:18:26:210] [client] [HQ] 00:00:53:320 ~ 00:00:55:986
+[15:18:27:457] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:18:29:670] [client] [MQ] 00:01:04:000 ~ 00:01:08:000
+[15:18:32:992] [client] [HQ] 00:00:55:986 ~ 00:00:58:652
+[15:18:35:461] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:18:36:088] [client] [MQ] 00:01:08:000 ~ 00:01:12:000
+[15:18:38:929] [client] [HQ] 00:00:58:652 ~ 00:01:01:318
+[15:18:42:270] [client] [MQ] 00:01:12:000 ~ 00:01:16:000
+[15:18:43:466] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:18:45:764] [client] [HQ] 00:01:01:318 ~ 00:01:03:984
+[15:18:47:481] [client] [MQ] 00:01:16:000 ~ 00:01:20:000
+[15:18:47:744] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[15:18:47:879] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[15:18:48:143] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[15:18:48:249] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[15:18:48:456] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[15:18:48:568] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[15:18:48:811] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[15:18:48:974] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[15:18:49:191] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[15:18:49:386] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[15:18:51:470] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:23:52:522] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:23:52:525] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:23:52:860] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:23:53:033] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:23:53:191] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:23:53:310] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:23:53:638] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:23:53:982] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:23:55:925] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.12
+[15:23:58:597] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.288
+[15:24:00:467] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:24:01:267] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.2952
+[15:24:03:937] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.29808
+[15:24:06:606] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.239232
+[15:24:06:607] [client] encoding switched: HQ to MQ
+R_buffer: 0.15569280000000002
+alpha: 0.4
+beta: 0.7
+gamma: 0.4
+[15:24:06:960] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:24:09:278] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.15569280000000002
+[15:24:09:279] [client] encoding switched: MQ to LQ
+R_buffer: 0.06227712000000001
+alpha: 0.4
+beta: 0.7
+gamma: 0.4
+[15:24:11:949] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.06227712000000001
+[15:24:13:075] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[15:24:13:222] [client] [MQ] 00:00:16:000 ~ 00:00:20:000
+[15:24:15:508] [client] [LQ] 00:00:24:000 ~ 00:00:32:000
+[15:24:18:260] [client] [MQ] 00:00:20:000 ~ 00:00:24:000
+[15:24:19:753] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[15:24:21:524] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:24:23:512] [client] PLAY: [LQ] 00:00:24:000 ~ 00:00:32:000
+R_buffer: 0.024910848000000006
+[15:24:24:299] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[15:24:26:366] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[15:24:26:655] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:24:30:462] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[15:24:31:517] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.009964339200000004
+[15:24:31:636] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[15:24:31:771] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:24:36:644] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:24:36:645] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:24:37:382] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:24:37:693] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:24:37:933] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:24:38:132] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:24:38:249] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:24:38:650] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:24:40:663] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.12
+[15:24:43:333] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.29
+[15:24:45:500] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:24:46:005] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.30
+[15:24:48:676] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.30
+[15:24:50:975] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:24:51:346] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[15:24:51:347] [client] encoding switched: HQ to MQ
+R_buffer: 0.21569280000000002
+alpha: 0.4
+beta: 0.7
+gamma: 0.4
+[15:24:54:018] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.22
+[15:24:54:019] [client] encoding switched: MQ to LQ
+R_buffer: 0.14627712
+alpha: 0.4
+beta: 0.7
+gamma: 0.4
+[15:24:56:118] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[15:24:56:688] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.15
+[15:24:59:358] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.06
+[15:24:59:542] [client] [LQ] 00:00:24:000 ~ 00:00:32:000
+[15:25:01:836] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[15:25:02:692] [client] [MQ] 00:00:16:000 ~ 00:00:20:000
+[15:25:05:892] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:25:07:120] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[15:25:07:546] [client] PLAY: [LQ] 00:00:24:000 ~ 00:00:32:000
+R_buffer: 0.02
+[15:25:08:363] [client] [MQ] 00:00:20:000 ~ 00:00:24:000
+[15:25:11:682] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:25:13:935] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[15:25:14:006] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[15:25:15:549] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.01
+[15:25:18:583] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:25:19:096] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[15:25:19:250] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[15:25:23:554] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.00
+[15:25:24:314] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[15:25:24:804] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[15:25:25:078] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[15:25:30:737] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[15:25:30:894] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[15:25:31:083] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[15:25:31:557] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.00
+[15:25:36:186] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[15:25:36:388] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[15:25:36:920] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[15:25:37:170] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:25:37:529] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:25:37:900] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:25:38:016] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:25:38:206] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:25:39:558] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+R_buffer: 0.06
+[15:25:42:171] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[15:25:42:666] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[15:25:47:563] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+R_buffer: 0.38
+[15:25:48:792] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[15:25:48:876] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[15:25:54:041] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[15:25:54:875] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[15:25:55:566] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+R_buffer: 0.45
+[15:25:59:933] [client] [HQ] 00:00:50:654 ~ 00:00:53:320
+[15:26:01:464] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[15:26:03:572] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+R_buffer: 0.42
+[15:26:05:601] [client] [HQ] 00:00:53:320 ~ 00:00:55:986
+[15:26:07:917] [client] [MQ] 00:01:00:000 ~ 00:01:04:000
+[15:26:11:577] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+R_buffer: 0.35
+[15:26:12:221] [client] [HQ] 00:00:55:986 ~ 00:00:58:652
+[15:26:14:887] [client] [MQ] 00:01:04:000 ~ 00:01:08:000
+[15:26:17:986] [client] [HQ] 00:00:58:652 ~ 00:01:01:318
+[15:26:19:582] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+R_buffer: 0.26
+[15:26:21:750] [client] [MQ] 00:01:08:000 ~ 00:01:12:000
+[15:26:23:567] [client] [HQ] 00:01:01:318 ~ 00:01:03:984
+[15:26:27:588] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+R_buffer: 0.16
+[15:26:27:995] [client] [MQ] 00:01:12:000 ~ 00:01:16:000
+[15:26:28:866] [client] [HQ] 00:01:03:984 ~ 00:01:06:650
+[15:26:33:824] [client] [MQ] 00:01:16:000 ~ 00:01:20:000
+[15:26:34:193] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[15:26:34:517] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[15:26:34:633] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[15:26:34:733] [client] [HQ] 00:01:06:650 ~ 00:01:09:316
+[15:26:34:775] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[15:26:34:994] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[15:26:35:173] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[15:26:35:547] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[15:26:35:591] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+R_buffer: 0.07
+[15:33:06:714] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:33:06:722] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:33:06:908] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:33:07:181] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:33:07:314] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:33:07:609] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:33:07:901] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:33:08:176] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:33:10:022] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.12
+[15:33:12:692] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.29
+[15:33:14:576] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:33:15:362] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.30
+[15:33:18:033] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.30
+[15:33:19:960] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:33:20:701] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[15:33:20:701] [client] encoding switched: HQ to MQ
+R_buffer: 0.21569280000000002
+alpha: 0.4
+beta: 0.7
+gamma: 0.4
+[15:33:23:373] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.22
+[15:33:23:374] [client] encoding switched: MQ to LQ
+R_buffer: 0.14627712
+alpha: 0.4
+beta: 0.7
+gamma: 0.4
+[15:33:25:879] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[15:33:26:045] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.15
+[15:33:26:351] [client] [MQ] 00:00:16:000 ~ 00:00:20:000
+[15:33:28:717] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.06
+[15:33:29:935] [client] [LQ] 00:00:24:000 ~ 00:00:32:000
+[15:33:32:111] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[15:33:32:584] [client] [MQ] 00:00:20:000 ~ 00:00:24:000
+[15:33:35:584] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:33:37:779] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[15:33:37:939] [client] PLAY: [LQ] 00:00:24:000 ~ 00:00:32:000
+R_buffer: 0.02
+[15:33:38:513] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[15:33:40:822] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:33:43:034] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[15:33:43:976] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[15:33:45:942] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.01
+[15:33:46:378] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:33:49:030] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[15:33:49:096] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[15:33:51:739] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[15:33:53:947] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.00
+[15:33:54:680] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[15:33:55:720] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[15:33:56:826] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[15:34:00:726] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[15:34:01:576] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[15:34:01:951] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.06
+[15:34:02:826] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[15:34:03:192] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:34:03:499] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:34:03:776] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:34:04:142] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:34:04:446] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:34:06:542] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[15:34:07:112] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[15:34:09:956] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+R_buffer: 0.08
+[15:34:12:354] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[15:34:13:084] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[15:34:17:960] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+R_buffer: 0.39
+[15:34:18:021] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[15:34:18:126] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[15:34:23:976] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[15:34:23:979] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[15:34:25:965] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+R_buffer: 0.46
+[15:34:29:100] [client] [MQ] 00:01:00:000 ~ 00:01:04:000
+[15:34:29:473] [client] [HQ] 00:00:50:654 ~ 00:00:53:320
+[15:34:33:968] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+R_buffer: 0.42
+[15:34:35:094] [client] [MQ] 00:01:04:000 ~ 00:01:08:000
+[15:34:35:651] [client] [HQ] 00:00:53:320 ~ 00:00:55:986
+[15:34:41:966] [client] [MQ] 00:01:08:000 ~ 00:01:12:000
+[15:34:41:970] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+R_buffer: 0.35
+[15:34:42:500] [client] [HQ] 00:00:55:986 ~ 00:00:58:652
+[15:34:47:554] [client] [MQ] 00:01:12:000 ~ 00:01:16:000
+[15:34:49:497] [client] [HQ] 00:00:58:652 ~ 00:01:01:318
+[15:34:49:972] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+R_buffer: 0.26
+[15:34:54:296] [client] [MQ] 00:01:16:000 ~ 00:01:20:000
+[15:34:54:468] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[15:34:54:528] [client] [HQ] 00:01:01:318 ~ 00:01:03:984
+[15:34:54:626] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[15:34:54:750] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[15:34:55:058] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[15:34:55:397] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[15:34:55:542] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[15:34:55:700] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[15:34:55:975] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[15:34:56:352] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[15:34:56:533] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[15:34:57:975] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+R_buffer: 0.16
+[15:35:00:630] [client] [HQ] 00:01:03:984 ~ 00:01:06:650
+[15:35:05:979] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+R_buffer: 0.07
+[15:36:03:900] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:36:03:903] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:36:04:275] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:36:04:507] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:36:04:872] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:36:05:238] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:36:05:403] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:36:05:692] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:36:07:610] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.10
+[15:36:10:281] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.25
+[15:36:11:377] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:36:12:951] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.28
+[15:36:15:623] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.29
+[15:36:17:493] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:36:18:294] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[15:36:20:963] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.22
+[15:36:23:634] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.16
+[15:36:23:635] [client] encoding switched: HQ to MQ
+R_buffer: 0.08
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:36:23:835] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[15:36:26:304] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.08
+[15:36:28:662] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[15:36:28:663] [client] encoding switched: MQ to LQ
+R_buffer: 0.04
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:36:29:417] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[15:36:32:664] [client] PLAY: [MQ] 00:00:24:000 ~ 00:00:28:000
+R_buffer: 0.04
+[15:36:34:576] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[15:36:35:534] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:36:35:604] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[15:36:39:668] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[15:36:40:743] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:36:42:418] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[15:36:43:539] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.02
+[15:36:45:785] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:36:46:142] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[15:36:48:793] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[15:36:51:023] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[15:36:51:543] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.01
+[15:36:51:675] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[15:36:55:301] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[15:36:56:520] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[15:36:56:916] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[15:36:59:548] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.06
+[15:37:00:986] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[15:37:03:049] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[15:37:03:214] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:37:03:423] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[15:37:03:501] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:37:03:610] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:37:03:776] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:37:04:140] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:37:07:097] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[15:37:07:553] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+R_buffer: 0.08
+[15:37:08:960] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[15:37:12:806] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[15:37:14:139] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[15:37:15:555] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+R_buffer: 0.34
+[15:37:15:556] [client] encoding switched: LQ to MQ
+R_buffer: 0.42
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:37:18:167] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[15:37:20:722] [client] [MQ] 00:01:00:000 ~ 00:01:04:000
+[15:37:20:947] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[15:37:21:281] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[15:37:21:610] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[15:37:21:937] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[15:37:22:338] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[15:37:22:532] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[15:37:22:746] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[15:37:23:140] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[15:37:23:334] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[15:37:23:455] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[15:37:23:561] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+R_buffer: 0.42
+[15:37:23:562] [client] encoding switched: MQ to HQ
+R_buffer: 0.96
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:37:23:970] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[15:37:24:154] [client] [HQ] 00:01:30:644 ~ 00:01:33:310
+[15:37:24:288] [client] [HQ] 00:01:33:310 ~ 00:01:35:976
+[15:37:24:421] [client] [HQ] 00:01:35:976 ~ 00:01:38:642
+[15:37:24:579] [client] [HQ] 00:01:38:642 ~ 00:01:41:308
+[15:37:24:977] [client] [HQ] 00:01:41:308 ~ 00:01:43:974
+[15:37:25:372] [client] [HQ] 00:01:43:974 ~ 00:01:46:640
+[15:37:25:584] [client] [HQ] 00:01:46:640 ~ 00:01:49:306
+[15:37:25:787] [client] [HQ] 00:01:49:306 ~ 00:01:51:972
+[15:37:25:962] [client] [HQ] 00:01:51:972 ~ 00:01:54:638
+[15:37:26:322] [client] [HQ] 00:01:54:638 ~ 00:01:57:304
+[15:37:26:592] [client] [HQ] 00:01:57:304 ~ 00:01:59:970
+[15:37:31:567] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+R_buffer: 0.96
+[15:37:39:573] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+R_buffer: 1.78
+[15:37:47:576] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+R_buffer: 2.14
+[15:37:55:581] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+R_buffer: 2.27
+[15:38:03:584] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+R_buffer: 2.28
+[15:41:14:099] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:41:14:103] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:41:14:307] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:41:14:481] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:41:14:835] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:41:15:134] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:41:15:435] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:41:15:807] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:41:17:609] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.10
+[15:41:20:281] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.25
+[15:41:21:422] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:41:22:950] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.28
+[15:41:25:622] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.29
+[15:41:27:714] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:41:28:293] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[15:41:30:964] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.22
+[15:41:33:632] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.16
+[15:41:33:632] [client] encoding switched: HQ to MQ
+R_buffer: 0.08
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:41:34:322] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[15:41:36:299] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.08
+[15:41:38:871] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[15:41:38:872] [client] encoding switched: MQ to LQ
+R_buffer: 0.04
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:41:41:023] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[15:41:42:876] [client] PLAY: [MQ] 00:00:24:000 ~ 00:00:28:000
+R_buffer: 0.04
+[15:41:44:073] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:41:44:420] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[15:41:46:318] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[15:41:49:300] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:41:49:423] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[15:41:51:959] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[15:41:52:076] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.02
+[15:41:54:709] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:41:55:551] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[15:41:58:379] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[15:42:00:080] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.01
+[15:42:01:095] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[15:42:01:577] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[15:42:05:377] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[15:42:07:206] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[15:42:07:700] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[15:42:08:084] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.01
+[15:42:10:876] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[15:42:12:438] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[15:42:12:786] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:42:13:042] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:42:13:393] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:42:13:517] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:42:13:913] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:42:14:571] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[15:42:16:089] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+R_buffer: 0.05
+[15:42:16:613] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[15:42:21:001] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[15:42:22:664] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[15:42:24:093] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+R_buffer: 0.33
+[15:42:24:093] [client] encoding switched: LQ to MQ
+R_buffer: 0.41
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:42:26:060] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[15:42:26:218] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[15:42:26:440] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[15:42:26:703] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[15:42:27:101] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[15:42:27:265] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[15:42:27:513] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[15:42:27:701] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[15:42:27:848] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[15:42:28:065] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[15:42:28:218] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[15:42:28:485] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[15:42:32:097] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+R_buffer: 0.41
+[15:42:32:099] [client] encoding switched: MQ to HQ
+R_buffer: 0.96
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:42:33:485] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[15:42:33:638] [client] [HQ] 00:01:30:644 ~ 00:01:33:310
+[15:42:34:025] [client] [HQ] 00:01:33:310 ~ 00:01:35:976
+[15:42:34:208] [client] [HQ] 00:01:35:976 ~ 00:01:38:642
+[15:42:34:548] [client] [HQ] 00:01:38:642 ~ 00:01:41:308
+[15:42:34:684] [client] [HQ] 00:01:41:308 ~ 00:01:43:974
+[15:42:34:793] [client] [HQ] 00:01:43:974 ~ 00:01:46:640
+[15:42:35:138] [client] [HQ] 00:01:46:640 ~ 00:01:49:306
+[15:42:35:398] [client] [HQ] 00:01:49:306 ~ 00:01:51:972
+[15:42:35:601] [client] [HQ] 00:01:51:972 ~ 00:01:54:638
+[15:42:35:834] [client] [HQ] 00:01:54:638 ~ 00:01:57:304
+[15:42:35:959] [client] [HQ] 00:01:57:304 ~ 00:01:59:970
+[15:42:40:101] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+R_buffer: 0.96
+[15:42:48:104] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+R_buffer: 1.78
+[15:42:56:109] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+R_buffer: 2.14
+[15:43:04:115] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+R_buffer: 2.27
+[15:43:12:118] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+R_buffer: 2.28
+[15:51:51:231] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[15:51:51:235] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[15:51:51:372] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[15:51:51:586] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[15:51:51:794] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[15:51:51:946] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[15:51:52:134] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[15:51:52:329] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[15:51:54:526] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.10
+[15:51:57:196] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.25
+[15:51:57:738] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[15:51:59:866] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.28
+[15:52:02:537] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.29
+[15:52:04:005] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[15:52:05:205] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[15:52:07:876] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.22
+[15:52:09:984] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[15:52:10:548] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.16
+[15:52:10:549] [client] encoding switched: HQ to MQ
+R_buffer: 0.13
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:52:13:218] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.13
+[15:52:16:530] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[15:52:16:564] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[15:52:16:564] [client] encoding switched: MQ to LQ
+R_buffer: 0.07
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:52:20:567] [client] PLAY: [MQ] 00:00:24:000 ~ 00:00:28:000
+R_buffer: 0.07
+[15:52:22:299] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[15:52:22:504] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[15:52:23:398] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[15:52:28:031] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[15:52:29:124] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[15:52:29:645] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[15:52:31:404] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.03
+[15:52:33:231] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[15:52:34:900] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[15:52:36:458] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[15:52:39:408] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.02
+[15:52:39:455] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[15:52:41:028] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[15:52:41:484] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[15:52:44:976] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[15:52:46:739] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[15:52:47:115] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[15:52:47:414] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.01
+[15:52:50:858] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[15:52:52:425] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[15:52:52:824] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:52:52:923] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[15:52:53:025] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:52:53:270] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:52:53:458] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:52:53:725] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:52:55:419] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+R_buffer: 0.05
+[15:52:56:517] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[15:52:57:989] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[15:53:01:905] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[15:53:03:421] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+R_buffer: 0.33
+[15:53:03:422] [client] encoding switched: LQ to MQ
+R_buffer: 0.41
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:53:03:809] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[15:53:07:667] [client] [MQ] 00:01:00:000 ~ 00:01:04:000
+[15:53:07:919] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[15:53:08:077] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[15:53:08:475] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[15:53:08:668] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[15:53:09:014] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[15:53:09:041] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[15:53:09:149] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[15:53:09:255] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[15:53:09:597] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[15:53:09:738] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[15:53:10:069] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[15:53:11:425] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+R_buffer: 0.41
+[15:53:11:425] [client] encoding switched: MQ to HQ
+R_buffer: 0.71
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:53:15:430] [client] PLAY: [MQ] 00:01:00:000 ~ 00:01:04:000
+R_buffer: 0.71
+[15:53:15:747] [client] [HQ] 00:00:50:654 ~ 00:00:53:320
+[15:53:18:417] [client] PLAY: [HQ] 00:00:50:654 ~ 00:00:53:320
+R_buffer: 0.35
+[15:53:20:899] [client] [HQ] 00:01:06:650 ~ 00:01:09:316
+[15:53:23:570] [client] PLAY: [HQ] 00:01:06:650 ~ 00:01:09:316
+R_buffer: 0.18
+[15:53:27:870] [client] [HQ] 00:01:09:316 ~ 00:01:11:982
+[15:53:27:871] [client] encoding switched: HQ to MQ
+R_buffer: 0.09
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:53:30:542] [client] PLAY: [HQ] 00:01:09:316 ~ 00:01:11:982
+R_buffer: 0.09
+[15:53:33:792] [client] [MQ] 00:01:12:000 ~ 00:01:16:000
+[15:53:33:793] [client] encoding switched: MQ to LQ
+R_buffer: 0.04
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[15:53:33:984] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[15:53:34:250] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[15:53:34:424] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[15:53:34:512] [client] [HQ] 00:01:11:982 ~ 00:01:14:648
+[15:53:34:600] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[15:53:34:826] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[15:53:37:798] [client] PLAY: [MQ] 00:01:12:000 ~ 00:01:16:000
+R_buffer: 0.04
+[15:53:39:137] [client] [MQ] 00:01:16:000 ~ 00:01:20:000
+[15:53:39:427] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[15:53:39:697] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[15:53:40:088] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[15:53:40:271] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[15:53:40:461] [client] [HQ] 00:01:14:648 ~ 00:01:17:314
+[15:53:40:529] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[15:53:40:887] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[15:53:41:250] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[15:53:41:387] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[15:53:41:721] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[15:53:41:954] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[15:53:45:803] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+R_buffer: 0.22
+[15:53:46:204] [client] [HQ] 00:01:17:314 ~ 00:01:19:980
+[15:53:51:596] [client] [HQ] 00:01:19:980 ~ 00:01:22:646
+[15:53:51:778] [client] [HQ] 00:01:22:646 ~ 00:01:25:312
+[15:53:52:167] [client] [HQ] 00:01:25:312 ~ 00:01:27:978
+[15:53:52:313] [client] [HQ] 00:01:27:978 ~ 00:01:30:644
+[15:53:52:522] [client] [HQ] 00:01:30:644 ~ 00:01:33:310
+[15:53:52:785] [client] [HQ] 00:01:33:310 ~ 00:01:35:976
+[15:53:53:018] [client] [HQ] 00:01:35:976 ~ 00:01:38:642
+[15:53:53:178] [client] [HQ] 00:01:38:642 ~ 00:01:41:308
+[15:53:53:529] [client] [HQ] 00:01:41:308 ~ 00:01:43:974
+[15:53:53:735] [client] [HQ] 00:01:43:974 ~ 00:01:46:640
+[15:53:53:808] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+R_buffer: 0.26
+[15:53:53:929] [client] [HQ] 00:01:46:640 ~ 00:01:49:306
+[15:53:54:221] [client] [HQ] 00:01:49:306 ~ 00:01:51:972
+[15:53:54:521] [client] [HQ] 00:01:51:972 ~ 00:01:54:638
+[15:53:54:629] [client] [HQ] 00:01:54:638 ~ 00:01:57:304
+[15:53:54:932] [client] [HQ] 00:01:57:304 ~ 00:01:59:970
+[15:54:01:812] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+R_buffer: 0.23
+[15:54:09:817] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+R_buffer: 0.17
+[15:54:17:821] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+R_buffer: 0.08
+[16:05:59:529] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[16:05:59:532] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[16:05:59:795] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[16:06:00:081] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[16:06:00:380] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[16:06:00:703] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[16:06:00:986] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[16:06:01:198] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[16:06:03:135] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.10
+[16:06:05:806] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.25
+[16:06:07:008] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[16:06:08:476] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.28
+[16:06:11:148] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.29
+[16:06:13:818] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[16:06:13:952] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[16:06:16:486] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.17
+[16:06:16:487] [client] encoding switched: HQ to MQ
+R_buffer: 0.14
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:06:19:045] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[16:06:19:157] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.14
+[16:06:19:158] [client] encoding switched: MQ to LQ
+R_buffer: 0.07
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:06:21:826] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.07
+[16:06:23:270] [client] [MQ] 00:00:20:000 ~ 00:00:24:000
+[16:06:24:228] [client] [LQ] 00:00:24:000 ~ 00:00:32:000
+[16:06:24:854] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[16:06:28:473] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[16:06:29:814] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[16:06:31:756] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[16:06:32:231] [client] PLAY: [LQ] 00:00:24:000 ~ 00:00:32:000
+R_buffer: 0.03
+[16:06:33:815] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[16:06:34:981] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[16:06:37:156] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[16:06:39:748] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[16:06:40:237] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.02
+[16:06:40:589] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[16:06:43:356] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[16:06:46:506] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[16:06:46:772] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[16:06:48:239] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.01
+[16:06:49:585] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[16:06:51:812] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[16:06:53:251] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[16:06:55:073] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[16:06:56:244] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.05
+[16:06:57:911] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[16:06:58:251] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[16:06:58:599] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[16:06:58:886] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[16:06:59:048] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[16:06:59:139] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[16:06:59:240] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[16:07:00:712] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[16:07:04:250] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+R_buffer: 0.08
+[16:07:05:524] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[16:07:06:406] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[16:07:11:190] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[16:07:12:256] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+R_buffer: 0.34
+[16:07:12:256] [client] encoding switched: LQ to MQ
+R_buffer: 0.42
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:07:13:067] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[16:07:17:305] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[16:07:17:514] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[16:07:17:831] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[16:07:18:056] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[16:07:18:208] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[16:07:18:497] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[16:07:18:618] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[16:07:18:913] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[16:07:19:116] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[16:07:19:414] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[16:07:19:548] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[16:07:19:552] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[16:07:20:259] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+R_buffer: 0.42
+[16:07:20:260] [client] encoding switched: MQ to HQ
+R_buffer: 0.96
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:07:26:168] [client] [HQ] 00:00:50:654 ~ 00:00:53:320
+[16:07:26:456] [client] [HQ] 00:01:30:644 ~ 00:01:33:310
+[16:07:26:837] [client] [HQ] 00:01:33:310 ~ 00:01:35:976
+[16:07:26:946] [client] [HQ] 00:01:35:976 ~ 00:01:38:642
+[16:07:27:295] [client] [HQ] 00:01:38:642 ~ 00:01:41:308
+[16:07:27:522] [client] [HQ] 00:01:41:308 ~ 00:01:43:974
+[16:07:27:734] [client] [HQ] 00:01:43:974 ~ 00:01:46:640
+[16:07:28:092] [client] [HQ] 00:01:46:640 ~ 00:01:49:306
+[16:07:28:265] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+R_buffer: 0.96
+[16:07:28:368] [client] [HQ] 00:01:49:306 ~ 00:01:51:972
+[16:07:28:519] [client] [HQ] 00:01:51:972 ~ 00:01:54:638
+[16:07:28:813] [client] [HQ] 00:01:54:638 ~ 00:01:57:304
+[16:07:29:095] [client] [HQ] 00:01:57:304 ~ 00:01:59:970
+[16:07:36:270] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+R_buffer: 1.58
+[16:07:44:272] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+R_buffer: 2.04
+[16:07:52:277] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+R_buffer: 2.22
+[16:08:00:285] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+R_buffer: 2.26
+[16:08:23:514] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[16:08:23:516] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[16:08:23:642] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[16:08:23:941] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[16:08:24:335] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[16:08:24:581] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[16:08:24:804] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[16:08:25:139] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[16:08:27:014] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.10
+[16:08:29:685] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.25
+[16:08:31:597] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[16:08:32:356] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.28
+[16:08:35:025] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.29
+[16:08:37:184] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[16:08:37:696] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[16:08:40:364] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.22
+[16:08:43:036] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.16
+[16:08:43:037] [client] encoding switched: HQ to MQ
+R_buffer: 0.08
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:08:43:308] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[16:08:45:707] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.08
+[16:08:48:435] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[16:08:48:707] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[16:08:48:708] [client] encoding switched: MQ to LQ
+R_buffer: 0.04
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:08:52:713] [client] PLAY: [MQ] 00:00:24:000 ~ 00:00:28:000
+R_buffer: 0.04
+[16:08:53:831] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[16:08:54:103] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[16:08:54:989] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[16:08:59:997] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[16:09:00:198] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[16:09:00:704] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[16:09:01:836] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.02
+[16:09:05:983] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[16:09:06:786] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[16:09:07:262] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[16:09:09:839] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.01
+[16:09:11:713] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[16:09:12:785] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[16:09:13:923] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[16:09:17:841] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.01
+[16:09:18:363] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[16:09:18:714] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[16:09:20:473] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[16:09:24:664] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[16:09:25:123] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[16:09:25:847] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+R_buffer: 0.00
+[16:09:26:139] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[16:09:26:409] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[16:09:26:580] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[16:09:26:729] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[16:09:26:973] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[16:09:27:207] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[16:09:29:820] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[16:09:31:394] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[16:09:33:851] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+R_buffer: 0.00
+[16:09:35:012] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[16:09:37:583] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[16:09:41:853] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+R_buffer: 0.25
+[16:09:42:011] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[16:09:43:821] [client] [MQ] 00:01:00:000 ~ 00:01:04:000
+[16:09:48:640] [client] [HQ] 00:00:50:654 ~ 00:00:53:320
+[16:09:49:859] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+R_buffer: 0.33
+[16:09:50:767] [client] [MQ] 00:01:04:000 ~ 00:01:08:000
+[16:09:54:076] [client] [HQ] 00:00:53:320 ~ 00:00:55:986
+[16:09:56:825] [client] [MQ] 00:01:08:000 ~ 00:01:12:000
+[16:09:57:860] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+R_buffer: 0.31
+[16:09:59:410] [client] [HQ] 00:00:55:986 ~ 00:00:58:652
+[16:10:02:646] [client] [MQ] 00:01:12:000 ~ 00:01:16:000
+[16:10:05:526] [client] [HQ] 00:00:58:652 ~ 00:01:01:318
+[16:10:05:865] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+R_buffer: 0.26
+[16:10:07:900] [client] [MQ] 00:01:16:000 ~ 00:01:20:000
+[16:10:08:235] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[16:10:08:462] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[16:10:08:793] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[16:10:09:093] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[16:10:09:442] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[16:10:09:576] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[16:10:09:775] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[16:10:10:119] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[16:10:10:292] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[16:10:10:418] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[16:10:11:877] [client] [HQ] 00:01:01:318 ~ 00:01:03:984
+[16:10:13:868] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+R_buffer: 0.18
+[16:10:18:335] [client] [HQ] 00:01:03:984 ~ 00:01:06:650
+[16:10:21:872] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+R_buffer: 0.09
+[16:13:16:852] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[16:13:16:857] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[16:13:16:967] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[16:13:17:339] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[16:13:17:547] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[16:13:17:747] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[16:13:17:947] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[16:13:18:184] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[16:13:20:251] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.10
+[16:13:22:923] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.25
+[16:13:24:170] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[16:13:25:594] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.28
+[16:13:28:266] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.29
+[16:13:30:863] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[16:13:30:934] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[16:13:33:606] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.22
+[16:13:36:276] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.16
+[16:13:36:280] [client] encoding switched: HQ to MQ
+R_buffer: 0.08
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:13:37:213] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[16:13:38:951] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.08
+[16:13:42:477] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[16:13:42:477] [client] encoding switched: MQ to LQ
+R_buffer: 0.04
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:13:42:666] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[16:13:46:482] [client] PLAY: [MQ] 00:00:24:000 ~ 00:00:28:000
+R_buffer: 0.04
+[16:13:48:231] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[16:13:48:268] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[16:13:48:853] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[16:13:54:180] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[16:13:55:161] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[16:13:55:185] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[16:13:56:234] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.02
+[16:13:59:705] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[16:14:01:661] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[16:14:02:085] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[16:14:04:239] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.01
+[16:14:06:393] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[16:14:07:252] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[16:14:07:426] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[16:14:12:247] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.01
+[16:14:12:268] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[16:14:13:479] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[16:14:13:806] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[16:14:18:759] [client] [MQ] 00:00:48:000 ~ 00:00:52:000
+[16:14:19:016] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[16:14:19:152] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[16:14:19:355] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[16:14:19:537] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[16:14:19:668] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[16:14:19:923] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[16:14:20:253] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+R_buffer: 0.00
+[16:14:20:308] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[16:14:25:405] [client] [MQ] 00:00:52:000 ~ 00:00:56:000
+[16:14:25:718] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[16:14:28:258] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+R_buffer: 0.30
+[16:14:28:258] [client] encoding switched: LQ to MQ
+R_buffer: 0.40
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:14:30:922] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[16:14:32:377] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[16:14:32:506] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[16:14:32:778] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[16:14:33:109] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[16:14:33:313] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[16:14:33:436] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[16:14:33:746] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[16:14:33:904] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[16:14:34:169] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[16:14:34:360] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[16:14:34:540] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[16:14:36:263] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+R_buffer: 0.40
+[16:14:36:264] [client] encoding switched: MQ to HQ
+R_buffer: 0.95
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:14:37:068] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[16:14:37:372] [client] [HQ] 00:01:30:644 ~ 00:01:33:310
+[16:14:37:638] [client] [HQ] 00:01:33:310 ~ 00:01:35:976
+[16:14:37:763] [client] [HQ] 00:01:35:976 ~ 00:01:38:642
+[16:14:38:143] [client] [HQ] 00:01:38:642 ~ 00:01:41:308
+[16:14:38:413] [client] [HQ] 00:01:41:308 ~ 00:01:43:974
+[16:14:38:553] [client] [HQ] 00:01:43:974 ~ 00:01:46:640
+[16:14:38:947] [client] [HQ] 00:01:46:640 ~ 00:01:49:306
+[16:14:39:130] [client] [HQ] 00:01:49:306 ~ 00:01:51:972
+[16:14:39:253] [client] [HQ] 00:01:51:972 ~ 00:01:54:638
+[16:14:39:609] [client] [HQ] 00:01:54:638 ~ 00:01:57:304
+[16:14:39:763] [client] [HQ] 00:01:57:304 ~ 00:01:59:970
+[16:14:44:269] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+R_buffer: 0.95
+[16:14:52:275] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+R_buffer: 1.78
+[16:15:00:279] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+R_buffer: 2.14
+[16:15:08:281] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+R_buffer: 2.27
+[16:15:16:286] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+R_buffer: 2.28
+[16:18:48:114] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[16:18:48:118] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[16:18:48:316] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[16:18:48:591] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[16:18:48:772] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[16:18:49:156] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[16:18:49:273] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[16:18:49:389] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[16:18:51:414] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[16:18:51:510] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.10
+[16:18:54:033] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[16:18:54:180] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.30
+[16:18:56:851] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.40
+[16:18:56:866] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[16:18:59:170] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[16:18:59:521] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.40
+[16:19:01:735] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[16:19:02:189] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.45
+[16:19:04:072] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[16:19:04:859] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.47
+[16:19:06:495] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[16:19:07:530] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.49
+[16:19:08:794] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[16:19:10:201] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.49
+[16:19:10:897] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[16:19:12:872] [client] PLAY: [HQ] 00:00:21:328 ~ 00:00:23:994
+R_buffer: 0.50
+[16:19:13:276] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[16:19:15:544] [client] PLAY: [HQ] 00:00:23:994 ~ 00:00:26:660
+R_buffer: 0.50
+[16:19:16:271] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[16:19:18:213] [client] PLAY: [HQ] 00:00:26:660 ~ 00:00:29:326
+R_buffer: 0.50
+[16:19:18:738] [client] [HQ] 00:00:45:322 ~ 00:00:47:988
+[16:19:20:880] [client] PLAY: [HQ] 00:00:29:326 ~ 00:00:31:992
+R_buffer: 0.50
+[16:19:21:105] [client] [HQ] 00:00:47:988 ~ 00:00:50:654
+[16:19:23:547] [client] [HQ] 00:00:50:654 ~ 00:00:53:320
+[16:19:23:550] [client] PLAY: [HQ] 00:00:31:992 ~ 00:00:34:658
+R_buffer: 0.50
+[16:19:26:221] [client] PLAY: [HQ] 00:00:34:658 ~ 00:00:37:324
+R_buffer: 0.55
+[16:19:26:314] [client] [HQ] 00:00:53:320 ~ 00:00:55:986
+[16:19:28:414] [client] [HQ] 00:00:55:986 ~ 00:00:58:652
+[16:19:28:888] [client] PLAY: [HQ] 00:00:37:324 ~ 00:00:39:990
+R_buffer: 0.52
+[16:19:31:222] [client] [HQ] 00:00:58:652 ~ 00:01:01:318
+[16:19:31:559] [client] PLAY: [HQ] 00:00:39:990 ~ 00:00:42:656
+R_buffer: 0.56
+[16:19:31:573] [client] [HQ] 00:01:01:318 ~ 00:01:03:984
+[16:19:31:732] [client] [HQ] 00:01:03:984 ~ 00:01:06:650
+[16:19:31:983] [client] [HQ] 00:01:06:650 ~ 00:01:09:316
+[16:19:32:131] [client] [HQ] 00:01:09:316 ~ 00:01:11:982
+[16:19:32:527] [client] [HQ] 00:01:11:982 ~ 00:01:14:648
+[16:19:32:903] [client] [HQ] 00:01:14:648 ~ 00:01:17:314
+[16:19:33:189] [client] [HQ] 00:01:17:314 ~ 00:01:19:980
+[16:19:33:348] [client] [HQ] 00:01:19:980 ~ 00:01:22:646
+[16:19:33:489] [client] [HQ] 00:01:22:646 ~ 00:01:25:312
+[16:19:33:740] [client] [HQ] 00:01:25:312 ~ 00:01:27:978
+[16:19:33:863] [client] [HQ] 00:01:27:978 ~ 00:01:30:644
+[16:19:34:105] [client] [HQ] 00:01:30:644 ~ 00:01:33:310
+[16:19:34:232] [client] PLAY: [HQ] 00:00:42:656 ~ 00:00:45:322
+R_buffer: 0.58
+[16:19:34:408] [client] [HQ] 00:01:33:310 ~ 00:01:35:976
+[16:19:34:652] [client] [HQ] 00:01:35:976 ~ 00:01:38:642
+[16:19:35:055] [client] [HQ] 00:01:38:642 ~ 00:01:41:308
+[16:19:35:217] [client] [HQ] 00:01:41:308 ~ 00:01:43:974
+[16:19:35:551] [client] [HQ] 00:01:43:974 ~ 00:01:46:640
+[16:19:35:847] [client] [HQ] 00:01:46:640 ~ 00:01:49:306
+[16:19:36:042] [client] [HQ] 00:01:49:306 ~ 00:01:51:972
+[16:19:36:364] [client] [HQ] 00:01:51:972 ~ 00:01:54:638
+[16:19:36:470] [client] [HQ] 00:01:54:638 ~ 00:01:57:304
+[16:19:36:701] [client] [HQ] 00:01:57:304 ~ 00:01:59:970
+[16:19:36:904] [client] PLAY: [HQ] 00:00:45:322 ~ 00:00:47:988
+R_buffer: 1.14
+[16:19:39:574] [client] PLAY: [HQ] 00:00:47:988 ~ 00:00:50:654
+R_buffer: 1.87
+[16:19:48:320] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[16:19:48:324] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[16:19:48:427] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[16:19:48:541] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[16:19:48:761] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[16:19:48:898] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[16:19:49:072] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[16:19:49:415] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[16:19:51:506] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.10
+[16:19:54:178] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.25
+[16:19:55:264] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[16:19:56:846] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.28
+[16:19:59:515] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.29
+[16:20:00:786] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[16:20:02:187] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[16:20:04:857] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.22
+[16:20:06:065] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[16:20:07:525] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.16
+[16:20:07:525] [client] encoding switched: HQ to MQ
+R_buffer: 0.13
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:20:10:196] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.13
+[16:20:10:197] [client] encoding switched: MQ to LQ
+R_buffer: 0.07
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:20:11:458] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[16:20:12:868] [client] PLAY: [HQ] 00:00:21:328 ~ 00:00:23:994
+R_buffer: 0.07
+[16:20:13:488] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[16:20:15:980] [client] [LQ] 00:00:24:000 ~ 00:00:32:000
+[16:20:16:890] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[16:20:18:643] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[16:20:21:358] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[16:20:22:605] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[16:20:23:763] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[16:20:23:985] [client] PLAY: [LQ] 00:00:24:000 ~ 00:00:32:000
+R_buffer: 0.03
+[16:20:27:234] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[16:20:27:755] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[16:20:29:378] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[16:20:31:988] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.02
+[16:20:32:826] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[16:20:33:666] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[16:20:35:105] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[16:20:37:955] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[16:20:38:140] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[16:20:38:399] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[16:20:38:730] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[16:20:38:918] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[16:20:39:024] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[16:20:39:107] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[16:20:39:218] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[16:20:39:521] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[16:20:39:989] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.01
+[16:20:39:990] [client] encoding switched: LQ to MQ
+R_buffer: 0.40
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:20:40:767] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[16:20:44:691] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[16:20:46:208] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[16:20:46:317] [client] [MQ] 00:01:00:000 ~ 00:01:04:000
+[16:20:46:672] [client] [MQ] 00:01:04:000 ~ 00:01:08:000
+[16:20:46:984] [client] [MQ] 00:01:08:000 ~ 00:01:12:000
+[16:20:47:224] [client] [MQ] 00:01:12:000 ~ 00:01:16:000
+[16:20:47:547] [client] [MQ] 00:01:16:000 ~ 00:01:20:000
+[16:20:47:747] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[16:20:47:980] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[16:20:47:992] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.40
+[16:20:47:993] [client] encoding switched: MQ to HQ
+R_buffer: 1.00
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[16:20:48:238] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[16:20:48:455] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[16:20:48:719] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[16:20:48:957] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[16:20:49:143] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[16:20:49:376] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[16:20:49:544] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[16:20:49:656] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[16:20:49:778] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[16:20:49:901] [client] [HQ] 00:01:06:650 ~ 00:01:09:316
+[16:20:50:036] [client] [HQ] 00:01:09:316 ~ 00:01:11:982
+[16:20:50:420] [client] [HQ] 00:01:11:982 ~ 00:01:14:648
+[16:20:50:663] [client] [HQ] 00:01:14:648 ~ 00:01:17:314
+[16:20:50:788] [client] [HQ] 00:01:17:314 ~ 00:01:19:980
+[16:20:51:113] [client] [HQ] 00:01:19:980 ~ 00:01:22:646
+[16:20:51:512] [client] [HQ] 00:01:22:646 ~ 00:01:25:312
+[16:20:51:822] [client] [HQ] 00:01:25:312 ~ 00:01:27:978
+[16:20:52:198] [client] [HQ] 00:01:27:978 ~ 00:01:30:644
+[16:20:52:319] [client] [HQ] 00:01:30:644 ~ 00:01:33:310
+[16:20:52:645] [client] [HQ] 00:01:33:310 ~ 00:01:35:976
+[16:20:52:912] [client] [HQ] 00:01:35:976 ~ 00:01:38:642
+[16:20:53:283] [client] [HQ] 00:01:38:642 ~ 00:01:41:308
+[16:20:53:580] [client] [HQ] 00:01:41:308 ~ 00:01:43:974
+[16:20:53:908] [client] [HQ] 00:01:43:974 ~ 00:01:46:640
+[16:20:54:144] [client] [HQ] 00:01:46:640 ~ 00:01:49:306
+[16:20:54:265] [client] [HQ] 00:01:49:306 ~ 00:01:51:972
+[16:20:54:514] [client] [HQ] 00:01:51:972 ~ 00:01:54:638
+[16:20:54:637] [client] [HQ] 00:01:54:638 ~ 00:01:57:304
+[16:20:54:849] [client] [HQ] 00:01:57:304 ~ 00:01:59:970
+[16:20:55:996] [client] PLAY: [LQ] 00:00:56:000 ~ 00:01:04:000
+R_buffer: 1.00
+[16:21:03:997] [client] PLAY: [LQ] 00:01:04:000 ~ 00:01:12:000
+R_buffer: 2.30
+[16:21:12:001] [client] PLAY: [LQ] 00:01:12:000 ~ 00:01:20:000
+R_buffer: 2.90
+[16:21:20:007] [client] PLAY: [LQ] 00:01:20:000 ~ 00:01:28:000
+R_buffer: 3.15
+[16:21:28:008] [client] PLAY: [LQ] 00:01:28:000 ~ 00:01:36:000
+R_buffer: 3.23
+[16:21:36:015] [client] PLAY: [LQ] 00:01:36:000 ~ 00:01:44:000
+R_buffer: 3.21
+[16:21:44:017] [client] PLAY: [LQ] 00:01:44:000 ~ 00:01:52:000
+R_buffer: 3.16
+[16:21:52:022] [client] PLAY: [LQ] 00:01:52:000 ~ 00:02:00:000
+R_buffer: 3.08
+[17:26:49:091] [client] received from ('127.0.0.1', 50001): index.netplus.com/movie9
+[17:26:49:097] [client] received from ('127.0.0.1', 50000): {'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[17:26:49:247] [client] [HQ] 00:00:00:000 ~ 00:00:02:666
+[17:26:49:530] [client] [HQ] 00:00:02:666 ~ 00:00:05:332
+[17:26:49:910] [client] [HQ] 00:00:05:332 ~ 00:00:07:998
+[17:26:50:151] [client] [HQ] 00:00:07:998 ~ 00:00:10:664
+[17:26:50:435] [client] [HQ] 00:00:10:664 ~ 00:00:13:330
+[17:26:50:724] [client] [HQ] 00:00:13:330 ~ 00:00:15:996
+[17:26:52:598] [client] PLAY: [HQ] 00:00:00:000 ~ 00:00:02:666
+R_buffer: 0.10
+[17:26:55:268] [client] PLAY: [HQ] 00:00:02:666 ~ 00:00:05:332
+R_buffer: 0.25
+[17:26:56:426] [client] [HQ] 00:00:15:996 ~ 00:00:18:662
+[17:26:57:938] [client] PLAY: [HQ] 00:00:05:332 ~ 00:00:07:998
+R_buffer: 0.28
+[17:27:00:605] [client] PLAY: [HQ] 00:00:07:998 ~ 00:00:10:664
+R_buffer: 0.29
+[17:27:02:222] [client] [HQ] 00:00:18:662 ~ 00:00:21:328
+[17:27:03:276] [client] PLAY: [HQ] 00:00:10:664 ~ 00:00:13:330
+R_buffer: 0.24
+[17:27:05:947] [client] PLAY: [HQ] 00:00:13:330 ~ 00:00:15:996
+R_buffer: 0.22
+[17:27:07:406] [client] [HQ] 00:00:21:328 ~ 00:00:23:994
+[17:27:08:619] [client] PLAY: [HQ] 00:00:15:996 ~ 00:00:18:662
+R_buffer: 0.16
+[17:27:08:619] [client] encoding switched: HQ to MQ
+R_buffer: 0.13
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[17:27:11:289] [client] PLAY: [HQ] 00:00:18:662 ~ 00:00:21:328
+R_buffer: 0.13
+[17:27:11:289] [client] encoding switched: MQ to LQ
+R_buffer: 0.07
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[17:27:12:802] [client] [HQ] 00:00:23:994 ~ 00:00:26:660
+[17:27:13:774] [client] [MQ] 00:00:24:000 ~ 00:00:28:000
+[17:27:13:960] [client] PLAY: [HQ] 00:00:21:328 ~ 00:00:23:994
+R_buffer: 0.07
+[17:27:16:309] [client] [LQ] 00:00:24:000 ~ 00:00:32:000
+[17:27:18:235] [client] [HQ] 00:00:26:660 ~ 00:00:29:326
+[17:27:19:083] [client] [MQ] 00:00:28:000 ~ 00:00:32:000
+[17:27:21:588] [client] [LQ] 00:00:32:000 ~ 00:00:40:000
+[17:27:23:698] [client] [HQ] 00:00:29:326 ~ 00:00:31:992
+[17:27:24:314] [client] PLAY: [LQ] 00:00:24:000 ~ 00:00:32:000
+R_buffer: 0.03
+[17:27:24:664] [client] [MQ] 00:00:32:000 ~ 00:00:36:000
+[17:27:27:160] [client] [LQ] 00:00:40:000 ~ 00:00:48:000
+[17:27:29:503] [client] [HQ] 00:00:31:992 ~ 00:00:34:658
+[17:27:29:856] [client] [MQ] 00:00:36:000 ~ 00:00:40:000
+[17:27:32:283] [client] [LQ] 00:00:48:000 ~ 00:00:56:000
+[17:27:32:315] [client] PLAY: [LQ] 00:00:32:000 ~ 00:00:40:000
+R_buffer: 0.02
+[17:27:34:683] [client] [HQ] 00:00:34:658 ~ 00:00:37:324
+[17:27:35:036] [client] [MQ] 00:00:40:000 ~ 00:00:44:000
+[17:27:38:052] [client] [LQ] 00:00:56:000 ~ 00:01:04:000
+[17:27:38:289] [client] [LQ] 00:01:04:000 ~ 00:01:12:000
+[17:27:38:578] [client] [LQ] 00:01:12:000 ~ 00:01:20:000
+[17:27:38:701] [client] [LQ] 00:01:20:000 ~ 00:01:28:000
+[17:27:39:099] [client] [LQ] 00:01:28:000 ~ 00:01:36:000
+[17:27:39:248] [client] [LQ] 00:01:36:000 ~ 00:01:44:000
+[17:27:39:469] [client] [LQ] 00:01:44:000 ~ 00:01:52:000
+[17:27:39:792] [client] [HQ] 00:00:37:324 ~ 00:00:39:990
+[17:27:39:864] [client] [LQ] 00:01:52:000 ~ 00:02:00:000
+[17:27:40:319] [client] PLAY: [LQ] 00:00:40:000 ~ 00:00:48:000
+R_buffer: 0.06
+[17:27:40:320] [client] encoding switched: LQ to MQ
+R_buffer: 0.43
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[17:27:40:779] [client] [MQ] 00:00:44:000 ~ 00:00:48:000
+[17:27:45:477] [client] [HQ] 00:00:39:990 ~ 00:00:42:656
+[17:27:46:627] [client] [MQ] 00:00:56:000 ~ 00:01:00:000
+[17:27:46:828] [client] [MQ] 00:01:00:000 ~ 00:01:04:000
+[17:27:47:172] [client] [MQ] 00:01:04:000 ~ 00:01:08:000
+[17:27:47:277] [client] [MQ] 00:01:08:000 ~ 00:01:12:000
+[17:27:47:586] [client] [MQ] 00:01:12:000 ~ 00:01:16:000
+[17:27:47:764] [client] [MQ] 00:01:16:000 ~ 00:01:20:000
+[17:27:48:132] [client] [MQ] 00:01:20:000 ~ 00:01:24:000
+[17:27:48:240] [client] [MQ] 00:01:24:000 ~ 00:01:28:000
+[17:27:48:326] [client] PLAY: [LQ] 00:00:48:000 ~ 00:00:56:000
+R_buffer: 0.43
+[17:27:48:326] [client] encoding switched: MQ to HQ
+R_buffer: 0.56
+alpha: 0.5
+beta: 0.4
+gamma: 0.15
+[17:27:48:536] [client] [MQ] 00:01:28:000 ~ 00:01:32:000
+[17:27:48:821] [client] [MQ] 00:01:32:000 ~ 00:01:36:000
+[17:27:48:940] [client] [MQ] 00:01:36:000 ~ 00:01:40:000
+[17:27:49:293] [client] [MQ] 00:01:40:000 ~ 00:01:44:000
+[17:27:49:477] [client] [MQ] 00:01:44:000 ~ 00:01:48:000
+[17:27:49:843] [client] [MQ] 00:01:48:000 ~ 00:01:52:000
+[17:27:50:129] [client] [MQ] 00:01:52:000 ~ 00:01:56:000
+[17:27:50:512] [client] [HQ] 00:00:42:656 ~ 00:00:45:322
+[17:27:50:527] [client] [MQ] 00:01:56:000 ~ 00:02:00:000
+[17:27:50:632] [client] [HQ] 00:01:01:318 ~ 00:01:03:984
+[17:27:50:802] [client] [HQ] 00:01:03:984 ~ 00:01:06:650
+[17:27:51:103] [client] [HQ] 00:01:06:650 ~ 00:01:09:316
+[17:27:51:246] [client] [HQ] 00:01:09:316 ~ 00:01:11:982
+[17:27:51:524] [client] [HQ] 00:01:11:982 ~ 00:01:14:648
+[17:27:51:894] [client] [HQ] 00:01:14:648 ~ 00:01:17:314
+[17:27:52:198] [client] [HQ] 00:01:17:314 ~ 00:01:19:980
+[17:27:52:332] [client] PLAY: [MQ] 00:00:56:000 ~ 00:01:00:000
+R_buffer: 0.56
+[17:27:52:368] [client] [HQ] 00:01:19:980 ~ 00:01:22:646
+[17:27:52:477] [client] [HQ] 00:01:22:646 ~ 00:01:25:312
+[17:27:52:695] [client] [HQ] 00:01:25:312 ~ 00:01:27:978
+[17:27:52:937] [client] [HQ] 00:01:27:978 ~ 00:01:30:644
+[17:27:53:047] [client] [HQ] 00:01:30:644 ~ 00:01:33:310
+[17:27:53:317] [client] [HQ] 00:01:33:310 ~ 00:01:35:976
+[17:27:53:493] [client] [HQ] 00:01:35:976 ~ 00:01:38:642
+[17:27:53:629] [client] [HQ] 00:01:38:642 ~ 00:01:41:308
+[17:27:53:874] [client] [HQ] 00:01:41:308 ~ 00:01:43:974
+[17:27:54:090] [client] [HQ] 00:01:43:974 ~ 00:01:46:640
+[17:27:54:278] [client] [HQ] 00:01:46:640 ~ 00:01:49:306
+[17:27:54:395] [client] [HQ] 00:01:49:306 ~ 00:01:51:972
+[17:27:54:542] [client] [HQ] 00:01:51:972 ~ 00:01:54:638
+[17:27:54:675] [client] [HQ] 00:01:54:638 ~ 00:01:57:304
+[17:27:54:918] [client] [HQ] 00:01:57:304 ~ 00:01:59:970
+[17:27:55:003] [client] PLAY: [HQ] 00:01:01:318 ~ 00:01:03:984
+R_buffer: 0.58
+[17:27:57:673] [client] PLAY: [HQ] 00:01:03:984 ~ 00:01:06:650
+R_buffer: 1.29
+[17:28:00:343] [client] PLAY: [HQ] 00:01:06:650 ~ 00:01:09:316
+R_buffer: 1.60
+[17:28:03:014] [client] PLAY: [HQ] 00:01:09:316 ~ 00:01:11:982
+R_buffer: 1.70
+[17:28:05:684] [client] PLAY: [HQ] 00:01:11:982 ~ 00:01:14:648
+R_buffer: 1.70
+[17:28:08:357] [client] PLAY: [HQ] 00:01:14:648 ~ 00:01:17:314
+R_buffer: 1.65
+[17:28:11:028] [client] PLAY: [HQ] 00:01:17:314 ~ 00:01:19:980
+R_buffer: 1.57
+[17:28:13:699] [client] PLAY: [HQ] 00:01:19:980 ~ 00:01:22:646
+R_buffer: 1.49
+[17:28:16:371] [client] PLAY: [HQ] 00:01:22:646 ~ 00:01:25:312
+R_buffer: 1.39
+[17:28:19:039] [client] PLAY: [HQ] 00:01:25:312 ~ 00:01:27:978
+R_buffer: 1.30
+[17:28:21:710] [client] PLAY: [HQ] 00:01:27:978 ~ 00:01:30:644
+R_buffer: 1.20
+[17:28:24:381] [client] PLAY: [HQ] 00:01:30:644 ~ 00:01:33:310
+R_buffer: 1.10
+[17:28:27:053] [client] PLAY: [HQ] 00:01:33:310 ~ 00:01:35:976
+R_buffer: 1.00
+[17:28:29:723] [client] PLAY: [HQ] 00:01:35:976 ~ 00:01:38:642
+R_buffer: 0.90
+[17:28:32:393] [client] PLAY: [HQ] 00:01:38:642 ~ 00:01:41:308
+R_buffer: 0.80
+[17:28:35:062] [client] PLAY: [HQ] 00:01:41:308 ~ 00:01:43:974
+R_buffer: 0.70
+[17:28:37:734] [client] PLAY: [HQ] 00:01:43:974 ~ 00:01:46:640
+R_buffer: 0.60
+[17:28:40:402] [client] PLAY: [HQ] 00:01:46:640 ~ 00:01:49:306
+R_buffer: 0.50
+[17:28:43:071] [client] PLAY: [HQ] 00:01:49:306 ~ 00:01:51:972
+R_buffer: 0.40
+[17:28:45:739] [client] PLAY: [HQ] 00:01:51:972 ~ 00:01:54:638
+R_buffer: 0.30
+[17:28:48:411] [client] PLAY: [HQ] 00:01:54:638 ~ 00:01:57:304
+R_buffer: 0.20
+[17:28:51:077] [client] PLAY: [HQ] 00:01:57:304 ~ 00:01:59:970
+R_buffer: 0.10

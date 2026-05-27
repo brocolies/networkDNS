@@ -1,0 +1,21 @@
+[14:59:22:024] [streaming LQ] LQ ON: 50012
+[15:00:30:543] [streaming LQ] received from ('127.0.0.1', 60341): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:18:662'}
+[15:04:42:571] [streaming LQ] received from ('127.0.0.1', 63927): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:18:662'}
+[15:13:04:477] [streaming LQ] received from ('127.0.0.1', 52145): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:18:662'}
+[15:13:56:559] [streaming LQ] received from ('127.0.0.1', 51505): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:18:662'}
+[15:17:09:960] [streaming LQ] received from ('127.0.0.1', 51485): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:18:662'}
+[15:24:09:281] [streaming LQ] received from ('127.0.0.1', 55981): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:18:662'}
+[15:24:54:019] [streaming LQ] received from ('127.0.0.1', 60994): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:18:662'}
+[15:33:23:376] [streaming LQ] received from ('127.0.0.1', 52219): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:18:662'}
+[15:36:28:665] [streaming LQ] received from ('127.0.0.1', 57721): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:28:000'}
+[15:41:38:872] [streaming LQ] received from ('127.0.0.1', 57780): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:28:000'}
+[15:52:16:567] [streaming LQ] received from ('127.0.0.1', 53813): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:28:000'}
+[15:53:33:795] [streaming LQ] received from ('127.0.0.1', 53813): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:01:16:000'}
+[16:06:19:159] [streaming LQ] received from ('127.0.0.1', 52134): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
+[16:08:48:710] [streaming LQ] received from ('127.0.0.1', 62540): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:28:000'}
+[16:13:42:480] [streaming LQ] received from ('127.0.0.1', 53831): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:28:000'}
+[16:18:46:424] [streaming LQ] LQ ON: 50012
+[16:19:46:911] [streaming LQ] LQ ON: 50012
+[16:20:10:198] [streaming LQ] received from ('127.0.0.1', 57535): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:23:994'}
+[17:26:47:349] [streaming LQ] LQ ON: 50012
+[17:27:11:289] [streaming LQ] received from ('127.0.0.1', 50008): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:23:994'}

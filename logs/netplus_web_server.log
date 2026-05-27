@@ -2,3 +2,42 @@
 [16:12:10:495] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
 [16:15:25:219] [netplus_web_server] received from ('127.0.0.1', 54052): {'type': 'info_rqst', 'movie_id': 9}
 [16:15:25:219] [netplus_web_server] sent to ('127.0.0.1', 54052): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[14:59:11:590] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[14:59:29:227] [netplus_web_server] received from ('127.0.0.1', 55478): {'type': 'info_rqst', 'movie_id': 9}
+[14:59:29:227] [netplus_web_server] sent to ('127.0.0.1', 55478): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:00:11:301] [netplus_web_server] received from ('127.0.0.1', 60341): {'type': 'info_rqst', 'movie_id': 9}
+[15:00:11:301] [netplus_web_server] sent to ('127.0.0.1', 60341): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:04:25:924] [netplus_web_server] received from ('127.0.0.1', 63927): {'type': 'info_rqst', 'movie_id': 9}
+[15:04:25:924] [netplus_web_server] sent to ('127.0.0.1', 63927): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:12:47:621] [netplus_web_server] received from ('127.0.0.1', 52145): {'type': 'info_rqst', 'movie_id': 9}
+[15:12:47:622] [netplus_web_server] sent to ('127.0.0.1', 52145): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:13:26:946] [netplus_web_server] received from ('127.0.0.1', 54312): {'type': 'info_rqst', 'movie_id': 9}
+[15:13:26:946] [netplus_web_server] sent to ('127.0.0.1', 54312): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:13:38:873] [netplus_web_server] received from ('127.0.0.1', 51505): {'type': 'info_rqst', 'movie_id': 9}
+[15:13:38:873] [netplus_web_server] sent to ('127.0.0.1', 51505): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:16:52:991] [netplus_web_server] received from ('127.0.0.1', 51485): {'type': 'info_rqst', 'movie_id': 9}
+[15:16:52:991] [netplus_web_server] sent to ('127.0.0.1', 51485): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:23:52:522] [netplus_web_server] received from ('127.0.0.1', 55981): {'type': 'info_rqst', 'movie_id': 9}
+[15:23:52:522] [netplus_web_server] sent to ('127.0.0.1', 55981): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:24:36:644] [netplus_web_server] received from ('127.0.0.1', 60994): {'type': 'info_rqst', 'movie_id': 9}
+[15:24:36:644] [netplus_web_server] sent to ('127.0.0.1', 60994): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:33:06:714] [netplus_web_server] received from ('127.0.0.1', 52219): {'type': 'info_rqst', 'movie_id': 9}
+[15:33:06:714] [netplus_web_server] sent to ('127.0.0.1', 52219): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:36:03:900] [netplus_web_server] received from ('127.0.0.1', 57721): {'type': 'info_rqst', 'movie_id': 9}
+[15:36:03:900] [netplus_web_server] sent to ('127.0.0.1', 57721): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:41:14:099] [netplus_web_server] received from ('127.0.0.1', 57780): {'type': 'info_rqst', 'movie_id': 9}
+[15:41:14:099] [netplus_web_server] sent to ('127.0.0.1', 57780): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[15:51:51:230] [netplus_web_server] received from ('127.0.0.1', 53813): {'type': 'info_rqst', 'movie_id': 9}
+[15:51:51:230] [netplus_web_server] sent to ('127.0.0.1', 53813): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[16:05:59:528] [netplus_web_server] received from ('127.0.0.1', 52134): {'type': 'info_rqst', 'movie_id': 9}
+[16:05:59:529] [netplus_web_server] sent to ('127.0.0.1', 52134): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[16:08:23:513] [netplus_web_server] received from ('127.0.0.1', 62540): {'type': 'info_rqst', 'movie_id': 9}
+[16:08:23:513] [netplus_web_server] sent to ('127.0.0.1', 62540): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[16:13:16:852] [netplus_web_server] received from ('127.0.0.1', 53831): {'type': 'info_rqst', 'movie_id': 9}
+[16:13:16:852] [netplus_web_server] sent to ('127.0.0.1', 53831): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[16:18:48:114] [netplus_web_server] received from ('127.0.0.1', 61819): {'type': 'info_rqst', 'movie_id': 9}
+[16:18:48:114] [netplus_web_server] sent to ('127.0.0.1', 61819): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[16:19:48:318] [netplus_web_server] received from ('127.0.0.1', 57535): {'type': 'info_rqst', 'movie_id': 9}
+[16:19:48:319] [netplus_web_server] sent to ('127.0.0.1', 57535): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[17:26:49:090] [netplus_web_server] received from ('127.0.0.1', 50008): {'type': 'info_rqst', 'movie_id': 9}
+[17:26:49:091] [netplus_web_server] sent to ('127.0.0.1', 50008): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}

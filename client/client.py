@@ -25,6 +25,11 @@ R = aR + (1-a)fullness -> fullness의 누적 추이 표현
 3. 적절한 alpha 값 선정 필요 0.8은 너무 이전 애들이 반영 많이 돼서 변화가 더딤
     - 적정값 테스트해서 찾기
 
+* 추가 주의사항
+마지막에 화질 떨어지는거 -> 버퍼 기준으로 하면 떨어지는게 맞는데 
+이건 네트워크 상황 때문에 떨어지는게 아니라 추가적으로 받을 청크가 없어서
+근데 이걸 떨구면 좀 이상해지니 보완할 방법 필요
+
 """
 
 import socket
@@ -49,7 +54,7 @@ log = get_logger(node_name)
 def main():
     # client.py 전체 작동 흐름
     initial_setup()
-    threading.Thread(target=receive_chunks, demon=True).start()
+    threading.Thread(target=receive_chunks, daemon=True).start()
     play_chunks()
 
 # movie_id 선택 -> index 수령 -> local에 질의 -> manifest local에게 수령 -> CDN에 chunk 첫 요청
@@ -104,7 +109,7 @@ def receive_chunks():
     while True:
         payload, cdn_addr = sock.recvfrom(4096)
         chunk = unpack(payload)
-        log.info(f"received from {cdn_addr}: {chunk}")
+        log.info(f"[{chunk["encoding_type"]}] {chunk["start_time"]} ~ {chunk["end_time"]}")
         if chunk["encoding_type"] == selected_encoding:
             buffer.put(chunk)
 
@@ -114,18 +119,38 @@ def play_chunks():
     # 버퍼에 저장된 청크 가져와서 재생 -> 초기값 정해야함(얼마나 저장하고 시작할지)
     # sleep으로 영상 재생 구현
     initial_size = int(n * 0.3)
+    last_played_ms = 0
     while buffer.qsize() < initial_size:
             time.sleep(0.1) # initial_size보다 커질 때까지 대기
 
     while True:
         chunk = buffer.get()
-        end_time = chunk["end_time"]
+        
+        # 지나간 청크 제거 
+        if time_to_ms(chunk["start_time"]) < last_played_ms:
+            continue
+        # 현재 화질 아닌 청크가 현재 화질보다 앞에 와 있으면 버리고 뒷 청크 재생
+        if chunk["encoding_type"] != selected_encoding:
+            has_current_ahead = False
+            for buffered in list(buffer.queue):
+                if buffered["encoding_type"] == selected_encoding and time_to_ms(buffered["start_time"]) >= last_played_ms:
+                    has_current_ahead = True
+                    break
+            if has_current_ahead:
+                continue
+
+        last_played = chunk["end_time"]
+        last_played_ms = time_to_ms(last_played)
         probe_cnt += 1
         R_buffer = probe_buffer(R_buffer)
-        select_encoding(R_buffer, probe_cnt, end_time)
+        select_encoding(R_buffer, probe_cnt, last_played)
         calculate_length_to_s = (time_to_ms(chunk["end_time"]) - time_to_ms(chunk["start_time"])) / 1000
         time.sleep(calculate_length_to_s)
-        if time_to_ms(chunk["end_time"]) >= time_to_ms("00:01:59:000"):
+        log.info(
+            f"PLAY: [{chunk["encoding_type"]}] {chunk["start_time"]} ~ {chunk["end_time"]}\n"
+            f"R_buffer: {R_buffer:.2f}"
+        )
+        if last_played_ms >= time_to_ms("00:01:59:000"):
             break
 
 def probe_buffer(R_buffer):
@@ -138,9 +163,12 @@ def select_encoding(R_buffer, probe_cnt, end_time):
     global selected_encoding
     # 첫 k번 probe 전까지는 R 무의미하다는 것 반영
     if probe_cnt <= 5:
-        return 
+        return
+    # 마지막으로 갔을 때 영상 더이상 없어서 R_buffer값 작게 나오니 그냥 전환 자체를 안함 
+    if time_to_ms(end_time) >= time_to_ms("00:01:45:000"):
+        return
     previous_encoding = selected_encoding
-    beta, gamma = 0.8, 0.4
+    beta, gamma = 0.4, 0.15
     changed = False
     
     if R_buffer >= beta and selected_encoding != "HQ":
@@ -168,9 +196,10 @@ def select_encoding(R_buffer, probe_cnt, end_time):
             "last_watched_time": end_time,
         }
         sock.sendto(pack(chunk_req), new_streaming_addr)
+
         log.info(
             f"encoding switched: {previous_encoding} to {selected_encoding}\n"
-            f"R_buffer: {R_buffer}\n"
+            f"R_buffer: {R_buffer:.2f}\n"
             f"alpha: {alpha}\n"
             f"beta: {beta}\n"
             f"gamma: {gamma}"
