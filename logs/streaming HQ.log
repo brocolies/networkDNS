@@ -30,3 +30,14 @@
 [17:26:44:671] [streaming HQ] HQ ON: 50010
 [17:26:49:097] [streaming HQ] received from ('127.0.0.1', 50008): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:00:00:000'}
 [17:27:50:512] [streaming HQ] received from ('127.0.0.1', 50008): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:01:00:000'}
+[17:34:41:587] [streaming HQ] HQ ON: 50010
+[17:34:49:732] [streaming HQ] received from ('127.0.0.1', 50810): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:00:00:000'}
+[17:35:57:989] [streaming HQ] received from ('127.0.0.1', 50810): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:01:08:000'}
+[17:48:07:733] [streaming HQ] received from ('127.0.0.1', 51329): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:00:00:000'}
+[17:49:20:487] [streaming HQ] received from ('127.0.0.1', 51329): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:01:08:000'}
+[22:09:41:810] [streaming HQ] HQ ON: 50010
+[22:09:43:829] [streaming HQ] received from ('127.0.0.1', 58001): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:00:00:000'}
+[22:10:49:283] [streaming HQ] received from ('127.0.0.1', 58001): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:01:04:000'}
+[22:24:25:491] [streaming HQ] HQ ON: 50010
+[22:24:27:510] [streaming HQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:00:00:000'}
+[22:25:31:912] [streaming HQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:01:00:000'}

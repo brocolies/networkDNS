@@ -33,3 +33,9 @@
 [16:18:48:118] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn9', 'txid': 53816}
 [16:19:48:324] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn9', 'txid': 11000}
 [17:26:49:096] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn9', 'txid': 30595}
+[17:34:49:731] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn9', 'txid': 13753}
+[17:48:07:732] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn9', 'txid': 27602}
+[22:09:41:810] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
+[22:09:43:829] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn9', 'txid': 7382}
+[22:24:25:491] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
+[22:24:27:509] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn9', 'txid': 19334}
