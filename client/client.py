@@ -14,9 +14,9 @@ R = aR + (1-a)fullness -> fullness의 누적 추이 표현
 4. 받기 스레드 만들기 -> push로 오는 청크 계속 받아서 버퍼에 쌓기 / receive_chunks()
 5. 버퍼 어느 정도 차면 재생 시작 / play_chunks()
 6. 재생 스레드 만들기 -> 버퍼에서 청크 꺼내서 sleep으로 재생 / play_chunks()
-7. 재생하면서 버퍼 얼마나 찼나 재고(probe) R 계산하기 / probe()
-8. R 보고 화질 올릴지 내릴지 정하기 (decide)
-9. 화질 바뀌면 새 서버에 다시 요청 + 전환 로그 찍기 (decide)
+7. 재생하면서 버퍼 얼마나 찼나 재고(probe) R 계산하기 / probe_buffer()
+8. R 보고 화질 올릴지 내릴지 정하기 / select_encoding()
+9. 화질 바뀌면 새 서버에 다시 요청 + 전환 로그 찍기 / select_encoding()
 
 < 명세 주의사항 > 
 1. 영화의 적절한 범위에서 네트워크 딜레이 결정 -> streaming.py 파일 수정
@@ -39,7 +39,7 @@ from core.log_utils import get_logger
 buffer = queue.Queue()
 selected_encoding = "HQ"
 n = 10 # 버퍼 크기
-alpha = 0.8
+alpha = 0.5
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 manifest = None 
 movie_id = None 
@@ -47,7 +47,10 @@ node_name = "client"
 log = get_logger(node_name)
 
 def main():
+    # client.py 전체 작동 흐름
     initial_setup()
+    threading.Thread(target=receive_chunks, demon=True).start()
+    play_chunks()
 
 # movie_id 선택 -> index 수령 -> local에 질의 -> manifest local에게 수령 -> CDN에 chunk 첫 요청
 def initial_setup():
@@ -116,9 +119,10 @@ def play_chunks():
 
     while True:
         chunk = buffer.get()
+        end_time = chunk["end_time"]
         probe_cnt += 1
         R_buffer = probe_buffer(R_buffer)
-        select_encoding(R_buffer, probe_cnt)
+        select_encoding(R_buffer, probe_cnt, end_time)
         calculate_length_to_s = (time_to_ms(chunk["end_time"]) - time_to_ms(chunk["start_time"])) / 1000
         time.sleep(calculate_length_to_s)
         if time_to_ms(chunk["end_time"]) >= time_to_ms("00:01:59:000"):
@@ -130,14 +134,47 @@ def probe_buffer(R_buffer):
     R_buffer = alpha * R_buffer + (1 - alpha) * fullness
     return R_buffer
 
-def select_encoding(R_buffer, probe_cnt):
+def select_encoding(R_buffer, probe_cnt, end_time):
     global selected_encoding
-
     # 첫 k번 probe 전까지는 R 무의미하다는 것 반영
     if probe_cnt <= 5:
         return 
+    previous_encoding = selected_encoding
     beta, gamma = 0.8, 0.4
+    changed = False
     
+    if R_buffer >= beta and selected_encoding != "HQ":
+        changed = True
+        if selected_encoding == "MQ":
+            selected_encoding = "HQ"
+        else:
+            selected_encoding = "MQ"
+    elif R_buffer < gamma and selected_encoding != "LQ":
+        changed = True
+        if selected_encoding == "HQ":
+            selected_encoding = "MQ"
+        else:
+            selected_encoding = "LQ"
+    
+    if changed:
+        ip, port = manifest[selected_encoding].split(":")        
+        new_streaming_addr = (ip, int(port))
+
+        chunk_req = {
+            "type": "chunk_rqst",
+            "movie_id": movie_id,
+            "encoding_type": selected_encoding,
+            "chunk_index": 0,
+            "last_watched_time": end_time,
+        }
+        sock.sendto(pack(chunk_req), new_streaming_addr)
+        log.info(
+            f"encoding switched: {previous_encoding} to {selected_encoding}\n"
+            f"R_buffer: {R_buffer}\n"
+            f"alpha: {alpha}\n"
+            f"beta: {beta}\n"
+            f"gamma: {gamma}"
+        )
 
 if __name__ == "__main__":
     main()

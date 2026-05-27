@@ -121,21 +121,21 @@ network/
 - [x] `data/create_chunks.py` + `chunks.json` — 9 영상 × 3 인코딩(HQ 45/MQ 30/LQ 15) 청크 메타
 - [x] `server/netplus_web.py` — `info_rqst` → 인덱스 URL 응답 + 단위 테스트
 - [x] `server/streaming.py` — 화질별 별도 서버(CLI 인자), `chunk_rqst` 받으면 t_N부터 끝까지 push, 전송 사이 랜덤 지연
-- [x] streaming의 `start_index` — t_N(시각)으로 시작 청크 매칭 (명세 3.3.4)
+- [x] streaming의 `cal_start_index` — t_N(시각)으로 시작 청크 매칭 (명세 3.3.4)
 - [x] **검증** — `tests/test_streaming.py`: 청크 0~44 순서대로 도착 통과
 
 ### Part 4. 클라이언트 핵심 로직  🟡 진행 중
 
 이 프로젝트의 알고리즘적 본질. 명세 2절, 3.1. **단일 파일 `client.py`** (과분리 안 함). push 스트림을 받으며 동시에 재생·판단 → 스레드 2개(받기/재생).
 
-- [ ] Step 1 — 셋업: 영화 선택 → `info_rqst` → 인덱스 URL → `dns_rqst` → manifest 수신
-- [ ] Step 2 — 받기 스레드: `recvfrom` → 현재 화질 청크만 buffer 적재 (lock)
-- [ ] Step 3 — 재생 스레드: buffer 일정 수준 차면 시작, 청크 start~end 길이만큼 소비
-- [ ] Step 4 — probe + R: `R = α·R_prev + (1−α)·fullness`, fullness = 남은 청크 수 / m
-- [ ] Step 5 — 전환 판단 + case(i)/(ii): R≥β 상향 / γ≤R<β 유지 / R<γ 하향, t_N 실어 새 서버 요청
+- [x] Step 1 — 셋업: 영화 선택 → `info_rqst` → 인덱스 URL → `dns_rqst` → manifest 수신
+- [x] Step 2 — 받기 스레드: `recvfrom` → 현재 화질 청크만 buffer 적재 (queue.Queue)
+- [x] Step 3 — 재생 스레드: buffer 일정 수준 차면 시작, 청크 start~end 길이만큼 소비
+- [x] Step 4 — probe + R: `R_buffer = α·R_prev + (1−α)·fullness`, fullness = 남은 청크 수 / n (play가 상태 들고 인자로 전달)
+- [ ] Step 5 — 전환 판단 + case(i)/(ii): R≥β 상향 / γ≤R<β 유지 / R<γ 하향, t_N 실어 새 서버 요청 (select_encoding 결정부 미구현)
 - [ ] Step 5 — 전환 로그 (명세 4절 Fail 조항): α/β/γ + 현재→목표 encoding + 최신 R
-- [ ] Step 6 — 스레드 묶기: 셋업 → 첫 요청(HQ) → 받기·재생 동시 시작
-- [ ] **검증**: `tests/test_client.py` + 지연 조절로 HQ↔MQ↔LQ 전환 관찰
+- [ ] Step 6 — 스레드 묶기: 셋업 → 받기·재생 동시 시작 (main 와이어링 남음)
+- [ ] **검증**: 6노드 띄우고 지연 조절로 HQ↔MQ↔LQ 전환 관찰
 
 ### Part 5. 통합과 운영  ⬜
 
@@ -169,20 +169,25 @@ network/
 
 ## 파라미터
 
-명세 3.1: 데모 10분 내 시연되고 ABR 전환이 관찰되도록 상호 조율하여 결정. 아래는 예시·결정 대기값.
+명세 3.1: 데모 10분 내 시연되고 ABR 전환이 관찰되도록 상호 조율하여 결정. 아래는 Phase 4 버퍼 동역학 모의로 확정한 값.
 
 | 이름 | 값 | 비고 |
 |---|---|---|
 | 영상 길이 | 2분 | 명세 기준 |
 | 청크 수 | HQ 45 / MQ 30 / LQ 15 | 명세 권장 |
-| 버퍼 크기 m | 미정 (예 10) | 청크 단위 |
-| α | 미정 (예 0.8) | R 가중치 (옛값 비중) |
-| β | 미정 (예 0.8) | 인코딩 상향 임계 |
-| γ | 미정 (예 0.4) | 인코딩 하향 임계 (0 ＜ γ ＜ β ＜ 1) |
-| 전송 지연 | 0.1~0.4초 | streaming 청크 사이 랜덤 |
-| 재생 속도 | 미정 | 데모 압축용 |
+| 버퍼 크기 n | 10 | 청크 단위 (확정) |
+| α | 0.5 | R_buffer 가중치(이전값 비중). 명세 예시 0.8보다 작게 → LQ 복귀 적시화 |
+| β | 0.8 | 인코딩 상향 임계 |
+| γ | 0.4 | 인코딩 하향 임계 (0 ＜ γ ＜ β ＜ 1) |
+| initial_size | n의 0.3 | 재생 시작 전 채울 양 |
+| probe 주기 | 청크당 | 청크 하나 재생마다 1회 probe |
+| 워밍업 | 첫 5 probe | R_buffer 초기 0이라 그동안 판단 보류 |
+| 전송 지연(정상) | 0.1~0.4초 | streaming 청크 사이 랜덤 |
+| 전송 지연(혼잡) | 5~7초 | 영상 [15s, 80s] 구간 청크 (영상시각 기준) |
 
-청크 크기·DNS 캐시 TTL은 명세 미요구 → 미사용 (probe는 청크 개수 기반).
+청크 크기·DNS 캐시 TTL은 명세 미요구 → 미사용 (probe는 청크 개수 기반). 재생은 정속(실시간) — 배속 변수 없음, 2분이라 10분 데모에 충분. 혼잡은 청크 *번호*가 아니라 *영상 시각*으로 키잉 (화질별 청크 수가 달라 공통 축 필요).
+
+> ※ 코드 동기화 메모: 현재 `client.py`의 `alpha` 기본값이 0.8로 남아 있음 — 위 확정값 **0.5**로 한 줄 수정 필요.
 
 ---
 
