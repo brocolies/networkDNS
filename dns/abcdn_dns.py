@@ -3,6 +3,7 @@ abCDN DNS server: manifest file 응답
 화질별로 다른 서버에서 관리
 """
 
+import time
 import socket 
 from core.protocol import pack, unpack
 from core.log_utils import get_logger
@@ -46,6 +47,8 @@ def main():
             "txid": msg["txid"],
             "answer": answer,
         }
+        # 보안 layer 공격 위한 delay 삽입
+        time.sleep(1)
         sock.sendto(pack(response), client_addr)
 
 if __name__ == "__main__":
