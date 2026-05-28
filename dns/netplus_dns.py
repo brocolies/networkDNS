@@ -43,7 +43,7 @@ def main():
         
         url = msg["url"]
         # dict.get(key, default=None), key가 없을 떄 반환할 내용
-        answer = abcdn_url.get(url, "")
+        answer = abcdn_url.get(url.lower(), "")
 
         response = {
             "type": "dns_rsp",

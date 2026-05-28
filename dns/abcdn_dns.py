@@ -16,7 +16,7 @@ def main():
 
     # abCDN URL → 화질별 streaming 서버 주소 매핑 (이 노드 내부에서만 쓰는 lookup 테이블)
     manifest_url = {
-        f"abCDN.net/cdn{i}": {
+        f"abcdn.net/cdn{i}": {
             "HQ": "127.0.0.1:50010",
             "MQ": "127.0.0.1:50011",
             "LQ": "127.0.0.1:50012",
@@ -39,7 +39,7 @@ def main():
             continue
     
         url = msg["url"]
-        answer = manifest_url.get(url, {})
+        answer = manifest_url.get(url.lower(), {})
 
         response = {
             "type": "dns_rsp",

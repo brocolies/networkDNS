@@ -62,17 +62,3 @@ def unpack(data: bytes) -> dict:
 
 def create_txid() -> int:
     return secrets.randbits(16)
-
-def txid_matching(sock, expected_txid, log, txid_match=True):
-    while True:
-        payload, _ = sock.recvfrom(4096)
-        response = unpack(payload)
-        response_txid_echo = response.get("txid_echo")
-        if not txid_match:
-            return response
-        if response_txid_echo == expected_txid:
-            return response
-        log.warning(f"TXID NOT MATCHES \n"
-                    f"sent txid: {expected_txid} \n"
-                    f"received txid: {response_txid_echo}"
-                    )

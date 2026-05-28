@@ -14,11 +14,16 @@ txid: 16-bit 무작위 ID: query와 resp 매칭
 """
 
 import socket
-from core.protocol import pack, unpack, create_txid, txid_matching
+from core.protocol import pack, unpack, create_txid
 from core.log_utils import get_logger
 from core.config_utils import parse_config
+from security.defense import query_upstream
 
 def main():
+    defense_txid = True
+    defense_spr = False
+    defense_0x20 = False
+
     config = parse_config()
     local_addr = config["local_dns_server"]
     netplus_addr = config["netplus_dns_server"]
@@ -43,6 +48,7 @@ def main():
         client_url = client_msg["url"]
         client_txid = client_msg["txid"]
 
+
         # netplus 서버에 요청 전송
         netplus_txid = create_txid()
         send_to_netplus_dns = {
@@ -50,10 +56,8 @@ def main():
             "url": client_url,
             "txid": netplus_txid,
         }
-        sock.sendto(pack(send_to_netplus_dns), netplus_addr)
-        
-        # netplus 응답 수신 + txid 검증
-        netplus_response = txid_matching(sock, netplus_txid, log)
+        # netplus 응답 수신 + txid 검증 + spr
+        netplus_response = query_upstream(netplus_addr, send_to_netplus_dns, netplus_txid, log, defense_txid, defense_spr, defense_0x20, sock)
         abcdn_url = netplus_response["answer"]
 
         # abCDN 서버에 요청 전송
@@ -63,11 +67,9 @@ def main():
             "url": abcdn_url,
             "txid": abcdn_txid,
         }
-        sock.sendto(pack(send_to_abcdn_dns), abcdn_addr)
 
-        # abCDN 응답 수신 + txid 검증
-        abcdn_response = txid_matching(sock, abcdn_txid, log)
-
+        # abCDN 응답 수신 + txid 검증 + spr
+        abcdn_response = query_upstream(abcdn_addr, send_to_abcdn_dns, abcdn_txid, log, defense_txid, defense_spr, defense_0x20, sock)
         # 클라이언트에게 응답할 manifest file 추출
         mainfest_file = abcdn_response["answer"]
 

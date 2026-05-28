@@ -36,7 +36,8 @@ import socket
 import queue
 import time
 import threading
-from core.protocol import pack, unpack, create_txid, txid_matching
+from core.protocol import pack, unpack, create_txid
+from security.defense import txid_matching
 from core.time_utils import time_to_ms
 from core.config_utils import parse_config
 from core.log_utils import get_logger
