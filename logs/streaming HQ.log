@@ -41,3 +41,4 @@
 [22:24:25:491] [streaming HQ] HQ ON: 50010
 [22:24:27:510] [streaming HQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:00:00:000'}
 [22:25:31:912] [streaming HQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:01:00:000'}
+[01:49:38:849] [streaming HQ] HQ ON: 50010

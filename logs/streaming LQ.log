@@ -26,3 +26,4 @@
 [22:10:05:711] [streaming LQ] received from ('127.0.0.1', 58001): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:23:994'}
 [22:24:25:491] [streaming LQ] LQ ON: 50012
 [22:24:49:596] [streaming LQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:23:994'}
+[01:49:38:851] [streaming LQ] LQ ON: 50012

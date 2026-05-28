@@ -36,7 +36,7 @@ import socket
 import queue
 import time
 import threading
-from core.protocol import pack, unpack, create_txid
+from core.protocol import pack, unpack, create_txid, txid_matching
 from core.time_utils import time_to_ms
 from core.config_utils import parse_config
 from core.log_utils import get_logger
@@ -78,16 +78,17 @@ def initial_setup():
     log.info(f"received from {netplus_web_addr}: {movie_index_url}")
 
     # 3. local DNS에 인덱스 질의 
+    dns_txid = create_txid()
     dns_req = {
         "type": "dns_rqst",
         "url": movie_index_url,
-        "txid": create_txid(),
+        "txid": dns_txid,
     }
     sock.sendto(pack(dns_req), local_dns_addr)
 
-    # 4. mainfest 수령 / 수신 로그 
-    payload, _ = sock.recvfrom(4096)
-    manifest = unpack(payload)["answer"]
+    # 4. mainfest 수령 / 수신 로그 + txid 검증
+    dns_rsp = txid_matching(sock, dns_txid, log)
+    manifest = dns_rsp["answer"]
     log.info(f"received from {local_dns_addr}: {manifest}")
 
     # 5. CDN 서버에 첫 청크 요청

@@ -48,7 +48,7 @@ def main():
         response = {
             "type": "dns_rsp",
             "url_echo": url,
-            "txid": msg["txid"], 
+            "txid_echo": msg["txid"], 
             "answer": answer,
         }
     

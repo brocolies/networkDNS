@@ -37,3 +37,4 @@
 [22:24:25:492] [streaming MQ] MQ ON: 50011
 [22:24:46:924] [streaming MQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
 [22:25:19:696] [streaming MQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:56:000'}
+[01:49:38:854] [streaming MQ] MQ ON: 50011

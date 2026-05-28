@@ -51,3 +51,4 @@
 [22:24:25:491] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
 [22:24:27:501] [netplus_web_server] received from ('127.0.0.1', 59955): {'type': 'info_rqst', 'movie_id': 9}
 [22:24:27:501] [netplus_web_server] sent to ('127.0.0.1', 59955): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
+[01:49:38:854] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON

@@ -14,7 +14,7 @@ txid: 16-bit 무작위 ID: query와 resp 매칭
 """
 
 import socket
-from core.protocol import pack, unpack, create_txid
+from core.protocol import pack, unpack, create_txid, txid_matching
 from core.log_utils import get_logger
 from core.config_utils import parse_config
 
@@ -35,6 +35,10 @@ def main():
         payload, client_addr = sock.recvfrom(4096)
         client_msg = unpack(payload)
 
+        # dns_rqst 공격 대비 
+        if client_msg.get("type") != "dns_rqst":
+            continue
+
         # 클라이언트에게 응답할 때 url_echo, txid에 넣어서 보내야 함
         client_url = client_msg["url"]
         client_txid = client_msg["txid"]
@@ -47,10 +51,9 @@ def main():
             "txid": netplus_txid,
         }
         sock.sendto(pack(send_to_netplus_dns), netplus_addr)
-
-        # netplus에서 응답 수신
-        payload, _ = sock.recvfrom(4096)
-        netplus_response = unpack(payload)
+        
+        # netplus 응답 수신 + txid 검증
+        netplus_response = txid_matching(sock, netplus_txid, log)
         abcdn_url = netplus_response["answer"]
 
         # abCDN 서버에 요청 전송
@@ -62,9 +65,8 @@ def main():
         }
         sock.sendto(pack(send_to_abcdn_dns), abcdn_addr)
 
-        # abCDN 서버에서 응답 수신
-        payload, _ = sock.recvfrom(4096)
-        abcdn_response = unpack(payload)
+        # abCDN 응답 수신 + txid 검증
+        abcdn_response = txid_matching(sock, abcdn_txid, log)
 
         # 클라이언트에게 응답할 manifest file 추출
         mainfest_file = abcdn_response["answer"]
@@ -73,7 +75,7 @@ def main():
         response_to_client = {
             "type": "dns_rsp",
             "url_echo": client_url,
-            "txid": client_txid,
+            "txid_echo": client_txid,
             "answer": mainfest_file,
         }
         sock.sendto(pack(response_to_client), client_addr)

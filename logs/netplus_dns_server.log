@@ -59,3 +59,4 @@
 [22:24:25:491] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
 [22:24:27:509] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 24812}
 [22:24:27:509] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid': 24812, 'answer': 'abCDN.net/cdn9'}
+[01:49:38:854] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON

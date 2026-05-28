@@ -44,7 +44,7 @@ def main():
         response = {
             "type": "dns_rsp",
             "url_echo": url,
-            "txid": msg["txid"],
+            "txid_echo": msg["txid"],
             "answer": answer,
         }
         # 보안 layer 공격 위한 delay 삽입
