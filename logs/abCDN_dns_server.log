@@ -1806,3 +1806,11 @@
 [02:47:22:155] [abcdn_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=abCDN.net/cdn9
 [10:00:07:162] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
 [10:00:12:173] [abcdn_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=abCDN.net/cdn5
+[10:27:35:771] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
+[10:27:40:605] [abcdn_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=abCDN.net/cdn5
+[10:33:47:613] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
+[10:33:52:644] [abcdn_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=abCDN.net/cdn3
+[11:08:48:245] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
+[11:08:53:028] [abcdn_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=abCDN.net/cdn3
+[11:10:27:570] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
+[11:10:31:236] [abcdn_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=abCDN.net/cdn1

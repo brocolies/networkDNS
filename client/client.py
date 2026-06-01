@@ -150,9 +150,12 @@ def play_chunks():
         select_encoding(R_buffer, probe_cnt, last_played, k)
         calculate_length_to_s = (time_to_ms(chunk["end_time"]) - time_to_ms(chunk["start_time"])) / 1000
         time.sleep(calculate_length_to_s)
+        pos = time_to_ms(chunk['start_time']) // 3000
+        bar = "-" * pos + "#" + "-" * (39 - pos)
         log.info(
             f"PLAY: [{chunk['encoding_type']}] {chunk['start_time']} ~ {chunk['end_time']}\n"
-            f"R_buffer: {R_buffer:.2f}"
+            f"R_buffer: {R_buffer:.2f}\n"
+            f"[{bar}]"
         )
         if last_played_ms >= time_to_ms("00:01:59:000"):
             break

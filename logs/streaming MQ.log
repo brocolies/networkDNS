@@ -48,3 +48,15 @@
 [10:00:07:162] [streaming MQ] MQ ON: 50011
 [10:00:35:362] [streaming MQ] rcvd from ('127.0.0.1', 53437): chunk_rqst movie=5 MQ t_N=00:00:23:994
 [10:01:34:279] [streaming MQ] rcvd from ('127.0.0.1', 53437): chunk_rqst movie=5 MQ t_N=00:01:28:000
+[10:27:35:771] [streaming MQ] MQ ON: 50011
+[10:28:03:807] [streaming MQ] rcvd from ('127.0.0.1', 64421): chunk_rqst movie=5 MQ t_N=00:00:23:994
+[10:29:03:070] [streaming MQ] rcvd from ('127.0.0.1', 64421): chunk_rqst movie=5 MQ t_N=00:01:28:000
+[10:33:47:613] [streaming MQ] MQ ON: 50011
+[10:34:15:537] [streaming MQ] rcvd from ('127.0.0.1', 51425): chunk_rqst movie=3 MQ t_N=00:00:23:994
+[10:35:15:324] [streaming MQ] rcvd from ('127.0.0.1', 51425): chunk_rqst movie=3 MQ t_N=00:01:28:000
+[11:08:48:245] [streaming MQ] MQ ON: 50011
+[11:09:16:432] [streaming MQ] rcvd from ('127.0.0.1', 58444): chunk_rqst movie=3 MQ t_N=00:00:23:994
+[11:10:16:146] [streaming MQ] rcvd from ('127.0.0.1', 58444): chunk_rqst movie=3 MQ t_N=00:01:28:000
+[11:10:27:571] [streaming MQ] MQ ON: 50011
+[11:10:54:625] [streaming MQ] rcvd from ('127.0.0.1', 59838): chunk_rqst movie=1 MQ t_N=00:00:23:994
+[11:11:53:147] [streaming MQ] rcvd from ('127.0.0.1', 59838): chunk_rqst movie=1 MQ t_N=00:01:28:000

@@ -3575,3 +3575,11 @@
 [02:47:21:151] [netplus_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=index.netplus.com/movie9
 [10:00:07:162] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
 [10:00:11:171] [netplus_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=index.netplus.com/movie5
+[10:27:35:771] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
+[10:27:39:600] [netplus_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=index.netplus.com/movie5
+[10:33:47:613] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
+[10:33:51:638] [netplus_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=index.netplus.com/movie3
+[11:08:48:245] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
+[11:08:52:021] [netplus_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=index.netplus.com/movie3
+[11:10:27:570] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
+[11:10:30:230] [netplus_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=index.netplus.com/movie1

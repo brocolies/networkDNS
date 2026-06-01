@@ -52,3 +52,14 @@
 [10:00:07:162] [streaming HQ] HQ ON: 50010
 [10:00:13:178] [streaming HQ] rcvd from ('127.0.0.1', 53437): chunk_rqst movie=5 HQ t_N=00:00:00:000
 [10:01:47:689] [streaming HQ] rcvd from ('127.0.0.1', 53437): chunk_rqst movie=5 HQ t_N=00:01:32:000
+[10:27:35:771] [streaming HQ] HQ ON: 50010
+[10:27:41:613] [streaming HQ] rcvd from ('127.0.0.1', 64421): chunk_rqst movie=5 HQ t_N=00:00:00:000
+[10:29:15:303] [streaming HQ] rcvd from ('127.0.0.1', 64421): chunk_rqst movie=5 HQ t_N=00:01:32:000
+[10:33:47:613] [streaming HQ] HQ ON: 50010
+[10:33:53:652] [streaming HQ] rcvd from ('127.0.0.1', 51425): chunk_rqst movie=3 HQ t_N=00:00:00:000
+[10:35:27:751] [streaming HQ] rcvd from ('127.0.0.1', 51425): chunk_rqst movie=3 HQ t_N=00:01:32:000
+[11:08:48:245] [streaming HQ] HQ ON: 50010
+[11:08:54:032] [streaming HQ] rcvd from ('127.0.0.1', 58444): chunk_rqst movie=3 HQ t_N=00:00:00:000
+[11:10:27:571] [streaming HQ] HQ ON: 50010
+[11:10:32:243] [streaming HQ] rcvd from ('127.0.0.1', 59838): chunk_rqst movie=1 HQ t_N=00:00:00:000
+[11:12:03:250] [streaming HQ] rcvd from ('127.0.0.1', 59838): chunk_rqst movie=1 HQ t_N=00:01:32:000

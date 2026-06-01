@@ -59,3 +59,11 @@
 [02:47:21:146] [netplus_web_server] rcvd from ('127.0.0.1', 54658): info_rqst movie_id=9
 [10:00:07:162] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
 [10:00:11:167] [netplus_web_server] rcvd from ('127.0.0.1', 53437): info_rqst movie_id=5
+[10:27:35:771] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[10:27:39:598] [netplus_web_server] rcvd from ('127.0.0.1', 64421): info_rqst movie_id=5
+[10:33:47:613] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[10:33:51:636] [netplus_web_server] rcvd from ('127.0.0.1', 51425): info_rqst movie_id=3
+[11:08:48:245] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[11:08:52:017] [netplus_web_server] rcvd from ('127.0.0.1', 58444): info_rqst movie_id=3
+[11:10:27:570] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[11:10:30:228] [netplus_web_server] rcvd from ('127.0.0.1', 59838): info_rqst movie_id=1
