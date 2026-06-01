@@ -1,12 +1,11 @@
 """
-security/defenses.py — DNS resolver의 보안 계층 모음
+보안 계층 모음
 
-방어 함수가 여기에 모임:
-- L1 txid_matching: 응답의 txid_echo가 내가 보낸 txid와 같은지 검증, 다르면 폐기
-- L2 query_upstream (SPR): 업스트림 질의마다 새 ephemeral 포트로 송수신
-- L1.5 0x20: (예정) 이름 대소문자 무작위화 + echo 검증
+- txid_matching: 응답의 txid_echo가 내가 보낸 txid와 같은지 검증, 다르면 폐기
+- query_upstream (SPR): 업스트림 질의마다 새 ephemeral 포트로 송수신
+- 0x20: 이름 대소문자 무작위
 
-각 토글(defense_txid, defense_spr 등)은 호출자(local_dns)에서 인자로 넘긴다.
+
 """
 
 import secrets
