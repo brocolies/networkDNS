@@ -3,7 +3,7 @@
 
 보안모듈로 올린 txid 주의 
 txid: 16-bit 무작위 ID: query와 resp 매칭
-송신자: query마다 새로 생성하고 수신자는 응답에 그대로 echo해서 전송
+송신자: query마다 새로 생성하고 수신자는 응답에 그대로 echo해서 전송ㅋ>
 수신자: 전송한 txid 저장하고 응답이 오면 비교
 
 < 구현 필요 기능 >
@@ -36,11 +36,12 @@ def main():
     log.info(f"local_dns_server: {local_addr} ON")
 
     while True:
-        # 클라이언트로부터 UDP 패킷 수신 
+        # 클라이언트로부터 UDP 패킷 수신
         payload, client_addr = sock.recvfrom(4096)
         client_msg = unpack(payload)
+        log.info(f"rcvd from {client_addr}: dns_rqst url={client_msg.get('url')}")
 
-        # dns_rqst 공격 대비 
+        # dns_rqst 공격 대비
         if client_msg.get("type") != "dns_rqst":
             continue
 
@@ -58,6 +59,7 @@ def main():
         }
         # netplus 응답 수신 + txid 검증 + spr
         netplus_response = query_upstream(netplus_addr, send_to_netplus_dns, netplus_txid, log, defense_txid, defense_spr, defense_0x20, sock)
+        log.info(f"rcvd from {netplus_addr}: dns_rsp answer={netplus_response['answer']}")
         abcdn_url = netplus_response["answer"]
 
         # abCDN 서버에 요청 전송
@@ -70,6 +72,7 @@ def main():
 
         # abCDN 응답 수신 + txid 검증 + spr
         abcdn_response = query_upstream(abcdn_addr, send_to_abcdn_dns, abcdn_txid, log, defense_txid, defense_spr, defense_0x20, sock)
+        log.info(f"rcvd from {abcdn_addr}: dns_rsp answer={abcdn_response['answer']}")
         # 클라이언트에게 응답할 manifest file 추출
         mainfest_file = abcdn_response["answer"]
 

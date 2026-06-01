@@ -27,3 +27,10 @@
 [22:24:25:491] [streaming LQ] LQ ON: 50012
 [22:24:49:596] [streaming LQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'LQ', 'chunk_index': 0, 'last_watched_time': '00:00:23:994'}
 [01:49:38:851] [streaming LQ] LQ ON: 50012
+[02:41:48:158] [streaming LQ] LQ ON: 50012
+[02:42:03:203] [streaming LQ] LQ ON: 50012
+[02:42:39:088] [streaming LQ] rcvd from ('127.0.0.1', 51025): chunk_rqst movie=4 LQ t_N=00:00:32:000
+[02:47:17:134] [streaming LQ] LQ ON: 50012
+[02:47:53:067] [streaming LQ] rcvd from ('127.0.0.1', 54658): chunk_rqst movie=9 LQ t_N=00:00:32:000
+[10:00:07:162] [streaming LQ] LQ ON: 50012
+[10:00:41:239] [streaming LQ] rcvd from ('127.0.0.1', 53437): chunk_rqst movie=5 LQ t_N=00:00:28:000

@@ -1800,3 +1800,9 @@
 [21:52:41:645] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/fake', 'txid': 63762}
 [21:52:43:657] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn9', 'txid': 29438}
 [21:52:45:665] [abcdn_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'abCDN.net/cdn9', 'txid': 25470}
+[02:42:03:200] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
+[02:42:07:683] [abcdn_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=abCDN.net/cdn4
+[02:47:17:134] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
+[02:47:22:155] [abcdn_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=abCDN.net/cdn9
+[10:00:07:162] [abcdn_dns_server] abcdn_dns_server: ('127.0.0.1', 50003) ON
+[10:00:12:173] [abcdn_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=abCDN.net/cdn5

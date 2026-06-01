@@ -35,7 +35,7 @@ def main():
         # recvfrom(): (payload, sender addr) 튜플 반환
         payload, client_addr = sock.recvfrom(4096)
         msg = unpack(payload)
-        log.info(f"received from {client_addr}: {msg}")
+        log.info(f"rcvd from {client_addr}: dns_rqst url={msg.get('url')}")
 
         if msg.get("type") != "dns_rqst":
             log.warning(f"not expected type: {msg}")
@@ -55,7 +55,6 @@ def main():
         # 보안 layer 공격 위한 delay 삽입
         time.sleep(1)
         sock.sendto(pack(response), client_addr)
-        log.info(f"sent to {client_addr}: {response}")
         
 if __name__ == "__main__":
     main()

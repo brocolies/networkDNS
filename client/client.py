@@ -45,7 +45,7 @@ from core.log_utils import get_logger
 buffer = queue.Queue()
 selected_encoding = "HQ"
 n = 10 # 버퍼 크기
-alpha = 0.5
+alpha = 0.3
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 manifest = None 
 movie_id = None 
@@ -66,7 +66,7 @@ def initial_setup():
     local_dns_addr = config["local_dns_server"]
 
     # 1. 보고싶은 영화 클릭 -> web server에 request 전송
-    movie_id = 9
+    movie_id = int(input("영화 번호 선택(1 ~ 9): "))
     info_req = {
         "type": "info_rqst", 
         "movie_id": movie_id,
@@ -76,7 +76,7 @@ def initial_setup():
     # 2. rsp에서 index 수령 / 수신 로그
     payload, _ = sock.recvfrom(4096)
     movie_index_url = unpack(payload)["index_url"]
-    log.info(f"received from {netplus_web_addr}: {movie_index_url}")
+    log.info(f"rcvd from {netplus_web_addr}: info_rsp index_url={movie_index_url}")
 
     # 3. local DNS에 인덱스 질의 
     dns_txid = create_txid()
@@ -90,7 +90,7 @@ def initial_setup():
     # 4. mainfest 수령 / 수신 로그 + txid 검증
     dns_rsp = txid_matching(sock, dns_txid, log)
     manifest = dns_rsp["answer"]
-    log.info(f"received from {local_dns_addr}: {manifest}")
+    log.info(f"rcvd from {local_dns_addr}: dns_rsp manifest={manifest}")
 
     # 5. CDN 서버에 첫 청크 요청
     ip, port = manifest[selected_encoding].split(":")
@@ -111,13 +111,15 @@ def receive_chunks():
     while True:
         payload, cdn_addr = sock.recvfrom(4096)
         chunk = unpack(payload)
-        log.info(f"[{chunk["encoding_type"]}] {chunk["start_time"]} ~ {chunk["end_time"]}")
+        log.info(f"rcvd from {cdn_addr}: chunk_rsp [{chunk['encoding_type']}] {chunk['start_time']} ~ {chunk['end_time']}")
         if chunk["encoding_type"] == selected_encoding:
             buffer.put(chunk)
 
 def play_chunks():
     probe_cnt = 0
     R_buffer = 0.0
+    probes = []
+    k = 5
     # 버퍼에 저장된 청크 가져와서 재생 -> 초기값 정해야함(얼마나 저장하고 시작할지)
     # sleep으로 영상 재생 구현
     initial_size = int(n * 0.3)
@@ -144,27 +146,29 @@ def play_chunks():
         last_played = chunk["end_time"]
         last_played_ms = time_to_ms(last_played)
         probe_cnt += 1
-        R_buffer = probe_buffer(R_buffer)
-        select_encoding(R_buffer, probe_cnt, last_played)
+        R_buffer = probe_buffer(R_buffer, probes, k)
+        select_encoding(R_buffer, probe_cnt, last_played, k)
         calculate_length_to_s = (time_to_ms(chunk["end_time"]) - time_to_ms(chunk["start_time"])) / 1000
         time.sleep(calculate_length_to_s)
         log.info(
-            f"PLAY: [{chunk["encoding_type"]}] {chunk["start_time"]} ~ {chunk["end_time"]}\n"
+            f"PLAY: [{chunk['encoding_type']}] {chunk['start_time']} ~ {chunk['end_time']}\n"
             f"R_buffer: {R_buffer:.2f}"
         )
         if last_played_ms >= time_to_ms("00:01:59:000"):
             break
 
-def probe_buffer(R_buffer):
+def probe_buffer(R_buffer, probes, k):
     # R_buffer 값 계산 (명세 공식 참고)
-    fullness = buffer.qsize() / n
-    R_buffer = alpha * R_buffer + (1 - alpha) * fullness
-    return R_buffer
+    probes.append(buffer.qsize() / n)
+    if len(probes) < k:
+        return R_buffer
+    return alpha * R_buffer + (1 - alpha) * sum(probes[-k:]) / k
 
-def select_encoding(R_buffer, probe_cnt, end_time):
+
+def select_encoding(R_buffer, probe_cnt, end_time, k):
     global selected_encoding
     # 첫 k번 probe 전까지는 R 무의미하다는 것 반영
-    if probe_cnt <= 5:
+    if probe_cnt <= k:
         return
     # 마지막으로 갔을 때 영상 더이상 없어서 R_buffer값 작게 나오니 그냥 전환 자체를 안함 
     if time_to_ms(end_time) >= time_to_ms("00:01:45:000"):
@@ -204,7 +208,8 @@ def select_encoding(R_buffer, probe_cnt, end_time):
             f"R_buffer: {R_buffer:.2f}\n"
             f"alpha: {alpha}\n"
             f"beta: {beta}\n"
-            f"gamma: {gamma}"
+            f"gamma: {gamma}\n"
+            f"k: {k}"
         )
 
 if __name__ == "__main__":

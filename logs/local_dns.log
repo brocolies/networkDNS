@@ -1,0 +1,12 @@
+[02:42:03:200] [local_dns] local_dns_server: ('127.0.0.1', 50000) ON
+[02:42:06:680] [local_dns] rcvd from ('127.0.0.1', 51025): dns_rqst url=index.netplus.com/movie4
+[02:42:07:683] [local_dns] rcvd from ('127.0.0.1', 50002): dns_rsp answer=abCDN.net/cdn4
+[02:42:08:686] [local_dns] rcvd from ('127.0.0.1', 50003): dns_rsp answer={'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[02:47:17:135] [local_dns] local_dns_server: ('127.0.0.1', 50000) ON
+[02:47:21:148] [local_dns] rcvd from ('127.0.0.1', 54658): dns_rqst url=index.netplus.com/movie9
+[02:47:22:155] [local_dns] rcvd from ('127.0.0.1', 50002): dns_rsp answer=abCDN.net/cdn9
+[02:47:23:159] [local_dns] rcvd from ('127.0.0.1', 50003): dns_rsp answer={'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}
+[10:00:07:162] [local_dns] local_dns_server: ('127.0.0.1', 50000) ON
+[10:00:11:170] [local_dns] rcvd from ('127.0.0.1', 53437): dns_rqst url=index.netplus.com/movie5
+[10:00:12:173] [local_dns] rcvd from ('127.0.0.1', 50002): dns_rsp answer=abCDN.net/cdn5
+[10:00:13:177] [local_dns] rcvd from ('127.0.0.1', 50003): dns_rsp answer={'HQ': '127.0.0.1:50010', 'MQ': '127.0.0.1:50011', 'LQ': '127.0.0.1:50012'}

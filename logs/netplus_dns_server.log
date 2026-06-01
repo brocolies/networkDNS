@@ -3569,3 +3569,9 @@
 [21:52:43:656] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid_echo': 56894, 'answer': 'abCDN.net/cdn9'}
 [21:52:44:660] [netplus_dns_server] received from ('127.0.0.1', 50000): {'type': 'dns_rqst', 'url': 'index.netplus.com/movie9', 'txid': 5381}
 [21:52:45:665] [netplus_dns_server] sent to ('127.0.0.1', 50000): {'type': 'dns_rsp', 'url_echo': 'index.netplus.com/movie9', 'txid_echo': 5381, 'answer': 'abCDN.net/cdn9'}
+[02:42:03:200] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
+[02:42:06:681] [netplus_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=index.netplus.com/movie4
+[02:47:17:134] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
+[02:47:21:151] [netplus_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=index.netplus.com/movie9
+[10:00:07:162] [netplus_dns_server] netplus_dns_server: ('127.0.0.1', 50002) ON
+[10:00:11:171] [netplus_dns_server] rcvd from ('127.0.0.1', 50000): dns_rqst url=index.netplus.com/movie5

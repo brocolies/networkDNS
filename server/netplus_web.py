@@ -29,7 +29,7 @@ def main():
     while True:
         payload, client_addr = sock.recvfrom(4096)
         msg = unpack(payload)
-        log.info(f"received from {client_addr}: {msg}")
+        log.info(f"rcvd from {client_addr}: info_rqst movie_id={msg.get('movie_id')}")
 
         if msg.get("type") != "info_rqst":
             log.warning(f"unexpected type: {msg}")
@@ -44,7 +44,6 @@ def main():
         }
 
         sock.sendto(pack(response), client_addr)
-        log.info(f"sent to {client_addr}: {response}")
 
 if __name__ == "__main__":
     main()

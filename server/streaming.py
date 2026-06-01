@@ -71,7 +71,7 @@ def main():
     while True:
         payload, client_addr = sock.recvfrom(4096)
         msg = unpack(payload)
-        log.info(f"received from {client_addr}: {msg}")
+        log.info(f"rcvd from {client_addr}: chunk_rqst movie={msg['movie_id']} {msg['encoding_type']} t_N={msg['last_watched_time']}")
 
         movie_id = str(msg["movie_id"])
         rqst_movie_chunks = all_movie_chunks[movie_id]

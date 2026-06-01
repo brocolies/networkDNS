@@ -38,3 +38,13 @@
 [22:24:46:924] [streaming MQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:21:328'}
 [22:25:19:696] [streaming MQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'MQ', 'chunk_index': 0, 'last_watched_time': '00:00:56:000'}
 [01:49:38:854] [streaming MQ] MQ ON: 50011
+[02:41:48:158] [streaming MQ] MQ ON: 50011
+[02:42:03:201] [streaming MQ] MQ ON: 50011
+[02:42:33:439] [streaming MQ] rcvd from ('127.0.0.1', 51025): chunk_rqst movie=4 MQ t_N=00:00:26:660
+[02:43:40:697] [streaming MQ] rcvd from ('127.0.0.1', 51025): chunk_rqst movie=4 MQ t_N=00:01:36:000
+[02:47:17:134] [streaming MQ] MQ ON: 50011
+[02:47:48:023] [streaming MQ] rcvd from ('127.0.0.1', 54658): chunk_rqst movie=9 MQ t_N=00:00:26:660
+[02:48:54:222] [streaming MQ] rcvd from ('127.0.0.1', 54658): chunk_rqst movie=9 MQ t_N=00:01:36:000
+[10:00:07:162] [streaming MQ] MQ ON: 50011
+[10:00:35:362] [streaming MQ] rcvd from ('127.0.0.1', 53437): chunk_rqst movie=5 MQ t_N=00:00:23:994
+[10:01:34:279] [streaming MQ] rcvd from ('127.0.0.1', 53437): chunk_rqst movie=5 MQ t_N=00:01:28:000

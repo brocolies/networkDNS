@@ -42,3 +42,13 @@
 [22:24:27:510] [streaming HQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:00:00:000'}
 [22:25:31:912] [streaming HQ] received from ('127.0.0.1', 59955): {'type': 'chunk_rqst', 'movie_id': 9, 'encoding_type': 'HQ', 'chunk_index': 0, 'last_watched_time': '00:01:00:000'}
 [01:49:38:849] [streaming HQ] HQ ON: 50010
+[02:41:48:158] [streaming HQ] HQ ON: 50010
+[02:42:03:201] [streaming HQ] HQ ON: 50010
+[02:42:08:688] [streaming HQ] rcvd from ('127.0.0.1', 51025): chunk_rqst movie=4 HQ t_N=00:00:00:000
+[02:43:48:701] [streaming HQ] rcvd from ('127.0.0.1', 51025): chunk_rqst movie=4 HQ t_N=00:01:40:000
+[02:47:17:134] [streaming HQ] HQ ON: 50010
+[02:47:23:160] [streaming HQ] rcvd from ('127.0.0.1', 54658): chunk_rqst movie=9 HQ t_N=00:00:00:000
+[02:49:02:274] [streaming HQ] rcvd from ('127.0.0.1', 54658): chunk_rqst movie=9 HQ t_N=00:01:40:000
+[10:00:07:162] [streaming HQ] HQ ON: 50010
+[10:00:13:178] [streaming HQ] rcvd from ('127.0.0.1', 53437): chunk_rqst movie=5 HQ t_N=00:00:00:000
+[10:01:47:689] [streaming HQ] rcvd from ('127.0.0.1', 53437): chunk_rqst movie=5 HQ t_N=00:01:32:000

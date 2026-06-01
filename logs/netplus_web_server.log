@@ -52,3 +52,10 @@
 [22:24:27:501] [netplus_web_server] received from ('127.0.0.1', 59955): {'type': 'info_rqst', 'movie_id': 9}
 [22:24:27:501] [netplus_web_server] sent to ('127.0.0.1', 59955): {'type': 'info_rsp', 'movie_id_echo': 9, 'index_url': 'index.netplus.com/movie9'}
 [01:49:38:854] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[02:41:48:157] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[02:42:03:199] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[02:42:06:679] [netplus_web_server] rcvd from ('127.0.0.1', 51025): info_rqst movie_id=4
+[02:47:17:134] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[02:47:21:146] [netplus_web_server] rcvd from ('127.0.0.1', 54658): info_rqst movie_id=9
+[10:00:07:162] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[10:00:11:167] [netplus_web_server] rcvd from ('127.0.0.1', 53437): info_rqst movie_id=5

@@ -32,7 +32,7 @@ def main():
     while True:
         payload, client_addr = sock.recvfrom(4096) 
         msg = unpack(payload)
-        log.info(f"received from {client_addr}: {msg}")
+        log.info(f"rcvd from {client_addr}: dns_rqst url={msg.get('url')}")
 
         if msg.get("type") != "dns_rqst":
             log.warning(f"not expected type: {msg}")
