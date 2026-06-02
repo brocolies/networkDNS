@@ -21,7 +21,7 @@ from security.defense import query_upstream
 
 def main():
     defense_txid = True
-    defense_spr = False
+    defense_spr = True
     defense_0x20 = False
 
     config = parse_config()
@@ -57,6 +57,7 @@ def main():
             "url": client_url,
             "txid": netplus_txid,
         }
+
         # netplus 응답 수신 + txid 검증 + spr
         netplus_response = query_upstream(netplus_addr, send_to_netplus_dns, netplus_txid, log, defense_txid, defense_spr, defense_0x20, sock)
         log.info(f"rcvd from {netplus_addr}: dns_rsp answer={netplus_response['answer']}")
@@ -73,6 +74,7 @@ def main():
         # abCDN 응답 수신 + txid 검증 + spr
         abcdn_response = query_upstream(abcdn_addr, send_to_abcdn_dns, abcdn_txid, log, defense_txid, defense_spr, defense_0x20, sock)
         log.info(f"rcvd from {abcdn_addr}: dns_rsp answer={abcdn_response['answer']}")
+        
         # 클라이언트에게 응답할 manifest file 추출
         mainfest_file = abcdn_response["answer"]
 

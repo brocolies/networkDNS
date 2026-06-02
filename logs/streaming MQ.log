@@ -60,3 +60,28 @@
 [11:10:27:571] [streaming MQ] MQ ON: 50011
 [11:10:54:625] [streaming MQ] rcvd from ('127.0.0.1', 59838): chunk_rqst movie=1 MQ t_N=00:00:23:994
 [11:11:53:147] [streaming MQ] rcvd from ('127.0.0.1', 59838): chunk_rqst movie=1 MQ t_N=00:01:28:000
+[21:59:46:120] [streaming MQ] MQ ON: 50011
+[22:00:16:249] [streaming MQ] rcvd from ('127.0.0.1', 49865): chunk_rqst movie=1 MQ t_N=00:00:23:994
+[22:01:14:913] [streaming MQ] rcvd from ('127.0.0.1', 49865): chunk_rqst movie=1 MQ t_N=00:01:28:000
+[22:02:11:774] [streaming MQ] MQ ON: 50011
+[22:05:23:563] [streaming MQ] rcvd from ('127.0.0.1', 50966): chunk_rqst movie=4 MQ t_N=00:00:23:994
+[22:06:22:886] [streaming MQ] rcvd from ('127.0.0.1', 50966): chunk_rqst movie=4 MQ t_N=00:01:28:000
+[22:07:03:309] [streaming MQ] MQ ON: 50011
+[22:08:54:208] [streaming MQ] MQ ON: 50011
+[22:15:31:825] [streaming MQ] MQ ON: 50011
+[22:43:38:232] [streaming MQ] MQ ON: 50011
+[22:43:50:028] [streaming MQ] MQ ON: 50011
+[22:44:02:852] [streaming MQ] MQ ON: 50011
+[22:46:33:675] [streaming MQ] MQ ON: 50011
+[22:47:00:802] [streaming MQ] rcvd from ('127.0.0.1', 63581): chunk_rqst movie=5 MQ t_N=00:00:23:994
+[22:47:59:562] [streaming MQ] rcvd from ('127.0.0.1', 63581): chunk_rqst movie=5 MQ t_N=00:01:28:000
+[03:22:12:886] [streaming MQ] MQ ON: 50011
+[03:22:23:486] [streaming MQ] MQ ON: 50011
+[03:22:53:545] [streaming MQ] rcvd from ('127.0.0.1', 59573): chunk_rqst movie=9 MQ t_N=00:00:23:994
+[03:23:52:739] [streaming MQ] rcvd from ('127.0.0.1', 59573): chunk_rqst movie=9 MQ t_N=00:01:28:000
+[08:26:14:614] [streaming MQ] MQ ON: 50011
+[08:26:59:828] [streaming MQ] rcvd from ('127.0.0.1', 58772): chunk_rqst movie=9 MQ t_N=00:00:23:994
+[08:27:58:693] [streaming MQ] rcvd from ('127.0.0.1', 58772): chunk_rqst movie=9 MQ t_N=00:01:28:000
+[09:40:10:559] [streaming MQ] MQ ON: 50011
+[09:40:57:822] [streaming MQ] rcvd from ('127.0.0.1', 61376): chunk_rqst movie=9 MQ t_N=00:00:23:994
+[09:41:56:314] [streaming MQ] rcvd from ('127.0.0.1', 61376): chunk_rqst movie=9 MQ t_N=00:01:28:000

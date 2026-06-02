@@ -67,3 +67,22 @@
 [11:08:52:017] [netplus_web_server] rcvd from ('127.0.0.1', 58444): info_rqst movie_id=3
 [11:10:27:570] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
 [11:10:30:228] [netplus_web_server] rcvd from ('127.0.0.1', 59838): info_rqst movie_id=1
+[21:59:46:120] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[21:59:51:843] [netplus_web_server] rcvd from ('127.0.0.1', 49865): info_rqst movie_id=1
+[22:02:11:773] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[22:04:59:336] [netplus_web_server] rcvd from ('127.0.0.1', 50966): info_rqst movie_id=4
+[22:07:03:309] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[22:08:54:208] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[22:15:31:823] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[22:43:38:232] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[22:43:50:026] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[22:44:02:850] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[22:46:33:672] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[22:46:36:690] [netplus_web_server] rcvd from ('127.0.0.1', 63581): info_rqst movie_id=5
+[03:22:12:885] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[03:22:23:486] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[03:22:29:541] [netplus_web_server] rcvd from ('127.0.0.1', 59573): info_rqst movie_id=9
+[08:26:14:614] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[08:26:35:829] [netplus_web_server] rcvd from ('127.0.0.1', 58772): info_rqst movie_id=9
+[09:40:10:557] [netplus_web_server] netplus_web_server: ('127.0.0.1', 50001) ON
+[09:40:33:608] [netplus_web_server] rcvd from ('127.0.0.1', 61376): info_rqst movie_id=9

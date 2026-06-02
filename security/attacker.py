@@ -14,7 +14,7 @@ def main():
     target_url = "index.netplus.com/movie9"
     fake_answer = "abCDN.net/fake"
     burst = 3000
-    trials = 20
+    trials = 10
 
     config = parse_config()
     local_dns_addr = config["local_dns_server"]

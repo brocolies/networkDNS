@@ -116,10 +116,10 @@ def receive_chunks():
             buffer.put(chunk)
 
 def play_chunks():
-    probe_cnt = 0
+    probe_cnt = 0 # k개만큼 기다렸다 건너뛰기
     R_buffer = 0.0
-    probes = []
-    k = 5
+    probes = [] # 매번 측정한 probe 값 저장
+    k = 5 # 몇 개의 probe 평균 사용할지
     # 버퍼에 저장된 청크 가져와서 재생 -> 초기값 정해야함(얼마나 저장하고 시작할지)
     # sleep으로 영상 재생 구현
     initial_size = int(n * 0.3)

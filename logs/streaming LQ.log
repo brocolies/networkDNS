@@ -42,3 +42,22 @@
 [11:09:22:369] [streaming LQ] rcvd from ('127.0.0.1', 58444): chunk_rqst movie=3 LQ t_N=00:00:28:000
 [11:10:27:571] [streaming LQ] LQ ON: 50012
 [11:11:00:064] [streaming LQ] rcvd from ('127.0.0.1', 59838): chunk_rqst movie=1 LQ t_N=00:00:28:000
+[21:59:46:120] [streaming LQ] LQ ON: 50012
+[22:00:21:881] [streaming LQ] rcvd from ('127.0.0.1', 49865): chunk_rqst movie=1 LQ t_N=00:00:28:000
+[22:02:11:777] [streaming LQ] LQ ON: 50012
+[22:05:29:247] [streaming LQ] rcvd from ('127.0.0.1', 50966): chunk_rqst movie=4 LQ t_N=00:00:28:000
+[22:07:03:309] [streaming LQ] LQ ON: 50012
+[22:08:54:208] [streaming LQ] LQ ON: 50012
+[22:15:31:825] [streaming LQ] LQ ON: 50012
+[22:43:38:232] [streaming LQ] LQ ON: 50012
+[22:43:50:029] [streaming LQ] LQ ON: 50012
+[22:44:02:855] [streaming LQ] LQ ON: 50012
+[22:46:33:675] [streaming LQ] LQ ON: 50012
+[22:47:06:391] [streaming LQ] rcvd from ('127.0.0.1', 63581): chunk_rqst movie=5 LQ t_N=00:00:28:000
+[03:22:12:886] [streaming LQ] LQ ON: 50012
+[03:22:23:487] [streaming LQ] LQ ON: 50012
+[03:22:58:841] [streaming LQ] rcvd from ('127.0.0.1', 59573): chunk_rqst movie=9 LQ t_N=00:00:28:000
+[08:26:14:614] [streaming LQ] LQ ON: 50012
+[08:27:04:860] [streaming LQ] rcvd from ('127.0.0.1', 58772): chunk_rqst movie=9 LQ t_N=00:00:28:000
+[09:40:10:560] [streaming LQ] LQ ON: 50012
+[09:41:02:985] [streaming LQ] rcvd from ('127.0.0.1', 61376): chunk_rqst movie=9 LQ t_N=00:00:28:000
