@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Logs (런타임 생성, log_utils가 자동으로 logs/ 디렉토리 만듦)
+logs/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# 가상환경
+venv/
+.venv/
+env/
